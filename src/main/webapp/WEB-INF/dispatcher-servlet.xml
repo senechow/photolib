@@ -68,7 +68,7 @@
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="org.postgresql.Driver" />
-		<property name="url" value="jdbc:postgres://teyxsznudxkemu:fH27MPFdOEgcbG0OGiGK08Mxq2@ec2-54-197-238-242.compute-1.amazonaws.com:5432/dc13jbrbirjamt"/>
+		<property name="url" value="postgres://teyxsznudxkemu:fH27MPFdOEgcbG0OGiGK08Mxq2@ec2-54-197-238-242.compute-1.amazonaws.com:5432/dc13jbrbirjamt"/>
 	<!--  <property name="url" value="jdbc:postgresql://localhost:5432/photolib" /> -->
 		<property name="username" value="${jdbc.username}" />
 		<property name="password" value="${jdbc.password}" />

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+
+	<http auto-config='true'>
+		<intercept-url pattern="/photo/new" access="ROLE_REGISTERED_USER"
+			method="GET" />
+		<intercept-url pattern="/photo/*"
+			access="ROLE_ANONYMOUS, ROLE_REGISTERED_USER" method="GET" />
+		<intercept-url pattern="/photo/*/image"
+			access="ROLE_ANONYMOUS, ROLE_REGISTERED_USER" />
+		<intercept-url pattern="/photo/*" access="ROLE_REGISTERED_USER"
+			method="POST" />
+		<intercept-url pattern="/photo/*" access="ROLE_REGISTERED_USER"
+			method="DELETE" />
+		<intercept-url pattern="/photo/*/**" access="ROLE_REGISTERED_USER" />
+		<intercept-url pattern="/users/new/**" access="ROLE_ANONYMOUS" />
+		<intercept-url pattern="/users/*/confirmemail/**" access="ROLE_ANONYMOUS" />
+		<intercept-url pattern="/users/**" access="ROLE_REGISTERED_USER" />
+
+		<form-login login-page="/login" default-target-url="/login-successful"
+			authentication-failure-url="/login-failed" />
+		<logout logout-success-url="/logout" />
+	</http>
+
+
+	<authentication-manager>
+		<authentication-provider user-service-ref="customUserDetailsService">
+			<password-encoder hash="plaintext">
+			</password-encoder>
+		</authentication-provider>
+	</authentication-manager>
+
+
+
+</beans:beans>

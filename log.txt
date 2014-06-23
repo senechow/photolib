@@ -1,18 +1,3 @@
-2014-06-23T01:05:25.447736+00:00 heroku[api]: Release v2 created by senechow@gmail.com
-2014-06-23T01:05:25.447644+00:00 heroku[api]: Enable Logplex by senechow@gmail.com
-2014-06-23T01:22:17+00:00 heroku[slug-compiler]: Slug compilation started
-2014-06-23T01:22:33+00:00 heroku[slug-compiler]: Slug compilation failed: failed to compile Java app
-2014-06-23T01:43:16.144283+00:00 heroku[api]: Attach HEROKU_POSTGRESQL_COPPER resource by senechow@gmail.com
-2014-06-23T01:43:16.029289+00:00 heroku[api]: Set DATABASE_URL config vars by senechow@gmail.com
-2014-06-23T01:43:16.029372+00:00 heroku[api]: Release v3 created by senechow@gmail.com
-2014-06-23T01:43:16.144357+00:00 heroku[api]: Release v4 created by senechow@gmail.com
-2014-06-23T01:45:34.978129+00:00 heroku[api]: Release v5 created by senechow@gmail.com
-2014-06-23T01:45:34.978039+00:00 heroku[api]: Set APP_ENCRYPTION_PASSWORD config vars by senechow@gmail.com
-2014-06-23T01:45:50.037815+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=photolib.herokuapp.com request_id=c87b9839-60c3-40d5-a5b5-c3bb9dbed43a fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
-2014-06-23T01:45:50.724762+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=photolib.herokuapp.com request_id=1ec9b358-6c3b-44dc-915e-d5bc09ddee5e fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
-2014-06-23T01:45:50.885047+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=photolib.herokuapp.com request_id=b1
-121f44-1888-456d-84d4-b50e2f29d269 fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
-2014-06-23T20:50:33+00:00 heroku[slug-compiler]: Slug compilation started
 2014-06-23T20:51:06.405966+00:00 heroku[api]: Release v6 created by senechow@gmail.com
 2014-06-23T20:51:06.534135+00:00 heroku[api]: Deploy 6c84d60 by senechow@gmail.com
 2014-06-23T20:51:06.405966+00:00 heroku[api]: Set PATH, JAVA_OPTS, MAVEN_OPTS config vars by senechow@gmail.com
@@ -60,7 +45,8 @@
 2014-06-23T21:41:16.595882+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.startup.TaglibUriRule body
 2014-06-23T21:41:16.595887+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/fmt is already defined
 2014-06-23T21:41:16.604168+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.startup.TaglibUriRule body
-2014-06-23T21:41:16.599220+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/functions is already defined
+2014-06-23T21:41:16.599220+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/functions is already define
+d
 2014-06-23T21:41:16.601247+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.startup.TaglibUriRule body
 2014-06-23T21:41:16.592167+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/fmt is already defined
 2014-06-23T21:41:16.604173+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/sql_rt is already defined
@@ -75,8 +61,7 @@
 2014-06-23T21:41:16.608053+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.startup.TaglibUriRule body
 2014-06-23T21:41:16.613238+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/xml_rt is already defined
 2014-06-23T21:41:16.613235+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.startup.TaglibUriRule body
-2014-06-23
-T21:41:16.681691+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.core.ApplicationContext log
+2014-06-23T21:41:16.681691+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.core.ApplicationContext log
 2014-06-23T21:41:16.766888+00:00 app[web.1]: 21:41:16,764  INFO ContextLoader:285 - Root WebApplicationContext: initialization started
 2014-06-23T21:41:16.764122+00:00 app[web.1]: INFO: Initializing Spring root WebApplicationContext
 2014-06-23T21:41:16.681696+00:00 app[web.1]: INFO: No Spring WebApplicationInitializer types detected on classpath
@@ -84,9 +69,8 @@ T21:41:16.681691+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.c
 2014-06-23T21:41:16.870420+00:00 app[web.1]: 21:41:16,869  INFO XmlWebApplicationContext:513 - Refreshing Root WebApplicationContext: startup date [Mon Jun 23 21:41:16 UTC 2014]; root of context hierarchy
 2014-06-23T21:41:16.920286+00:00 app[web.1]: 21:41:16,919  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
 2014-06-23T21:41:17.268187+00:00 app[web.1]: 21:41:17,267  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from ServletContext resource [/WEB-INF/security-context.xml]
-2014-06-23T21:41:17.451666+00:00 app[web.1]: 21:41:17,451  INFO HttpSecurityBeanDefinitionParser:266 - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0
-; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 700, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1100, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1500, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; 
-initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2000, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2100, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2200, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2300]
+2014-06-23T21:41:17.451666+00:00 app[web.1]: 21:41:17,451  INFO HttpSecurityBeanDefinitionParser:266 - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 700, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1100, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMeth
+odName=null; destroyMethodName=null, order = 1500, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2000, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2100, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2200, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2300]
 2014-06-23T21:41:17.339036+00:00 app[web.1]: 21:41:17,338  INFO SpringSecurityCoreVersion:49 - You are running with Spring Security Core 3.2.4.RELEASE
 2014-06-23T21:41:17.339252+00:00 app[web.1]: 21:41:17,339  INFO SecurityNamespaceHandler:75 - Spring Security 'config' module version is 3.2.4.RELEASE
 2014-06-23T21:41:18.097333+00:00 app[web.1]: 21:41:18,096  INFO EncryptablePropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [server.properties]
@@ -131,7 +115,8 @@ initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org
 2014-06-23T21:41:19.936999+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
 2014-06-23T21:41:19.937007+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
 2014-06-23T21:41:19.937009+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
-2014-06-23T21:41:19.937005+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
+2014-06-23T21:41:19.937005+00:00 app[web.1]: 	at org.springframework.beans.factory
+.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
 2014-06-23T21:41:19.937011+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
 2014-06-23T21:41:19.937012+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
 2014-06-23T21:41:19.937014+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
@@ -173,8 +158,7 @@ initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org
 2014-06-23T21:41:19.937088+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1559)
 2014-06-23T21:41:19.937076+00:00 app[web.1]: 	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
 2014-06-23T21:41:19.937084+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2899)
-2014-06-23T21:41:19.937086+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.find
-Class(WebappClassLoader.java:1173)
+2014-06-23T21:41:19.937086+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1173)
 2014-06-23T21:41:19.937092+00:00 app[web.1]: 	at java.lang.Class.forName(Class.java:188)
 2014-06-23T21:41:19.937083+00:00 app[web.1]: Caused by: java.lang.UnsupportedClassVersionError: org/postgresql/Driver : Unsupported major.minor version 51.0 (unable to load class org.postgresql.Driver)
 2014-06-23T21:41:19.937090+00:00 app[web.1]: 	at java.lang.Class.forName0(Native Method)
@@ -221,8 +205,7 @@ Class(WebappClassLoader.java:1173)
 2014-06-23T21:41:20.585844+00:00 app[web.1]: 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:206)
 2014-06-23T21:41:20.585845+00:00 app[web.1]: 	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1885)
 2014-06-23T21:41:20.585850+00:00 app[web.1]: 	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:343)
-2014-06-23T21:41:20.585853+00:00 app[web.1]: 	at org.springframework.orm.hib
-ernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:416)
+2014-06-23T21:41:20.585853+00:00 app[web.1]: 	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:416)
 2014-06-23T21:41:20.585847+00:00 app[web.1]: 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1843)
 2014-06-23T21:41:20.585848+00:00 app[web.1]: 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1928)
 2014-06-23T21:41:20.585851+00:00 app[web.1]: 	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:431)
@@ -317,8 +300,7 @@ ernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:
 2014-06-23T21:41:20.622005+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
 2014-06-23T21:41:20.622019+00:00 app[web.1]: 	... 22 more
 2014-06-23T21:41:20.621955+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
-2014-06-23T21:41:20.621969+00:00 app[web.1]: 	at org.springframework.context.support.AbstractApplicati
-onContext.refresh(AbstractApplicationContext.java:482)
+2014-06-23T21:41:20.621969+00:00 app[web.1]: 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
 2014-06-23T21:41:20.622002+00:00 app[web.1]: 	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
 2014-06-23T21:41:20.622021+00:00 app[web.1]: Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
 2014-06-23T21:41:20.622063+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
@@ -749,3 +731,781 @@ onContext.refresh(AbstractApplicationContext.java:482)
 2014-06-23T21:42:10.077704+00:00 app[web.1]: Jun 23, 2014 9:42:10 PM org.apache.catalina.core.StandardContext startInternal
 2014-06-23T21:42:12.285351+00:00 heroku[web.1]: State changed from up to crashed
 2014-06-23T21:42:12.266511+00:00 heroku[web.1]: Process exited with status 0
+2014-06-23T21:49:34+00:00 heroku[slug-compiler]: Slug compilation started
+2014-06-23T21:50:19+00:00 heroku[slug-compiler]: Slug compilation finished
+2014-06-23T21:50:19.546007+00:00 heroku[web.1]: State changed from crashed to starting
+2014-06-23T21:50:19.403998+00:00 heroku[api]: Deploy 614b112 by senechow@gmail.com
+2014-06-23T21:50:19.404065+00:00 heroku[api]: Release v9 created by senechow@gmail.com
+2014-06-23T21:50:25.975218+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS:  -Djava.rmi.server.useCodebaseOnly=true -Djava.rmi.server.useCodebaseOnly=true
+2014-06-23T21:50:26.312741+00:00 app[web.1]: Adding Context  for target/PhotoLibrary.war
+2014-06-23T21:50:26.787834+00:00 app[web.1]: Jun 23, 2014 9:50:26 PM org.apache.coyote.AbstractProtocol init
+2014-06-23T21:50:26.813260+00:00 app[web.1]: INFO: Using a shared selector for servlet write/read
+2014-06-23T21:50:26.813256+00:00 app[web.1]: Jun 23, 2014 9:50:26 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+2014-06-23T21:50:26.787839+00:00 app[web.1]: INFO: Initializing ProtocolHandler ["http-nio-40518"]
+2014-06-23T21:50:26.815344+00:00 app[web.1]: INFO: Starting service Tomcat
+2014-06-23T21:50:26.815341+00:00 app[web.1]: Jun 23, 2014 9:50:26 PM org.apache.catalina.core.StandardService startInternal
+2014-06-23T21:50:26.815492+00:00 app[web.1]: Jun 23, 2014 9:50:26 PM org.apache.catalina.core.StandardEngine startInternal
+2014-06-23T21:50:26.815495+00:00 app[web.1]: INFO: Starting Servlet Engine: Apache Tomcat/7.0.40
+2014-06-23T21:50:27.316519+00:00 app[web.1]: Jun 23, 2014 9:50:27 PM org.apache.catalina.startup.ContextConfig getDefaultWebXmlFragment
+2014-06-23T21:50:27.316523+00:00 app[web.1]: INFO: No global web.xml found
+2014-06-23T21:50:27.325095+00:00 heroku[web.1]: State changed from starting to up
+2014-06-23T21:50:25.174710+00:00 heroku[web.1]: Starting process with command `java -Xmx384m -Xss512k -XX:+UseCompressedOops -jar target/dependency/webapp-runner.jar --port 40518 target/*.war`
+2014-06-23T21:50:35.790210+00:00 app[web.1]: Jun 23, 2014 9:50:35 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:50:35.795887+00:00 app[web.1]: Jun 23, 2014 9:50:35 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:50:35.790216+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/core_rt is already defined
+2014-06-23T21:50:35.811126+00:00 app[web.1]: Jun 23, 2014 9:50:35 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:50:35.811130+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/core is already defined
+2014-06-23T21:50:35.795892+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/core is already defined
+2014-06-23T21:50:35.826528+00:00 app[web.1]: Jun 23, 2014 9:50:35 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:50:35.826535+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/fmt_rt is already defined
+2014-06-23T21:50:35.842260+00:00 app[web.1]: Jun 23, 2014 9:50:35 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:50:35.842265+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/fmt is already defined
+2014-06-23T21:50:35.846083+00:00 app[web.1]: Jun 23, 2014 9:50:35 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:50:35.846086+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/fmt is already defined
+2014-06-23T21:50:35.855316+00:00 app[web.1]: Jun 23, 2014 9:50:35 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:50:35.855320+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/functions is already defined
+2014-06-23T21:50:35.856640+00:00 app[web.1]: Jun 23, 2014 9:50:35 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:50:35.856643+00:00 app[web.1]: INFO: TLD skipped. URI: http://jakarta.apache.org/taglibs/standard/permittedTaglibs is already defined
+2014-06-23T21:50:35.857253+00:00 app[web.1]: Jun 23, 2014 9:50:35 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:50:35.857258+00:00 app[web.1]: INFO: TLD skipped. URI: http://jakarta.apache.org/taglibs/standard/scriptfree is already defined
+2014-06-23T21:50:35.859666+00:00 app[web.1]: Jun 23, 2014 9:50:35 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:50:35.859670+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/sql_rt is already defined
+2014-06-23T21:50:35.872251+00:00 app[web.1]: Jun 23, 2014 9:50:35 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:50:35.874103+00:00 app[web.1]: Jun 23, 2014 9:50:35 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:50:35.872258+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/sql is already defined
+2014-06-23T21:50:35.874106+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/sql is already defined
+2014-06-23T21:50:35.876780+00:00 app[web.1]: Jun 23, 2014 9:50:35 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:50:35.890561+00:00 app[web.1]: Jun 23, 2014 9:50:35 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:50:35.892876+00:00 app[web.1]: Jun 23, 2014 9:50:35 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:50:35.876783+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/xml_rt is already defined
+2014-06-23T21:50:35.892879+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/xml is already defined
+2014-06-23T21:50:35.890566+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/xml is already defined
+2014-06-23T21:50:35.986747+00:00 app[web.1]: Jun 23, 2014 9:50:35 PM org.apache.catalina.core.ApplicationContext log
+2014-06-23T21:50:35.986775+00:00 app[web.1]: INFO: No Spring WebApplicationInitializer types detected on classpath
+2014-06-23T21:50:36.089368+00:00 app[web.1]: INFO: Initializing Spring root WebApplicationContext
+2014-06-23T21:50:36.089363+00:00 app[web.1]: Jun 23, 2014 9:50:36 PM org.apache.catalina.core.ApplicationContext log
+2014-06-23T21:50:36.258481+00:00 app[web.1]: 21:50:36,258  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+2014-06-23T21:50:36.092231+00:00 app[web.1]: 21:50:36,090  INFO ContextLoader:285 - Root WebApplicationContext: initialization started
+2014-06-23T21:50:36.200773+00:00 app[web.1]: 21:50:36,200  INFO XmlWebApplicationContext:513 - Refreshing Root WebApplicationContext: startup date [Mon Jun 23 21:50:36 UTC 2014]; root of context hierarchy
+2014-06-23T21:50:36.666686+00:00 app[web.1]: 21:50:36,666  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from ServletContext resource [/WEB-INF/security-context.xml]
+2014-06-23T21:50:36.880872+00:00 app[web.1]: 21:50:36,880  INFO SpringSecurityCoreVersion:49 - You are running with Spring Security Core 3.2.4.RELEASE
+2014-06-23T21:50:36.881210+00:00 app[web.1]: 21:50:36,880  INFO SecurityNamespaceHandler:75 - Spring Security 'config' module version is 3.2.4.RELEASE
+2014-06-23T21:50:37.011373+00:00 app[web.1]: 21:50:37,010  INFO HttpSecurityBeanDefinitionParser:266 - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 700, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1100, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1500, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2000, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2100, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2200, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2300]
+2014-06-23T21:50:37.342582+00:00 app[web.1]: 21:50:37,342  INFO EncryptablePropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [server.properties]
+2014-06-23T21:50:37.854630+00:00 app[web.1]: 21:50:37,854  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2014-06-23T21:50:37.866234+00:00 app[web.1]: 21:50:37,865  INFO Environment:239 - HHH000206: hibernate.properties not found
+2014-06-23T21:50:38.081449+00:00 app[web.1]: 21:50:38,080  INFO LobCreatorBuilder:88 - HHH000422: Disabling contextual LOB creation as connection was null
+2014-06-23T21:50:38.041579+00:00 app[web.1]: 21:50:38,041  WARN JdbcServicesImpl:204 - HHH000342: Could not obtain connection to query metadata : Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:50:37.863757+00:00 app[web.1]: 21:50:37,863  INFO Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-06-23T21:50:37.868212+00:00 app[web.1]: 21:50:37,867  INFO Environment:346 - HHH000021: Bytecode provider name : javassist
+2014-06-23T21:50:38.053831+00:00 app[web.1]: 21:50:38,053  INFO Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2014-06-23T21:50:38.410933+00:00 app[web.1]: 21:50:38,409  INFO TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-06-23T21:50:38.479409+00:00 app[web.1]: 21:50:38,478  INFO Version:27 - HV000001: Hibernate Validator 5.1.1.Final
+2014-06-23T21:50:38.417647+00:00 app[web.1]: 21:50:38,417  INFO ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-06-23T21:50:39.059161+00:00 app[web.1]: 21:50:39,058  INFO SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2014-06-23T21:50:39.288736+00:00 app[web.1]: 21:50:39,288  INFO RequestMappingHandlerMapping:181 - Mapped "{[/logout],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.SessionController.logout(org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2014-06-23T21:50:39.289545+00:00 app[web.1]: 21:50:39,289  INFO RequestMappingHandlerMapping:181 - Mapped "{[/login-failed],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.SessionController.invalidLogin(org.springframework.ui.ModelMap)
+2014-06-23T21:50:39.291629+00:00 app[web.1]: 21:50:39,291  INFO RequestMappingHandlerMapping:181 - Mapped "{[/users/new/create],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.UserController.createUser(com.spring.photolib.webapp.domain.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2014-06-23T21:50:39.292338+00:00 app[web.1]: 21:50:39,292  INFO RequestMappingHandlerMapping:181 - Mapped "{[/users/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.UserController.viewUser(java.lang.Integer)
+2014-06-23T21:50:39.293117+00:00 app[web.1]: 21:50:39,292  INFO RequestMappingHandlerMapping:181 - Mapped "{[/users/{id}/confirmemail],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.UserController.showConfirmEmail(java.lang.Integer,org.springframework.ui.ModelMap)
+2014-06-23T21:50:39.295337+00:00 app[web.1]: 21:50:39,295  INFO RequestMappingHandlerMapping:181 - Mapped "{[ || / || /photo],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.PhotoController.listPhotos(org.springframework.ui.ModelMap,java.security.Principal)
+2014-06-23T21:50:39.296051+00:00 app[web.1]: 21:50:39,295  INFO RequestMappingHandlerMapping:181 - Mapped "{[/photo/new/create],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.PhotoController.createPhoto(com.spring.photolib.webapp.domain.Photo,org.springframework.validation.BindingResult,org.springframework.web.multipart.MultipartFile,java.security.Principal,org.springframework.ui.ModelMap)
+2014-06-23T21:50:39.296796+00:00 app[web.1]: 21:50:39,296  INFO RequestMappingHandlerMapping:181 - Mapped "{[/photo/{pid}],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.PhotoController.updatePhoto(com.spring.photolib.webapp.domain.Photo,org.springframework.validation.BindingResult,org.springframework.web.multipart.MultipartFile,java.lang.Integer,java.security.Principal,org.springframework.ui.ModelMap)
+2014-06-23T21:50:39.297524+00:00 app[web.1]: 21:50:39,297  INFO RequestMappingHandlerMapping:181 - Mapped "{[/photo/{pid}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.PhotoController.getPhotoById(java.lang.Integer,org.springframework.ui.ModelMap) throws java.io.IOException
+2014-06-23T21:50:39.062367+00:00 app[web.1]: java.lang.UnsupportedClassVersionError: org/postgresql/Driver : Unsupported major.minor version 51.0 (unable to load class org.postgresql.Driver)
+2014-06-23T21:50:39.062364+00:00 app[web.1]: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:50:39.062369+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2899)
+2014-06-23T21:50:39.062374+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1559)
+2014-06-23T21:50:39.062379+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1415)
+2014-06-23T21:50:39.062381+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1371)
+2014-06-23T21:50:39.062382+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+2014-06-23T21:50:39.062385+00:00 app[web.1]: 	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139)
+2014-06-23T21:50:39.062388+00:00 app[web.1]: 	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:124)
+2014-06-23T21:50:39.062387+00:00 app[web.1]: 	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcServicesImpl.java:279)
+2014-06-23T21:50:39.062390+00:00 app[web.1]: 	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:111)
+2014-06-23T21:50:39.062393+00:00 app[web.1]: 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:206)
+2014-06-23T21:50:39.062391+00:00 app[web.1]: 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:234)
+2014-06-23T21:50:39.062373+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1681)
+2014-06-23T21:50:39.062371+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1173)
+2014-06-23T21:50:39.062376+00:00 app[web.1]: 	at java.lang.Class.forName0(Native Method)
+2014-06-23T21:50:39.062396+00:00 app[web.1]: 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1843)
+2014-06-23T21:50:39.062422+00:00 app[web.1]: 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1928)
+2014-06-23T21:50:39.062423+00:00 app[web.1]: 	at
+ org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:343)
+2014-06-23T21:50:39.062378+00:00 app[web.1]: 	at java.lang.Class.forName(Class.java:188)
+2014-06-23T21:50:39.062427+00:00 app[web.1]: 	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:416)
+2014-06-23T21:50:39.062432+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+2014-06-23T21:50:39.062433+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:50:39.062395+00:00 app[web.1]: 	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1885)
+2014-06-23T21:50:39.062435+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:50:39.062446+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+2014-06-23T21:50:39.062447+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+2014-06-23T21:50:39.062457+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:50:39.062425+00:00 app[web.1]: 	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:431)
+2014-06-23T21:50:39.062441+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1014)
+2014-06-23T21:50:39.062449+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+2014-06-23T21:50:39.062467+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+2014-06-23T21:50:39.062428+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+2014-06-23T21:50:39.062454+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+2014-06-23T21:50:39.062460+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:50:39.062464+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1014)
+2014-06-23T21:50:39.062436+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:50:39.062438+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:50:39.062459+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:50:39.062489+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+2014-06-23T21:50:39.062497+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:50:39.062439+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:50:39.062442+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
+2014-06-23T21:50:39.062444+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+2014-06-23T21:50:39.062487+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+2014-06-23T21:50:39.062492+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+2014-06-23T21:50:39.062496+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:50:39.062430+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+2014-06-23T21:50:39.062461+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:50:39.062463+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:50:39.062500+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:50:39.062503+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1014)
+2014-06-23T21:50:39.062513+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+2014-06-23T21:50:39.062508+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+2014-06-23T21:50:39.062511+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+2014-06-23T21:50:39.062512+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+2014-06-23T21:50:39.062516+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:50:39.062466+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
+2014-06-23T21:50:39.062456+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+2014-06-23T21:50:39.062509+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+2014-06-23T21:50:39.066248+00:00 app[web.1]: 	at org.springfra21:50:39,063 ERROR SchemaExport:385 - HHH000231: Schema export unsuccessful
+2014-06-23T21:50:39.062499+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:50:39.062491+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+2014-06-23T21:50:39.066251+00:00 app[web.1]: org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:50:39.066255+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+2014-06-23T21:50:39.066259+00:00 app[web.1]: 	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+2014-06-23T21:50:39.066262+00:00 app[web.1]: 	at org.hibernate.tool.hbm2ddl.SchemaExport.execute(SchemaExport.java:367)
+2014-06-23T21:50:39.066260+00:00 app[web.1]: 	at org.hibernate.tool.hbm2ddl.DatabaseExporter.<init>(DatabaseExporter.java:52)
+2014-06-23T21:50:39.062505+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
+2014-06-23T21:50:39.062494+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+2014-06-23T21:50:39.062522+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:50:39.066253+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1429)
+2014-06-23T21:50:39.066265+00:00 app[web.1]: 	at org.hibernate.tool.hbm2ddl.SchemaExport.create(SchemaExport.java:293)
+2014-06-23T21:50:39.062506+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+2014-06-23T21:50:39.062502+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:50:39.066281+00:00 app[web.1]: 	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:343)
+2014-06-23T21:50:39.066284+00:00 app[web.1]: 	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:416)
+2014-06-23T21:50:39.066268+00:00 app[web.1]: 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1857)
+2014-06-23T21:50:39.062517+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:50:39.066293+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:50:39.062515+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:50:39.066263+00:00 app[web.1]: 	at org.hibernate.tool.hbm2ddl.SchemaExport.create(SchemaExport.java:304)
+2014-06-23T21:50:39.066279+00:00 app[web.1]: 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1928)
+2014-06-23T21:50:39.066295+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:50:39.066296+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:50:39.066305+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+2014-06-23T21:50:39.066291+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+2014-06-23T21:50:39.066254+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1371)
+2014-06-23T21:50:39.066257+00:00 app[web.1]: 	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139)
+2014-06-23T21:50:39.066287+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+2014-06-23T21:50:39.066282+00:00 app[web.1]: 	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:431)
+2014-06-23T21:50:39.066297+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:50:39.066306+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+2014-06-23T21:50:39.066301+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
+2014-06-23T21:50:39.066307+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+2014-06-23T21:50:39.066303+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+2014-06-23T21:50:39.066310+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+2014-06-23T21:50:39.066266+00:00 app[web.1]: 	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:517)
+2014-06-23T21:50:39.066300+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1014)
+2014-06-23T21:50:39.066309+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+2014-06-23T21:50:39.066333+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:50:39.066285+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+2014-06-23T21:50:39.066311+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:50:39.066313+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:50:39.066334+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:50:39.066337+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1014)
+2014-06-23T21:50:39.066338+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
+2014-06-23T21:50:39.066357+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
+2014-06-23T21:50:39.066352+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:50:39.066356+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1014)
+2014-06-23T21:50:39.066368+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:50:39.066340+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+2014-06-23T21:50:39.066367+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:50:39.066372+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:50:39.066344+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+2014-06-23T21:50:39.066363+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+2014-06-23T21:50:39.066353+00:00 app[web.1]: 	
+at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:50:39.066348+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:50:39.066299+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:50:39.066398+00:00 app[web.1]: 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2014-06-23T21:50:39.066383+00:00 app[web.1]: 	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+2014-06-23T21:50:39.066346+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+2014-06-23T21:50:39.066401+00:00 app[web.1]: 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+2014-06-23T21:50:39.066403+00:00 app[web.1]: 	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+2014-06-23T21:50:39.066347+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+2014-06-23T21:50:39.066361+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+2014-06-23T21:50:39.066416+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1559)
+2014-06-23T21:50:39.066384+00:00 app[web.1]: 	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+2014-06-23T21:50:39.066400+00:00 app[web.1]: 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+2014-06-23T21:50:39.066414+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1681)
+2014-06-23T21:50:39.066350+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:50:39.066406+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+2014-06-23T21:50:39.066408+00:00 app[web.1]: 	at java.lang.Thread.run(Thread.java:679)
+2014-06-23T21:50:39.289117+00:00 app[web.1]: 21:50:39,288  INFO RequestMappingHandlerMapping:181 - Mapped "{[/login],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.SessionController.userLogin(org.springframework.ui.ModelMap)
+2014-06-23T21:50:39.066418+00:00 app[web.1]: 	at java.lang.Class.forName0(Native Method)
+2014-06-23T21:50:39.066412+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2899)
+2014-06-23T21:50:39.066700+00:00 app[web.1]: 21:50:39,066  INFO SchemaExport:405 - HHH000230: Schema export complete
+2014-06-23T21:50:39.066419+00:00 app[web.1]: 	at java.lang.Class.forName(Class.java:188)
+2014-06-23T21:50:39.066354+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:50:39.291977+00:00 app[web.1]: 21:50:39,291  INFO RequestMappingHandlerMapping:181 - Mapped "{[/users/new],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.UserController.newUser(org.springframework.ui.ModelMap)
+2014-06-23T21:50:39.297146+00:00 app[web.1]: 21:50:39,296  INFO RequestMappingHandlerMapping:181 - Mapped "{[/photo/{pid}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.PhotoController.deletePhoto(java.lang.Integer,java.security.Principal,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2014-06-23T21:50:39.066358+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+2014-06-23T21:50:39.296431+00:00 app[web.1]: 21:50:39,296  INFO RequestMappingHandlerMapping:181 - Mapped "{[/photo/{pid}/edit],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.PhotoController.editPhoto(java.lang.Integer,java.security.Principal,org.springframework.ui.ModelMap)
+2014-06-23T21:50:39.066364+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+2014-06-23T21:50:39.066375+00:00 app[web.1]: 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+2014-06-23T21:50:39.295697+00:00 app[web.1]: 21:50:39,295  INFO RequestMappingHandlerMapping:181 - Mapped "{[/photo/new],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.PhotoController.newPhoto(org.springframework.ui.ModelMap)
+2014-06-23T21:50:39.066376+00:00 app[web.1]: 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+2014-06-23T21:50:39.066365+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+2014-06-23T21:50:39.066386+00:00 app[web.1]: 	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+2014-06-23T21:50:39.066387+00:00 app[web.1]: 	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+2014-06-23T21:50:39.066413+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1173)
+2014-06-23T21:50:39.066371+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:50:39.066404+00:00 app[web.1]: 	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+2014-06-23T21:50:39.289900+00:00 app[web.1]: 21:50:39,289  INFO RequestMappingHandlerMapping:181 - Mapped "{[/login-successful],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.SessionController.successfulLogin()
+2014-06-23T21:50:39.066360+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+2014-06-23T21:50:39.066336+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:50:39.293456+00:00 app[web.1]: 21:50:39,293  INFO RequestMappingHandlerMapping:181 - Mapped "{[/users/{id}/confirmemail/confirm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.UserController.confirmEmail(com.spring.photolib.webapp.domain.User,org.springframework.validation.BindingResult,java.lang.Integer,org.springframework.ui.ModelMap,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2014-06-23T21:50:39.297835+00:00 app[web.1]: 21:50:39,297  INFO RequestMappingHandlerMapping:181 - Mapped "{[/photo/{pid}/image],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.spring.photolib.webapp.controller.PhotoController.getPhotoImage(java.lang.Integer,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2014-06-23T21:50:39.066342+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+2014-06-23T21:50:39.066343+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+2014-06-23T21:50:39.066369+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:50:39.066381+00:00 app[web.1]: 	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+2014-06-23T21:50:39.066373+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+2014-06-23T21:50:39.066407+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+2014-06-23T21:50:39.066410+00:00 app[web.1]: Caused by: java.lang.UnsupportedClassVersionError: org/postgresql/Driver : Unsupported major.minor version 51.0 (unable to load class org.postgresql.Driver)
+2014-06-23T21:50:39.066422+00:00 app[web.1]: 	... 77 more
+2014-06-23T21:50:39.066420+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1415)
+2014-06-23T21:50:39.292692+00:00 app[web.1]: 21:50:39,292  INFO RequestMappingHandlerMapping:181 - Mapped "{[/users/{id}/photos],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.UserController.showUsersPhotos(java.lang.Integer,org.springframework.ui.ModelMap)
+2014-06-23T21:50:39.676469+00:00 app[web.1]: 	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+2014-06-23T21:50:39.576515+00:00 app[web.1]: 21:50:39,576  INFO SimpleUrlHandlerMapping:315 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2014-06-23T21:50:39.676478+00:00 app[web.1]: 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2014-06-23T21:50:39.676487+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+2014-06-23T21:50:39.676495+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+2014-06-23T21:50:39.676519+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:45)
+2014-06-23T21:50:39.676526+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+2014-06-23T21:50:39.676535+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1173)
+2014-06-23T21:50:39.676471+00:00 app[web.1]: 	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+2014-06-23T21:50:39.676479+00:00 app[web.1]: 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+2014-06-23T21:50:39.676489+00:00 app[web.1]: 	at java.lang.Thread.run(Thread.java:679)
+2014-06-23T21:50:39.676497+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+2014-06-23T21:50:39.676520+00:00 app[web.1]: 	... 25 more
+2014-06-23T21:50:39.676528+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+2014-06-23T21:50:39.676537+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1681)
+2014-06-23T21:50:39.676543+00:00 app[web.1]: 	... 30 more
+2014-06-23T21:50:39.676484+00:00 app[web.1]: 	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+2014-06-23T21:50:39.676534+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2899)
+2014-06-23T21:50:39.677409+00:00 app[web.1]: Jun 23, 2014 9:50:39 PM org.apache.catalina.core.StandardContext startInternal
+2014-06-23T21:50:39.676474+00:00 app[web.1]: 	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+2014-06-23T21:50:39.676482+00:00 app[web.1]: 	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+2014-06-23T21:50:39.676492+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:56)
+2014-06-23T21:50:39.676509+00:00 app[web.1]: Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:50:39.676523+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1429)
+2014-06-23T21:50:39.676530+00:00 app[web.1]: 	... 26 more
+2014-06-23T21:50:39.676539+00:00 app[web.1]: 	at java.lang.Class.forName0(Native Method)
+2014-06-23T21:50:39.677302+00:00 app[web.1]: SEVERE: Exception sending context initialized event to listener instance of class org.springframework.web.context.ContextLoaderListener
+2014-06-23T21:50:39.676476+00:00 app[web.1]: 	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+2014-06-23T21:50:39.676485+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+2014-06-23T21:50:39.676494+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.init.DataSourceInitializer.afterPropertiesSet(DataSourceInitializer.java:84)
+2014-06-23T21:50:39.676518+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+2014-06-23T21:50:39.676473+00:00 app[web.1]: 	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+2014-06-23T21:50:39.676481+00:00 app[web.1]: 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+2014-06-23T21:50:39.676491+00:00 app[web.1]: Caused by: org.springframework.dao.DataAccessResourceFailureException: Failed to execute database script; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:50:39.676498+00:00 app[web.1]: 	... 22 more
+2014-06-23T21:50:39.676522+00:00 app[web.1]: Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:50:39.683918+00:00 app[web.1]: Jun 23, 2014 9:50:39 PM org.apache.catalina.core.StandardContext startInternal
+2014-06-23T21:50:39.676542+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1415)
+2014-06-23T21:50:39.677305+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+2014-06-23T21:50:39.677316+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+2014-06-23T21:50:39.677306+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+2014-06-23T21:50:39.677317+00:00 app[web.1]: 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+2014-06-23T21:50:39.677328+00:00 app[web.1]: 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+2014-06-23T21:50:39.677334+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+2014-06-23T21:50:39.677340+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:56)
+2014-06-23T21:50:39.677352+00:00 app[web.1]: Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:50:39.677356+00:00 app[web.1]: 	... 25 more
+2014-06-23T21:50:39.677362+00:00 app[web.1]: 	at org.apache.commons.d
+bcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+2014-06-23T21:50:39.677385+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1681)
+2014-06-23T21:50:39.685342+00:00 app[web.1]: SEVERE: Context [] failed in [org.apache.catalina.core.StandardContext] lifecycle. Allowing Tomcat to shutdown.
+2014-06-23T21:50:39.677309+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:50:39.677314+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:50:39.677313+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:50:39.683923+00:00 app[web.1]: SEVERE: Context [] startup failed due to previous errors
+2014-06-23T21:50:39.677411+00:00 app[web.1]: SEVERE: Error listenerStart
+2014-06-23T21:50:39.677390+00:00 app[web.1]: 	at java.lang.Class.forName(Class.java:188)
+2014-06-23T21:50:39.677321+00:00 app[web.1]: 	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+2014-06-23T21:50:39.677323+00:00 app[web.1]: 	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+2014-06-23T21:50:39.676525+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1371)
+2014-06-23T21:50:39.676529+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+2014-06-23T21:50:39.676532+00:00 app[web.1]: Caused by: java.lang.UnsupportedClassVersionError: org/postgresql/Driver : Unsupported major.minor version 51.0 (unable to load class org.postgresql.Driver)
+2014-06-23T21:50:39.676538+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1559)
+2014-06-23T21:50:39.677299+00:00 app[web.1]: Jun 23, 2014 9:50:39 PM org.apache.catalina.core.StandardContext listenerStart
+2014-06-23T21:50:39.677308+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:50:39.677333+00:00 app[web.1]: 	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+2014-06-23T21:50:39.677339+00:00 app[web.1]: Caused by: org.springframework.dao.DataAccessResourceFailureException: Failed to execute database script; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:50:39.677324+00:00 app[web.1]: 	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+2014-06-23T21:50:39.677326+00:00 app[web.1]: 	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+2014-06-23T21:50:39.676541+00:00 app[web.1]: 	at java.lang.Class.forName(Class.java:188)
+2014-06-23T21:50:39.677304+00:00 app[web.1]: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.jdbc.datasource.init.DataSourceInitializer#0': Invocation of init method failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Failed to execute database script; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:50:39.677311+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:50:39.677320+00:00 app[web.1]: 	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+2014-06-23T21:50:39.677331+00:00 app[web.1]: 	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+2014-06-23T21:50:39.677318+00:00 app[web.1]: 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+2014-06-23T21:50:39.677330+00:00 app[web.1]: 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+2014-06-23T21:50:39.677335+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+2014-06-23T21:50:39.677341+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.init.DataSourceInitializer.afterPropertiesSet(DataSourceInitializer.java:84)
+2014-06-23T21:50:39.677354+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+2014-06-23T21:50:39.677360+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1371)
+2014-06-23T21:50:39.677367+00:00 app[web.1]: Caused by: java.lang.UnsupportedClassVersionError: org/postgresql/Driver : Unsupported major.minor version 51.0 (unable to load class org.postgresql.Driver)
+2014-06-23T21:50:39.677370+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1173)
+2014-06-23T21:50:39.677393+00:00 app[web.1]: 	... 30 more
+2014-06-23T21:50:39.677344+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+2014-06-23T21:50:39.677327+00:00 app[web.1]: 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2014-06-23T21:50:39.677359+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1429)
+2014-06-23T21:50:39.677346+00:00 app[web.1]: 	... 22 more
+2014-06-23T21:50:39.677363+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+2014-06-23T21:50:39.677366+00:00 app[web.1]: 	... 26 more
+2014-06-23T21:50:39.677369+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2899)
+2014-06-23T21:50:39.677391+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1415)
+2014-06-23T21:50:39.677387+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1559)
+2014-06-23T21:50:39.677337+00:00 app[web.1]: 	at java.lang.Thread.run(Thread.java:679)
+2014-06-23T21:50:39.677343+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+2014-06-23T21:50:39.677355+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:45)
+2014-06-23T21:50:39.677358+00:00 app[web.1]: Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:50:39.677365+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+2014-06-23T21:50:39.677389+00:00 app[web.1]: 	at java.lang.Class.forName0(Native Method)
+2014-06-23T21:50:39.676389+00:00 app[web.1]: 21:50:39,659 ERROR ContextLoader:331 - Context initialization failed
+2014-06-23T21:50:39.676397+00:00 app[web.1]: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.jdbc.datasource.init.DataSourceInitializer#0': Invocation of init method failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Failed to execute database script; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:50:39.676399+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+2014-06-23T21:50:39.676401+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+2014-06-23T21:50:39.676406+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:50:39.676402+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:50:39.676404+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:50:39.676407+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:50:39.676409+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:50:39.676415+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+2014-06-23T21:50:39.676416+00:00 app[web.1]: 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+2014-06-23T21:50:39.676418+00:00 app[web.1]: 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+2014-06-23T21:50:39.686080+00:00 app[web.1]: Jun 23, 2014 9:50:39 PM org.apache.catalina.core.ApplicationContext log
+2014-06-23T21:50:39.707678+00:00 app[web.1]: Jun 23, 2014 9:50:39 PM org.apache.coyote.AbstractProtocol start
+2014-06-23T21:50:39.686083+00:00 app[web.1]: INFO: Closing Spring root WebApplicationContext
+2014-06-23T21:50:39.707684+00:00 app[web.1]: INFO: Starting ProtocolHandler ["http-nio-40518"]
+2014-06-23T21:50:41.408682+00:00 heroku[web.1]: State changed from up to crashed
+2014-06-23T21:50:41.390448+00:00 heroku[web.1]: Process exited with status 0
+2014-06-23T21:52:42.783334+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=photolib.herokuapp.com request_id=f0039ace-d4f9-4322-b7b9-4d646047bdf1 fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
+2014-06-23T21:54:06+00:00 heroku[slug-compiler]: Slug compilation started
+2014-06-23T21:54:29.225450+00:00 heroku[web.1]: State changed from crashed to starting
+2014-06-23T21:54:30+00:00 heroku[slug-compiler]: Slug compilation finished
+2014-06-23T21:54:30.851473+00:00 heroku[api]: Deploy 7f5a888 by senechow@gmail.com
+2014-06-23T21:54:30.851550+00:00 heroku[api]: Release v10 created by senechow@gmail.com
+2014-06-23T21:54:35.806162+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS:  -Djava.rmi.server.useCodebaseOnly=true -Djava.rmi.server.useCodebaseOnly=true
+2014-06-23T21:54:36.199193+00:00 app[web.1]: Adding Context  for target/PhotoLibrary.war
+2014-06-23T21:54:36.713137+00:00 app[web.1]: Jun 23, 2014 9:54:36 PM org.apache.coyote.AbstractProtocol init
+2014-06-23T21:54:36.713144+00:00 app[web.1]: INFO: Initializing ProtocolHandler ["http-nio-54581"]
+2014-06-23T21:54:36.740448+00:00 app[web.1]: Jun 23, 2014 9:54:36 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+2014-06-23T21:54:36.740456+00:00 app[web.1]: INFO: Using a shared selector for servlet write/read
+2014-06-23T21:54:36.742765+00:00 app[web.1]: Jun 23, 2014 9:54:36 PM org.apache.catalina.core.StandardService startInternal
+2014-06-23T21:54:36.742768+00:00 app[web.1]: INFO: Starting service Tomcat
+2014-06-23T21:54:36.742900+00:00 app[web.1]: Jun 23, 2014 9:54:36 PM org.apache.catalina.core.StandardEngine startInternal
+2014-06-23T21:54:36.742902+00:00 app[web.1]: INFO: Starting Servlet Engine: Apache Tomcat/7.0.40
+2014-06-23T21:54:36.780066+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS:  -Djava.rmi.server.useCodebaseOnly=true -Djava.rmi.server.useCodebaseOnly=true
+2014-06-23T21:54:37.036115+00:00 app[web.1]: Adding Context  for target/PhotoLibrary.war
+2014-06-23T21:54:37.424808+00:00 app[web.1]: Jun 23, 2014 9:54:37 PM org.apache.coyote.AbstractProtocol init
+2014-06-23T21:54:37.424814+00:00 app[web.1]: INFO: Initializing ProtocolHandler ["http-nio-18380"]
+2014-06-23T21:54:37.448596+00:00 app[web.1]: Jun 23, 2014 9:54:37 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+2014-06-23T21:54:37.448609+00:00 app[web.1]: INFO: Using a shared selector for servlet write/read
+2014-06-23T21:54:37.450551+00:00 app[web.1]: Jun 23, 2014 9:54:37 PM org.apache.catalina.core.StandardService startInternal
+2014-06-23T21:54:37.450554+00:00 app[web.1]: INFO: Starting service Tomcat
+2014-06-23T21:54:37.450691+00:00 app[web.1]: Jun 23, 2014 9:54:37 PM org.apache.catalina.core.StandardEngine startInternal
+2014-06-23T21:54:37.450693+00:00 app[web.1]: INFO: Starting Servlet Engine: Apache Tomcat/7.0.40
+2014-06-23T21:54:37.493053+00:00 app[web.1]: Jun 23, 2014 9:54:37 PM org.apache.catalina.startup.ContextConfig getDefaultWebXmlFragment
+2014-06-23T21:54:37.493061+00:00 app[web.1]: INFO: No global web.xml found
+2014-06-23T21:54:37.917875+00:00 app[web.1]: Jun 23, 2014 9:54:37 PM org.apache.catalina.startup.ContextConfig getDefaultWebXmlFragment
+2014-06-23T21:54:37.917880+00:00 app[web.1]: INFO: No global web.xml found
+2014-06-23T21:54:37.785470+00:00 heroku[web.1]: State changed from starting to up
+2014-06-23T21:54:36.086275+00:00 heroku[web.1]: Starting process with command `java -Xmx384m -Xss512k -XX:+UseCompressedOops -jar target/dependency/webapp-runner.jar --port 18380 target/*.war`
+2014-06-23T21:54:39.749608+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2014-06-23T21:54:34.900652+00:00 heroku[web.1]: Starting process with command `java -Xmx384m -Xss512k -XX:+UseCompressedOops -jar target/dependency/webapp-runner.jar --port 54581 target/*.war`
+2014-06-23T21:54:45.146178+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/core_rt is already defined
+2014-06-23T21:54:45.146172+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:54:45.154437+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:54:45.167073+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:54:45.170678+00:00 app[web.1]: INFO: TLD skipped. URI: http://jakarta.apache.org/taglibs/standard/permittedTaglibs is already defined
+2014-06-23T21:54:45.151164+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:54:45.154440+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/core is already defined
+2014-06-23T21:54:45.151168+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/core is already defined
+2014-06-23T21:54:45.163369+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:54:45.173593+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:54:45.167076+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/fmt is already defined
+2014-06-23T21:54:45.188520+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:54:45.188523+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/xml is already defined
+2014-06-23T21:54:45.249931+00:00 app[web.1]: INFO: No Spring WebApplicationInitializer types detected on classpath
+2014-06-23T21:54:45.171274+00:00 app[web.1]: INFO: TLD skipped. URI: http://jakarta.apache.org/taglibs/standard/scriptfree is already defined
+2014-06-23T21:54:45.163374+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/fmt is already defined
+2014-06-23T21:54:45.158087+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/fmt_rt is already defined
+2014-06-23T21:54:45.177179+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/sql is already defined
+2014-06-23T21:54:45.249924+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.core.ApplicationContext l
+og
+2014-06-23T21:54:45.169364+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:54:45.169367+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/functions is already defined
+2014-06-23T21:54:45.158082+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:54:45.173596+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/sql_rt is already defined
+2014-06-23T21:54:45.170676+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:54:45.182021+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:54:45.179121+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:54:45.179124+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/sql is already defined
+2014-06-23T21:54:45.324554+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.core.ApplicationContext log
+2014-06-23T21:54:45.327056+00:00 app[web.1]: 21:54:45,325  INFO ContextLoader:285 - Root WebApplicationContext: initialization started
+2014-06-23T21:54:45.171272+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:54:45.186109+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/xml is already defined
+2014-06-23T21:54:45.177176+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:54:45.182024+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/xml_rt is already defined
+2014-06-23T21:54:45.186105+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.startup.TaglibUriRule body
+2014-06-23T21:54:45.324559+00:00 app[web.1]: INFO: Initializing Spring root WebApplicationContext
+2014-06-23T21:54:45.427089+00:00 app[web.1]: 21:54:45,426  INFO XmlWebApplicationContext:513 - Refreshing Root WebApplicationContext: startup date [Mon Jun 23 21:54:45 UTC 2014]; root of context hierarchy
+2014-06-23T21:54:45.476842+00:00 app[web.1]: 21:54:45,476  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+2014-06-23T21:54:45.800548+00:00 app[web.1]: 21:54:45,800  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from ServletContext resource [/WEB-INF/security-context.xml]
+2014-06-23T21:54:45.892061+00:00 app[web.1]: 21:54:45,891  INFO SecurityNamespaceHandler:75 - Spring Security 'config' module version is 3.2.4.RELEASE
+2014-06-23T21:54:45.891718+00:00 app[web.1]: 21:54:45,891  INFO SpringSecurityCoreVersion:49 - You are running with Spring Security Core 3.2.4.RELEASE
+2014-06-23T21:54:45.966250+00:00 app[web.1]: 21:54:45,965  INFO HttpSecurityBeanDefinitionParser:266 - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 700, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1100, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1500, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2000, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2100, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2200, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2300]
+2014-06-23T21:54:46.290422+00:00 app[web.1]: 21:54:46,290  INFO EncryptablePropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [server.properties]
+2014-06-23T21:54:46.674083+00:00 app[web.1]: 21:54:46,673  INFO Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2014-06-23T21:54:46.678474+00:00 app[web.1]: 21:54:46,678  INFO Environment:346 - HHH000021: Bytecode provider name : javassist
+2014-06-23T21:54:46.861202+00:00 app[web.1]: 21:54:46,860  INFO Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2014-06-23T21:54:46.676542+00:00 app[web.1]: 21:54:46,676  INFO Environment:239 - HHH000206: hibernate.properties not found
+2014-06-23T21:54:46.665087+00:00 app[web.1]: 21:54:46,664  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2014-06-23T21:54:46.878323+00:00 app[web.1]: 21:54:46,877  INFO LobCreatorBuilder:88 - HHH000422: Disabling contextual LOB creation as connection was null
+2014-06-23T21:54:46.847667+00:00 app[web.1]: 21:54:46,847  WARN JdbcServicesImpl:204 - HHH000342: Could not obtain connection to query metadata : Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:54:47.160012+00:00 app[web.1]: 21:54:47,159  INFO ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2014-06-23T21:54:47.152471+00:00 app[web.1]: 21:54:47,150  INFO TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2014-06-23T21:54:47.229061+00:00 app[web.1]: 21:54:47,228  INFO Version:27 - HV000001: Hibernate Validator 5.1.1.Final
+2014-06-23T21:54:47.773324+00:00 app[web.1]: 21:54:47,772  INFO SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2014-06-23T21:54:47.979677+00:00 app[web.1]: 21:54:47,979  INFO RequestMappingHandlerMapping:181 - Mapped "{[ || / || /photo],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.PhotoController.listPhotos(org.springframework.ui.ModelMap,java.security.Principal)
+2014-06-23T21:54:47.980459+00:00 app[web.1]: 21:54:47,980  INFO RequestMappingHandlerMapping:181 - Mapped "{[/photo/new/create],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.PhotoController.createPhoto(com.spring.photolib.webapp.domain.Photo,org.springframework.validation.BindingResult,org.springframework.web.multipart.MultipartFile,java.security.Principal,org.springframework.ui.ModelMap)
+2014-06-23T21:54:47.981156+00:00 app[web.1]: 21:54:47,980  INFO RequestMappingHandlerMapping:181 - Mapped "{[/photo/{pid}],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.PhotoController.updatePhoto(com.spring.photolib.webapp.domain.Photo,org.springframework.validation.BindingResult,org.springframework.web.multipart.MultipartFile,java.lang.Integer,java.security.Principal,org.springframework.ui.ModelMap)
+2014-06-23T21:54:47.981879+00:00 app[web.1]: 21:54:47,981  INFO RequestMappingHandlerMapping:181 - Mapped "{[/photo/{pid}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.PhotoController.getPhotoById(java.lang.Integer,org.springframework.ui.ModelMap) throws java.io.IOException
+2014-06-23T21:54:47.984180+00:00 app[web.1]: 21:54:47,984  INFO RequestMappingHandlerMapping:181 - Mapped "{[/login-failed],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.SessionController.invalidLogin(org.springframework.ui.ModelMap)
+2014-06-23T21:54:47.983514+00:00 app[web.1]: 21:54:47,983  INFO RequestMappingHandlerMapping:181 - Mapped "{[/logout],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.SessionController.logout(org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2014-06-23T21:54:47.986185+00:00 app[web.1]: 21:54:47,985  INFO RequestMappingHandlerMapping:181 - Mapped "{[/users/new/create],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.UserController.createUser(com.spring.photolib.webapp.domain.User,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,javax.servlet.http.HttpServletRequest)
+2014-06-23T21:54:47.986865+00:00 app[web.1]: 21:54:47,986  INFO RequestMappingHandlerMapping:181 - Mapped "{[/users/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.UserController.viewUser(java.lang.Integer)
+2014-06-23T21:54:47.987568+00:00 app[web.1]: 21:54:47,987  INFO RequestMappingHandlerMapping:181 - Mapped "{[/users/{id}/confirmemail],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.UserController.showConfirmEmail(java.lang.Integer,org.springframework.ui.ModelMap)
+2014-06-23T21:54:47.776349+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1173)
+2014-06-23T21:54:47.776342+00:00 app[web.1]: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:54:47.776345+00:00 app[web.1]: java.lang.UnsupportedClassVersionError: org/postgresql/Driver : Unsupported major.minor version 51.0 (unable to load class org.postgresql.Driver)
+2014-06-23T21:54:47.776347+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2899)
+2014-06-23T21:54:47.776350+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1681)
+2014-06-23T21:54:47.776355+00:00 app[web.1]: 	at java.lang.Class.forName(Class.java:188)
+2014-06-23T21:54:47.776352+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1559)
+2014-06-23T21:54:47.776360+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+2014-06-23T21:54:47.776366+00:00 app[web.1]: 	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:111)
+2014-06-23T21:54:47.776363+00:00 app[web.1]: 	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcServicesImpl.java:279)
+2014-06-23T21:54:47.776354+00:00 app[web.1]: 	at java.lang.Class.forName0(Native Method)
+2014-06-23T21:54:47.776365+00:00 app[web.1]: 	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:124)
+2014-06-23T21:54:47.776358+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1371)
+2014-06-23T21:54:47.776403+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+2014-06-23T21:54:47.776369+00:00 app[web.1]: 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:206)
+2014-06-23T21:54:47.776396+00:00 app[web.1]: 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1928)
+2014-06-23T21:54:47.776368+00:00 app[web.1]: 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:234)
+2014-06-23T21:54:47.776357+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1415)
+2014-06-23T21:54:47.776362+00:00 app[web.1]: 	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139)
+2014-06-23T21:54:47.776408+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:54:47.776370+00:00 app[web.1]: 	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1885)
+2014-06-23T21:54:47.776406+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+2014-06-23T21:54:47.776405+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+2014-06-23T21:54:47.776413+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:54:47.776419+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+2014-06-23T21:54:47.776414+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:54:47.776399+00:00 app[web.1]: 	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:343)
+2014-06-23T21:54:47.776400+00:00 app[web.1]: 	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:431)
+2014-06-23T21:54:47.776441+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1014)
+2014-06-23T21:54:47.776410+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:54:47.776425+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+2014-06-23T21:54:47.776411+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:54:47.776423+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+2014-06-23T21:54:47.776372+00:00 app[web.1]: 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1843)
+2014-06-23T21:54:47.776439+00:00 app[web.1]: 	at org.springframework
+.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:54:47.776430+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+2014-06-23T21:54:47.776465+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+2014-06-23T21:54:47.776472+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:54:47.776402+00:00 app[web.1]: 	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:416)
+2014-06-23T21:54:47.776418+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
+2014-06-23T21:54:47.776469+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:54:47.776457+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+2014-06-23T21:54:47.776432+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+2014-06-23T21:54:47.776442+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
+2014-06-23T21:54:47.776468+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:54:47.776435+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:54:47.776478+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+2014-06-23T21:54:47.776416+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1014)
+2014-06-23T21:54:47.776421+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+2014-06-23T21:54:47.776481+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+2014-06-23T21:54:47.776492+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:54:47.776483+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+2014-06-23T21:54:47.776436+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:54:47.776466+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:54:47.776479+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+2014-06-23T21:54:47.776459+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+2014-06-23T21:54:47.776475+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
+2014-06-23T21:54:47.776433+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:54:47.776484+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:54:47.780133+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1371)
+2014-06-23T21:54:47.776486+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:54:47.780130+00:00 app[web.1]: org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:54:47.776471+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:54:47.780137+00:00 app[web.1]: 	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+2014-06-23T21:54:47.776482+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+2014-06-23T21:54:47.776438+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:54:47.780145+00:00 app[web.1]: 	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:517)
+2014-06-23T21:54:47.780143+00:00 app[web.1]: 	at org.hibernate.tool.hbm2ddl.SchemaExport.create(SchemaExport.java:293)
+2014-06-23T21:54:47.780153+00:00 app[web.1]: 	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:416)
+2014-06-23T21:54:47.776456+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+2014-06-23T21:54:47.780127+00:00 app[web.1]: 	at org.springfra21:54:47,777 ERROR SchemaExport:385 - HHH000231: Schema export unsuccessful
+2014-06-23T21:54:47.780148+00:00 app[web.1]: 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1928)
+2014-06-23T21:54:47.780151+00:00 app[web.1]: 	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:431)
+2014-06-23T21:54:47.780135+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+2014-06-23T21:54:47.776443+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+2014-06-23T21:54:47.780160+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:54:47.776476+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+2014-06-23T21:54:47.780139+00:00 app[web.1]: 	at org.hibernate.tool.hbm2ddl.DatabaseExporter.<init>(DatabaseExporter.java:52)
+2014-06-23T21:54:47.780149+00:00 app[web.1]: 	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:343)
+2014-06-23T21:54:47.780156+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+2014-06-23T21:54:47.780146+00:00 app[web.1]: 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1857)
+2014-06-23T21:54:47.780165+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:54:47.776464+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+2014-06-23T21:54:47.780166+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1014)
+2014-06-23T21:54:47.780167+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
+2014-06-23T21:54:47.780132+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1429)
+2014-06-23T21:54:47.780140+00:00 app[web.1]: 	at org.hibernate.tool.hbm2ddl.SchemaExport.execute(SchemaExport.java:367)
+2014-06-23T21:54:47.780178+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:54:47.776474+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1014)
+2014-06-23T21:54:47.780173+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+2014-06-23T21:54:47.780142+00:00 app[web.1]: 	at org.hibernate.tool.hbm2ddl.SchemaExport.create(SchemaExport.java:304)
+2014-06-23T21:54:47.780157+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+2014-06-23T21:54:47.780172+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+2014-06-23T21:54:47.780204+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:54:47.776487+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:54:47.780177+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:54:47.780155+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+2014-06-23T21:54:47.780163+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:54:47.780203+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:54:47.780162+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:54:47.780214+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+2014-06-23T21:54:47.780205+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1014)
+2014-06-23T21:54:47.780216+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:54:47.780136+00:00 app[web.1]: 	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139)
+2014-06-23T21:54:47.780201+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:54:47.780169+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+2014-06-23T21:54:47.780212+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+2014-06-23T21:54:47.780226+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1014)
+2014-06-23T21:54:47.780225+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:54:47.780231+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+2014-06-23T21:54:47.780218+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:54:47.780159+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:54:47.780219+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:54:47.780241+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:54:47.780240+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:54:47.780236+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+2014-06-23T21:54:47.780237+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+2014-06-23T21:54:47.780234+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+2014-06-23T21:54:47.780232+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+2014-06-23T21:54:47.780221+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:54:47.780249+00:00 app[web.1]: 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+2014-06-23T21:54:47.780376+00:00 app[web.1]: 	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+2014-06-23T21:54:47.780254+00:00 app[web.1]: 	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+2014-06-23T21:54:47.780171+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+2014-06-23T21:54:47.780390+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+2014-06-23T21:54:47.780392+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+2014-06-23T21:54:47.780396+00:00 app[web.1]: Caused by: java.lang.UnsupportedClassVersionError: org/postgresql/Driver : Unsupported major.minor version 51.0 (unable to load class org.postgresql.Driver)
+2014-06-23T21:54:47.780388+00:00 app[web.1]: 	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+2014-06-23T21:54:47.780175+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+2014-06-23T21:54:47.780378+00:00 app[web.1]: 	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+2014-06-23T21:54:47.780248+00:00 app[web.1]: 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+2014-06-23T21:54:47.780247+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+2014-06-23T21:54:47.780403+00:00 app[web.1]: 	at java.lang.Class.forName0(Native Method)
+2014-06-23T21:54:47.780405+00:00 app[web.1]: 	at java.lang.Class.forName(Class
+.java:188)
+2014-06-23T21:54:47.780208+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+2014-06-23T21:54:47.780176+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+2014-06-23T21:54:47.780207+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
+2014-06-23T21:54:47.780386+00:00 app[web.1]: 	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+2014-06-23T21:54:47.780384+00:00 app[web.1]: 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+2014-06-23T21:54:47.780385+00:00 app[web.1]: 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+2014-06-23T21:54:47.980056+00:00 app[web.1]: 21:54:47,979  INFO RequestMappingHandlerMapping:181 - Mapped "{[/photo/new],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.PhotoController.newPhoto(org.springframework.ui.ModelMap)
+2014-06-23T21:54:47.780399+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1173)
+2014-06-23T21:54:47.780210+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+2014-06-23T21:54:47.780215+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+2014-06-23T21:54:47.780211+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+2014-06-23T21:54:47.986526+00:00 app[web.1]: 21:54:47,986  INFO RequestMappingHandlerMapping:181 - Mapped "{[/users/new],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.UserController.newUser(org.springframework.ui.ModelMap)
+2014-06-23T21:54:47.987224+00:00 app[web.1]: 21:54:47,987  INFO RequestMappingHandlerMapping:181 - Mapped "{[/users/{id}/photos],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.UserController.showUsersPhotos(java.lang.Integer,org.springframework.ui.ModelMap)
+2014-06-23T21:54:47.987924+00:00 app[web.1]: 21:54:47,987  INFO RequestMappingHandlerMapping:181 - Mapped "{[/users/{id}/confirmemail/confirm],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.UserController.confirmEmail(com.spring.photolib.webapp.domain.User,org.springframework.validation.BindingResult,java.lang.Integer,org.springframework.ui.ModelMap,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2014-06-23T21:54:47.780229+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+2014-06-23T21:54:47.780242+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:54:47.780406+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1415)
+2014-06-23T21:54:47.780228+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
+2014-06-23T21:54:47.984527+00:00 app[web.1]: 21:54:47,984  INFO RequestMappingHandlerMapping:181 - Mapped "{[/login-successful],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.SessionController.successfulLogin()
+2014-06-23T21:54:47.982320+00:00 app[web.1]: 21:54:47,982  INFO RequestMappingHandlerMapping:181 - Mapped "{[/photo/{pid}/image],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.spring.photolib.webapp.controller.PhotoController.getPhotoImage(java.lang.Integer,javax.servlet.http.HttpServletResponse) throws java.io.IOException
+2014-06-23T21:54:47.983849+00:00 app[web.1]: 21:54:47,983  INFO RequestMappingHandlerMapping:181 - Mapped "{[/login],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.SessionController.userLogin(org.springframework.ui.ModelMap)
+2014-06-23T21:54:47.780244+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:54:47.780380+00:00 app[web.1]: 	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+2014-06-23T21:54:47.780238+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:54:47.780381+00:00 app[web.1]: 	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+2014-06-23T21:54:47.780394+00:00 app[web.1]: 	at java.lang.Thread.run(Thread.java:679)
+2014-06-23T21:54:47.780382+00:00 app[web.1]: 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2014-06-23T21:54:47.780397+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2899)
+2014-06-23T21:54:47.780402+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1559)
+2014-06-23T21:54:47.780400+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1681)
+2014-06-23T21:54:47.780407+00:00 app[web.1]: 	... 77 more
+2014-06-23T21:54:47.780714+00:00 app[web.1]: 21:54:47,780  INFO SchemaExport:405 - HHH000230: Schema export complete
+2014-06-23T21:54:47.980780+00:00 app[web.1]: 21:54:47,980  INFO RequestMappingHandlerMapping:181 - Mapped "{[/photo/{pid}/edit],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.PhotoController.editPhoto(java.lang.Integer,java.security.Principal,org.springframework.ui.ModelMap)
+2014-06-23T21:54:47.981496+00:00 app[web.1]: 21:54:47,981  INFO RequestMappingHandlerMapping:181 - Mapped "{[/photo/{pid}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.PhotoController.deletePhoto(java.lang.Integer,java.security.Principal,org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2014-06-23T21:54:48.400136+00:00 app[web.1]: Jun 23, 2014 9:54:48 PM org.apache.coyote.AbstractProtocol start
+2014-06-23T21:54:48.427462+00:00 app[web.1]: Jun 23, 2014 9:54:48 PM org.apache.coyote.AbstractProtocol pause
+2014-06-23T21:54:48.388455+00:00 app[web.1]: INFO: Closing Spring root WebApplicationContext
+2014-06-23T21:54:48.400141+00:00 app[web.1]: INFO: Starting ProtocolHandler ["http-nio-18380"]
+2014-06-23T21:54:48.305406+00:00 app[web.1]: 21:54:48,304  INFO SimpleUrlHandlerMapping:315 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+2014-06-23T21:54:48.427468+00:00 app[web.1]: INFO: Pausing ProtocolHandler ["http-nio-18380"]
+2014-06-23T21:54:48.388453+00:00 app[web.1]: Jun 23, 2014 9:54:48 PM org.apache.catalina.core.ApplicationContext log
+2014-06-23T21:54:48.380526+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+2014-06-23T21:54:48.380512+00:00 app[web.1]: 21:54:48,379 ERROR ContextLoader:331 - Context initialization failed
+2014-06-23T21:54:48.380538+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+2014-06-23T21:54:48.380523+00:00 app[web.1]: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.jdbc.datasource.init.DataSourceInitializer#0': Invocation of init method failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Failed to execute database script; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:54:48.380528+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+2014-06-23T21:54:48.380529+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:54:48.380539+00:00 app[web.1]: 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+2014-06-23T21:54:48.380534+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:54:48.380563+00:00 app[web.1]: 	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+2014-06-23T21:54:48.380536+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:54:48.380567+00:00 app[web.1]: 	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+2014-06-23T21:54:48.380569+00:00 app[web.1]: 	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+2014-06-23T21:54:48.380573+00:00 app[web.1]: 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+2014-06-23T21:54:48.380541+00:00 app[web.1]: 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+2014-06-23T21:54:48.380571+00:00 app[web.1]: 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2014-06-23T21:54:48.380570+00:00 app[web.1]: 	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+2014-06-23T21:54:48.380531+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:54:48.380565+00:00 app[web.1]: 	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+2014-06-23T21:54:48.380584+00:00 app[web.1]: Caused by: org.springframework.dao.DataAccessResourceFailureException: Failed to execute database script; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:54:48.380533+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:54:48.380581+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+2014-06-23T21:54:48.380578+00:00 app[web.1]: 	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+2014-06-23T21:54:48.380591+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+2014-06-23T21:54:48.380586+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:56)
+2014-06-23T21:54:48.380589+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+2014-06-23T21:54:48.380602+00:00 app[web.1]: Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:54:48.380582+00:00 app[web.1]: 	at java.lang.Thread.run(Thread.java:679)
+2014-06-23T21:54:48.380611+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+2014-06-23T21:54:48.380575+00:00 app[web.1]: 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+2014-06-23T21:54:48.380576+00:00 app[web.1]: 	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+2014-06-23T21:54:48.380592+00:00 app[web.1]: 	... 22 more
+2014-06-23T21:54:48.380613+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:45)
+2014-06-23T21:54:48.380587+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.init.DataSourceInitializer.afterPropertiesSet(DataSourceInitializer.java:84)
+2014-06-23T21:54:48.380579+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+2014-06-23T21:54:48.380614+00:00 app[web.1]: 	... 25 more
+2014-06-23T21:54:48.380615+00:00 app[web.1]: Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:54:48.380637+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1681)
+2014-06-23T21:54:48.381248+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+2014-06-23T21:54:48.380639+00:00 app[web.1]: 	at java.lang.Class.forName0(Native Method)
+2014-06-23T21:54:48.381236+00:00 app[web.1]: Jun 23, 2014 9:54:48 PM org.apache.catalina.core.StandardContext listenerStart
+2014-06-23T21:54:48.380642+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1415)
+2014-06-23T21:54:48.380618+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1371)
+2014-06-23T21:54:48.380621+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+2014-06-23T21:54:48.380624+00:00 app[web.1]: 	... 26 more
+2014-06-23T21:54:48.380643+00:00 app[web.1]: 	... 30 more
+2014-06-23T21:54:48.380635+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1173)
+2014-06-23T21:54:48.381244+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+2014-06-23T21:54:48.380617+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1429)
+2014-06-23T21:54:48.380620+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+2014-06-23T21:54:48.380623+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+2014-06-23T21:54:48.380626+00:00 app[web.1]: Caused by: java.lang.UnsupportedClassVersionError: org/postgresql/Driver : Unsupported major.minor version 51.0 (unable to load class org.postgresql.Driver)
+2014-06-23T21:54:48.381238+00:00 app[web.1]: SEVERE: Exception sending context initialized event to listener instance of class org.springframework.web.context.ContextLoaderListener
+2014-06-23T21:54:48.380638+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1559)
+2014-06-23T21:54:48.381250+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+2014-06-23T21:54:48.380641+00:00 app[web.1]: 	at java.lang.Class.forName(Class.java:188)
+2014-06-23T21:54:48.381252+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:54:48.381261+00:00 app[web.1]: 	at org.springframework.web.conte
+xt.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+2014-06-23T21:54:48.381251+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:54:48.381262+00:00 app[web.1]: 	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+2014-06-23T21:54:48.381256+00:00 app[web.1]: 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+2014-06-23T21:54:48.381265+00:00 app[web.1]: 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+2014-06-23T21:54:48.381273+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+2014-06-23T21:54:48.381254+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+2014-06-23T21:54:48.381264+00:00 app[web.1]: 	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+2014-06-23T21:54:48.381269+00:00 app[web.1]: 	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+2014-06-23T21:54:48.380634+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2899)
+2014-06-23T21:54:48.381240+00:00 app[web.1]: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.jdbc.datasource.init.DataSourceInitializer#0': Invocation of init method failed; nested exception is org.springframework.dao.DataAccessResourceFailureException: Failed to execute database script; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:54:48.381243+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+2014-06-23T21:54:48.381258+00:00 app[web.1]: 	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+2014-06-23T21:54:48.381267+00:00 app[web.1]: 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+2014-06-23T21:54:48.381255+00:00 app[web.1]: 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+2014-06-23T21:54:48.381259+00:00 app[web.1]: 	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+2014-06-23T21:54:48.381274+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+2014-06-23T21:54:48.381241+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1553)
+2014-06-23T21:54:48.381277+00:00 app[web.1]: Caused by: org.springframework.dao.DataAccessResourceFailureException: Failed to execute database script; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:54:48.381275+00:00 app[web.1]: 	at java.lang.Thread.run(Thread.java:679)
+2014-06-23T21:54:48.381292+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:45)
+2014-06-23T21:54:48.381278+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:56)
+2014-06-23T21:54:48.381294+00:00 app[web.1]: Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:54:48.381283+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1549)
+2014-06-23T21:54:48.381299+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+2014-06-23T21:54:48.381280+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.init.DataSourceInitializer.afterPropertiesSet(DataSourceInitializer.java:84)
+2014-06-23T21:54:48.381296+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1429)
+2014-06-23T21:54:48.381268+00:00 app[web.1]: 	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+2014-06-23T21:54:48.381291+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+2014-06-23T21:54:48.381302+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+2014-06-23T21:54:48.381284+00:00 app[web.1]: 	... 22 more
+2014-06-23T21:54:48.381300+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+2014-06-23T21:54:48.381289+00:00 app[web.1]: Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
+2014-06-23T21:54:48.381271+00:00 app[web.1]: 	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+2014-06-23T21:54:48.381281+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1612)
+2014-06-23T21:54:48.381297+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1371)
+2014-06-23T21:54:48.381303+00:00 app[web.1]: 	... 26 more
+2014-06-23T21:54:48.381307+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1173)
+2014-06-23T21:54:48.381293+00:00 app[web.1]: 	... 25 more
+2014-06-23T21:54:48.381304+00:00 app[web.1]: Caused by: java.lang.UnsupportedClassVersionError: org/postgresql/Driver : Unsupported major.minor version 51.0 (unable to load class org.postgresql.Driver)
+2014-06-23T21:54:48.381324+00:00 app[web.1]: 	at java.lang.Class.forName(Class.java:188)
+2014-06-23T21:54:48.381351+00:00 app[web.1]: Jun 23, 2014 9:54:48 PM org.apache.catalina.core.StandardContext startInternal
+2014-06-23T21:54:48.381319+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1681)
+2014-06-23T21:54:48.381325+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1415)
+2014-06-23T21:54:48.386320+00:00 app[web.1]: SEVERE: Context [] startup failed due to previous errors
+2014-06-23T21:54:48.381321+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1559)
+2014-06-23T21:54:48.381306+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2899)
+2014-06-23T21:54:48.381322+00:00 app[web.1]: 	at java.lang.Class.forName0(Native Method)
+2014-06-23T21:54:48.386317+00:00 app[web.1]: Jun 23, 2014 9:54:48 PM org.apache.catalina.core.StandardContext startInternal
+2014-06-23T21:54:48.387702+00:00 app[web.1]: SEVERE: Context [] failed in [org.apache.catalina.core.StandardContext] lifecycle. Allowing Tomcat to shutdown.
+2014-06-23T21:54:48.381326+00:00 app[web.1]: 	... 30 more
+2014-06-23T21:54:48.381352+00:00 app[web.1]: SEVERE: Error listenerStart
+2014-06-23T21:54:48.740480+00:00 app[web.1]: 21:54:48,737  INFO ContextLoader:285 - Root WebApplicationContext: initialization started
+2014-06-23T21:54:48.903589+00:00 app[web.1]: 21:54:48,902  INFO XmlWebApplicationContext:513 - Refreshing Root WebApplicationContext: startup date [Mon Jun 23 21:54:48 UTC 2014]; root of context hierarchy
+2014-06-23T21:54:49.011220+00:00 app[web.1]: 21:54:49,010  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+2014-06-23T21:54:49.496576+00:00 app[web.1]: 21:54:49,496  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from ServletContext resource [/WEB-INF/security-context.xml]
+2014-06-23T21:54:49.684322+00:00 app[web.1]: 21:54:49,684  INFO SecurityNamespaceHandler:75 - Spring Security 'config' module version is 3.2.4.RELEASE
+2014-06-23T21:54:49.684057+00:00 app[web.1]: 21:54:49,683  INFO SpringSecurityCoreVersion:49 - You are running with Spring Security Core 3.2.4.RELEASE
+2014-06-23T21:54:49.845840+00:00 app[web.1]: 21:54:49,845  INFO HttpSecurityBeanDefinitionParser:266 - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 700, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1100, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1500, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2000, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2100, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2200, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2300]
+2014-06-23T21:54:50.563185+00:00 app[web.1]: 21:54:50,562  INFO EncryptablePropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [server.properties]
+2014-06-23T21:54:50.168651+00:00 heroku[web.1]: Stopping remaining processes with SIGKILL
+2014-06-23T21:54:50.168442+00:00 heroku[web.1]: Error R12 (Exit timeout) -> At least one process failed to exit within 10 seconds of SIGTERM
+2014-06-23T21:54:50.049139+00:00 heroku[web.1]: State changed from up to crashed
+2014-06-23T21:54:50.046702+00:00 heroku[web.1]: Process exited with status 0
+2014-06-23T21:54:52.591662+00:00 heroku[web.1]: Process exited with status 137
+2014-06-23T21:55:13.544656+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/users/login" host=photolib.herokuapp.com request_id=cb5ad630-8d93-46a4-a699-8425068a57ff fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
+2014-06-23T21:55:14.811624+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/users/login" host=photolib.herokuapp.com request_id=f7b24eb7-7ab1-4064-af50-13b1bfa4e8d9 fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
+2014-06-23T21:55:18.774302+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=photolib.herokuapp.com request_id=43cbc174-8d72-4033-a793-f8acdaa3a08c fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
+2014-06-23T22:00:54.148148+00:00 heroku[web.1]: State changed from crashed to starting
+2014-06-23T22:00:53.881827+00:00 heroku[api]: Set PATH config vars by senechow@gmail.com
+2014-06-23T22:00:53.881912+00:00 heroku[api]: Release v11 created by senechow@gmail.com
+2014-06-23T22:01:01.379314+00:00 app[web.1]: Error: No such file or directory
+2014-06-23T22:01:02.977076+00:00 heroku[web.1]: State changed from starting to crashed
+2014-06-23T22:01:00.064572+00:00 heroku[web.1]: Starting process with command `java -Xmx384m -Xss512k -XX:+UseCompressedOops -jar target/dependency/webapp-runner.jar --port 56866 target/*.war`
+2014-06-23T22:01:02.969505+00:00 heroku[web.1]: Process exited with status 126
+2014-06-23T22:01:33.533693+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=photolib.herokuapp.com request_id=8902344d-2ad1-450c-a293-c358e67f16aa fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
+2014-06-23T22:01:35.026406+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=photolib.herokuapp.com request_id=c271d998-a61f-4438-89c7-2d7ceac3ffab fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
+2014-06-23T22:02:32.260941+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=photolib.herokuapp.com request_id=37236afe-7c0a-40fe-a8a3-d410aa4b039a fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
+2014-06-23T22:02:33.133081+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=photolib.herokuapp.com request_id=ba2b461d-98ea-4bbe-940b-cc35d89a608b fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
+2014-06-23T22:02:33.646264+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=photolib.herokuapp.com request_id=62cfd470-554e-417b-9efb-47950cec83cb fwd="216.232.236.26" dyno= connect= service= status=503 bytes=

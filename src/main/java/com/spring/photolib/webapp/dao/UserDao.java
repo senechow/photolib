@@ -9,6 +9,7 @@ import com.spring.photolib.webapp.domain.User;
 import com.spring.photolib.webapp.exception.AccountAlreadyConfirmedException;
 import com.spring.photolib.webapp.exception.ConfirmationMismatchException;
 
+
 public interface UserDao {
 	
 	public List<User> listUser();

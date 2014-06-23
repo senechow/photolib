@@ -1,17 +1,14 @@
 package com.spring.photolib.webapp.controller;
 
-import java.io.File;
 import java.io.IOException;
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
-import org.apache.commons.fileupload.disk.DiskFileItem;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -25,14 +22,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.spring.photolib.webapp.domain.AuthorizedUser;
 import com.spring.photolib.webapp.domain.Photo;
 import com.spring.photolib.webapp.exception.UnauthorizedException;
 import com.spring.photolib.webapp.service.PhotoService;
-import com.spring.photolib.webapp.util.ByteMultipartFile;
 import com.spring.photolib.webapp.validator.PhotoValidator;
 
 @Controller

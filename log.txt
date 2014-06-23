@@ -1,58 +1,3 @@
-2014-06-23T20:51:06.405966+00:00 heroku[api]: Release v6 created by senechow@gmail.com
-2014-06-23T20:51:06.534135+00:00 heroku[api]: Deploy 6c84d60 by senechow@gmail.com
-2014-06-23T20:51:06.405966+00:00 heroku[api]: Set PATH, JAVA_OPTS, MAVEN_OPTS config vars by senechow@gmail.com
-2014-06-23T20:51:06.534236+00:00 heroku[api]: Release v7 created by senechow@gmail.com
-2014-06-23T20:51:06+00:00 heroku[slug-compiler]: Slug compilation finished
-2014-06-23T20:58:53.230166+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=photolib.herokuapp.com request_id=fbc60e7b-93f7-4af8-84cc-5ba50c93511e fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
-2014-06-23T20:58:53.529715+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=photolib.herokuapp.com request_id=0c43a644-d0a2-4618-a82e-64769dcae136 fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
-2014-06-23T20:58:53.680308+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/favicon.ico" host=photolib.herokuapp.com request_id=c6f8bbe6-d595-4f15-8825-c91e8a7c5806 fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
-2014-06-23T21:05:05.326402+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=photolib.herokuapp.com request_id=ed1a45fb-4ed9-46a5-b626-a6df0a67b7da fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
-2014-06-23T21:05:10.507539+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/user" host=photolib.herokuapp.com request_id=164127d5-72f5-4725-8f39-3670134de396 fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
-2014-06-23T21:05:13.409928+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/users" host=photolib.herokuapp.com request_id=9dc8282d-bd3c-4f25-8ba2-02eefdde001b fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
-2014-06-23T21:07:06.825390+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=photolib.herokuapp.com request_id=e7ffc617-2130-4b4d-ae9e-7a2f20cb64d5 fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
-2014-06-23T21:39:50+00:00 heroku[slug-compiler]: Slug compilation started
-2014-06-23T21:40:17+00:00 heroku[slug-compiler]: Slug compilation finished
-2014-06-23T21:40:17.312440+00:00 heroku[api]: Deploy 4f50344 by senechow@gmail.com
-2014-06-23T21:40:17.312440+00:00 heroku[api]: Release v8 created by senechow@gmail.com
-2014-06-23T21:40:29.295360+00:00 heroku[router]: at=error code=H14 desc="No web processes running" method=GET path="/" host=photolib.herokuapp.com request_id=770f8cc3-6448-4f84-bd18-186c85d0794b fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
-2014-06-23T21:40:56.346191+00:00 heroku[api]: Scale to web=1 by senechow@gmail.com
-2014-06-23T21:41:02.902962+00:00 heroku[web.1]: Starting process with command `java -Xmx384m -Xss512k -XX:+UseCompressedOops -jar target/dependency/webapp-runner.jar --port 9332 target/*.war`
-2014-06-23T21:41:04.057371+00:00 app[web.1]: Picked up JAVA_TOOL_OPTIONS:  -Djava.rmi.server.useCodebaseOnly=true -Djava.rmi.server.useCodebaseOnly=true
-2014-06-23T21:41:04.388851+00:00 app[web.1]: Adding Context  for target/PhotoLibrary.war
-2014-06-23T21:41:04.971091+00:00 app[web.1]: INFO: Starting service Tomcat
-2014-06-23T21:41:04.971288+00:00 app[web.1]: Jun 23, 2014 9:41:04 PM org.apache.catalina.core.StandardEngine startInternal
-2014-06-23T21:41:04.971291+00:00 app[web.1]: INFO: Starting Servlet Engine: Apache Tomcat/7.0.40
-2014-06-23T21:41:04.933800+00:00 app[web.1]: INFO: Initializing ProtocolHandler ["http-nio-9332"]
-2014-06-23T21:41:04.971089+00:00 app[web.1]: Jun 23, 2014 9:41:04 PM org.apache.catalina.core.StandardService startInternal
-2014-06-23T21:41:04.968327+00:00 app[web.1]: Jun 23, 2014 9:41:04 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
-2014-06-23T21:41:04.968335+00:00 app[web.1]: INFO: Using a shared selector for servlet write/read
-2014-06-23T21:41:04.933793+00:00 app[web.1]: Jun 23, 2014 9:41:04 PM org.apache.coyote.AbstractProtocol init
-2014-06-23T21:41:05.684790+00:00 app[web.1]: Jun 23, 2014 9:41:05 PM org.apache.catalina.startup.ContextConfig getDefaultWebXmlFragment
-2014-06-23T21:41:05.684798+00:00 app[web.1]: INFO: No global web.xml found
-2014-06-23T21:41:05.402059+00:00 heroku[web.1]: State changed from starting to up
-2014-06-23T21:41:16.573935+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.startup.TaglibUriRule body
-2014-06-23T21:41:16.573943+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/core_rt is already defined
-2014-06-23T21:41:16.579083+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/core is already defined
-2014-06-23T21:41:16.586589+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.startup.TaglibUriRule body
-2014-06-23T21:41:16.592160+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.startup.TaglibUriRule body
-2014-06-23T21:41:16.582561+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/core is already defined
-2014-06-23T21:41:16.600623+00:00 app[web.1]: INFO: TLD skipped. URI: http://jakarta.apache.org/taglibs/standard/permittedTaglibs is already defined
-2014-06-23T21:41:16.582556+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.startup.TaglibUriRule body
-2014-06-23T21:41:16.600620+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.startup.TaglibUriRule body
-2014-06-23T21:41:16.579078+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.startup.TaglibUriRule body
-2014-06-23T21:41:16.599185+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.startup.TaglibUriRule body
-2014-06-23T21:41:16.586595+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/fmt_rt is already defined
-2014-06-23T21:41:16.595882+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.startup.TaglibUriRule body
-2014-06-23T21:41:16.595887+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/fmt is already defined
-2014-06-23T21:41:16.604168+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.startup.TaglibUriRule body
-2014-06-23T21:41:16.599220+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/functions is already define
-d
-2014-06-23T21:41:16.601247+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.startup.TaglibUriRule body
-2014-06-23T21:41:16.592167+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/fmt is already defined
-2014-06-23T21:41:16.604173+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/sql_rt is already defined
-2014-06-23T21:41:16.601250+00:00 app[web.1]: INFO: TLD skipped. URI: http://jakarta.apache.org/taglibs/standard/scriptfree is already defined
-2014-06-23T21:41:16.608057+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/sql is already defined
-2014-06-23T21:41:16.610054+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/sql is already defined
 2014-06-23T21:41:16.617491+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.startup.TaglibUriRule body
 2014-06-23T21:41:16.619992+00:00 app[web.1]: Jun 23, 2014 9:41:16 PM org.apache.catalina.startup.TaglibUriRule body
 2014-06-23T21:41:16.617495+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/xml is already defined
@@ -69,12 +14,12 @@ d
 2014-06-23T21:41:16.870420+00:00 app[web.1]: 21:41:16,869  INFO XmlWebApplicationContext:513 - Refreshing Root WebApplicationContext: startup date [Mon Jun 23 21:41:16 UTC 2014]; root of context hierarchy
 2014-06-23T21:41:16.920286+00:00 app[web.1]: 21:41:16,919  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
 2014-06-23T21:41:17.268187+00:00 app[web.1]: 21:41:17,267  INFO XmlBeanDefinitionReader:316 - Loading XML bean definitions from ServletContext resource [/WEB-INF/security-context.xml]
-2014-06-23T21:41:17.451666+00:00 app[web.1]: 21:41:17,451  INFO HttpSecurityBeanDefinitionParser:266 - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 700, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1100, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMeth
-odName=null; destroyMethodName=null, order = 1500, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2000, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2100, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2200, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2300]
+2014-06-23T21:41:17.451666+00:00 app[web.1]: 21:41:17,451  INFO HttpSecurityBeanDefinitionParser:266 - Checking sorted filter chain: [Root bean: class [org.springframework.security.web.context.SecurityContextPersistenceFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 200, Root bean: class [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 400, Root bean: class [org.springframework.security.web.authentication.logout.LogoutFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 700, <org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter#0>, order = 1100, Root bean: class [org.springframework.security.web.authentication.www.BasicAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1500, Root bean: class [org.springframework.security.web.savedrequest.RequestCacheAwareFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1600, Root bean: class [org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 1700, Root bean: class [org.springframework.security.web.authentication.AnonymousAuthenticationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2000, Root bean: class [org.springframework.security.web.session.SessionManagementFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2100, Root bean: class [org.springframework.security.web.access.ExceptionTranslationFilter]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null, order = 2200, <org.springframework.security.web.access.intercept.FilterSecurityInterceptor#0>, order = 2300]
 2014-06-23T21:41:17.339036+00:00 app[web.1]: 21:41:17,338  INFO SpringSecurityCoreVersion:49 - You are running with Spring Security Core 3.2.4.RELEASE
 2014-06-23T21:41:17.339252+00:00 app[web.1]: 21:41:17,339  INFO SecurityNamespaceHandler:75 - Spring Security 'config' module version is 3.2.4.RELEASE
 2014-06-23T21:41:18.097333+00:00 app[web.1]: 21:41:18,096  INFO EncryptablePropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [server.properties]
-2014-06-23T21:41:18.728893+00:00 app[web.1]: 21:41:18,728  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2014-06-23T21:41:
+18.728893+00:00 app[web.1]: 21:41:18,728  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
 2014-06-23T21:41:18.903438+00:00 app[web.1]: 21:41:18,902  WARN JdbcServicesImpl:204 - HHH000342: Could not obtain connection to query metadata : Cannot load JDBC driver class 'org.postgresql.Driver'
 2014-06-23T21:41:18.929466+00:00 app[web.1]: 21:41:18,928  INFO LobCreatorBuilder:88 - HHH000422: Disabling contextual LOB creation as connection was null
 2014-06-23T21:41:18.740242+00:00 app[web.1]: 21:41:18,739  INFO Environment:239 - HHH000206: hibernate.properties not found
@@ -115,8 +60,7 @@ odName=null; destroyMethodName=null, order = 1500, Root bean: class [org.springf
 2014-06-23T21:41:19.936999+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
 2014-06-23T21:41:19.937007+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
 2014-06-23T21:41:19.937009+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
-2014-06-23T21:41:19.937005+00:00 app[web.1]: 	at org.springframework.beans.factory
-.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
+2014-06-23T21:41:19.937005+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
 2014-06-23T21:41:19.937011+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
 2014-06-23T21:41:19.937012+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
 2014-06-23T21:41:19.937014+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
@@ -829,9 +773,9 @@ odName=null; destroyMethodName=null, order = 1500, Root bean: class [org.springf
 2014-06-23T21:50:39.062371+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClass(WebappClassLoader.java:1173)
 2014-06-23T21:50:39.062376+00:00 app[web.1]: 	at java.lang.Class.forName0(Native Method)
 2014-06-23T21:50:39.062396+00:00 app[web.1]: 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1843)
-2014-06-23T21:50:39.062422+00:00 app[web.1]: 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1928)
-2014-06-23T21:50:39.062423+00:00 app[web.1]: 	at
- org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:343)
+2014-06-23T21:50:39.062422+00:00 app[w
+eb.1]: 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1928)
+2014-06-23T21:50:39.062423+00:00 app[web.1]: 	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:343)
 2014-06-23T21:50:39.062378+00:00 app[web.1]: 	at java.lang.Class.forName(Class.java:188)
 2014-06-23T21:50:39.062427+00:00 app[web.1]: 	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:416)
 2014-06-23T21:50:39.062432+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
@@ -929,8 +873,7 @@ odName=null; destroyMethodName=null, order = 1500, Root bean: class [org.springf
 2014-06-23T21:50:39.066372+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
 2014-06-23T21:50:39.066344+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
 2014-06-23T21:50:39.066363+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
-2014-06-23T21:50:39.066353+00:00 app[web.1]: 	
-at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+2014-06-23T21:50:39.066353+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
 2014-06-23T21:50:39.066348+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
 2014-06-23T21:50:39.066299+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
 2014-06-23T21:50:39.066398+00:00 app[web.1]: 	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
@@ -952,7 +895,8 @@ at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(Abstr
 2014-06-23T21:50:39.066412+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.findClassInternal(WebappClassLoader.java:2899)
 2014-06-23T21:50:39.066700+00:00 app[web.1]: 21:50:39,066  INFO SchemaExport:405 - HHH000230: Schema export complete
 2014-06-23T21:50:39.066419+00:00 app[web.1]: 	at java.lang.Class.forName(Class.java:188)
-2014-06-23T21:50:39.066354+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:50:39.066354+00:00 app[web
+.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
 2014-06-23T21:50:39.291977+00:00 app[web.1]: 21:50:39,291  INFO RequestMappingHandlerMapping:181 - Mapped "{[/users/new],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.UserController.newUser(org.springframework.ui.ModelMap)
 2014-06-23T21:50:39.297146+00:00 app[web.1]: 21:50:39,296  INFO RequestMappingHandlerMapping:181 - Mapped "{[/photo/{pid}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.spring.photolib.webapp.controller.PhotoController.deletePhoto(java.lang.Integer,java.security.Principal,org.springframework.web.servlet.mvc.support.RedirectAttributes)
 2014-06-23T21:50:39.066358+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
@@ -1029,8 +973,7 @@ at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(Abstr
 2014-06-23T21:50:39.677340+00:00 app[web.1]: 	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:56)
 2014-06-23T21:50:39.677352+00:00 app[web.1]: Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
 2014-06-23T21:50:39.677356+00:00 app[web.1]: 	... 25 more
-2014-06-23T21:50:39.677362+00:00 app[web.1]: 	at org.apache.commons.d
-bcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+2014-06-23T21:50:39.677362+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
 2014-06-23T21:50:39.677385+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1681)
 2014-06-23T21:50:39.685342+00:00 app[web.1]: SEVERE: Context [] failed in [org.apache.catalina.core.StandardContext] lifecycle. Allowing Tomcat to shutdown.
 2014-06-23T21:50:39.677309+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
@@ -1129,7 +1072,8 @@ bcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
 2014-06-23T21:54:37.917875+00:00 app[web.1]: Jun 23, 2014 9:54:37 PM org.apache.catalina.startup.ContextConfig getDefaultWebXmlFragment
 2014-06-23T21:54:37.917880+00:00 app[web.1]: INFO: No global web.xml found
 2014-06-23T21:54:37.785470+00:00 heroku[web.1]: State changed from starting to up
-2014-06-23T21:54:36.086275+00:00 heroku[web.1]: Starting process with command `java -Xmx384m -Xss512k -XX:+UseCompressedOops -jar target/dependency/webapp-runner.jar --port 18380 target/*.war`
+2014-06-23T21:54:36.086275+00:00 heroku[web.1]: Starting process with command `java -X
+mx384m -Xss512k -XX:+UseCompressedOops -jar target/dependency/webapp-runner.jar --port 18380 target/*.war`
 2014-06-23T21:54:39.749608+00:00 heroku[web.1]: Stopping all processes with SIGTERM
 2014-06-23T21:54:34.900652+00:00 heroku[web.1]: Starting process with command `java -Xmx384m -Xss512k -XX:+UseCompressedOops -jar target/dependency/webapp-runner.jar --port 54581 target/*.war`
 2014-06-23T21:54:45.146178+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/core_rt is already defined
@@ -1150,8 +1094,7 @@ bcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
 2014-06-23T21:54:45.163374+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/fmt is already defined
 2014-06-23T21:54:45.158087+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/fmt_rt is already defined
 2014-06-23T21:54:45.177179+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jstl/sql is already defined
-2014-06-23T21:54:45.249924+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.core.ApplicationContext l
-og
+2014-06-23T21:54:45.249924+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.core.ApplicationContext log
 2014-06-23T21:54:45.169364+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.startup.TaglibUriRule body
 2014-06-23T21:54:45.169367+00:00 app[web.1]: INFO: TLD skipped. URI: http://java.sun.com/jsp/jstl/functions is already defined
 2014-06-23T21:54:45.158082+00:00 app[web.1]: Jun 23, 2014 9:54:45 PM org.apache.catalina.startup.TaglibUriRule body
@@ -1213,7 +1156,8 @@ og
 2014-06-23T21:54:47.776396+00:00 app[web.1]: 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1928)
 2014-06-23T21:54:47.776368+00:00 app[web.1]: 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:234)
 2014-06-23T21:54:47.776357+00:00 app[web.1]: 	at org.apache.commons.dbcp.BasicDataSource.createConnectionFactory(BasicDataSource.java:1415)
-2014-06-23T21:54:47.776362+00:00 app[web.1]: 	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139)
+2014-06-23T21:54:47.776362+00:00 app[web.1]: 	a
+t org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139)
 2014-06-23T21:54:47.776408+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
 2014-06-23T21:54:47.776370+00:00 app[web.1]: 	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1885)
 2014-06-23T21:54:47.776406+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
@@ -1229,8 +1173,7 @@ og
 2014-06-23T21:54:47.776411+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
 2014-06-23T21:54:47.776423+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
 2014-06-23T21:54:47.776372+00:00 app[web.1]: 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1843)
-2014-06-23T21:54:47.776439+00:00 app[web.1]: 	at org.springframework
-.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+2014-06-23T21:54:47.776439+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
 2014-06-23T21:54:47.776430+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
 2014-06-23T21:54:47.776465+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
 2014-06-23T21:54:47.776472+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
@@ -1312,7 +1255,8 @@ og
 2014-06-23T21:54:47.780241+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
 2014-06-23T21:54:47.780240+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
 2014-06-23T21:54:47.780236+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
-2014-06-23T21:54:47.780237+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+2014-06-23T21:54:47.780237+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableB
+eanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
 2014-06-23T21:54:47.780234+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
 2014-06-23T21:54:47.780232+00:00 app[web.1]: 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
 2014-06-23T21:54:47.780221+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
@@ -1329,8 +1273,7 @@ og
 2014-06-23T21:54:47.780248+00:00 app[web.1]: 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
 2014-06-23T21:54:47.780247+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
 2014-06-23T21:54:47.780403+00:00 app[web.1]: 	at java.lang.Class.forName0(Native Method)
-2014-06-23T21:54:47.780405+00:00 app[web.1]: 	at java.lang.Class.forName(Class
-.java:188)
+2014-06-23T21:54:47.780405+00:00 app[web.1]: 	at java.lang.Class.forName(Class.java:188)
 2014-06-23T21:54:47.780208+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
 2014-06-23T21:54:47.780176+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
 2014-06-23T21:54:47.780207+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:957)
@@ -1408,7 +1351,8 @@ og
 2014-06-23T21:54:48.380579+00:00 app[web.1]: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
 2014-06-23T21:54:48.380614+00:00 app[web.1]: 	... 25 more
 2014-06-23T21:54:48.380615+00:00 app[web.1]: Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot load JDBC driver class 'org.postgresql.Driver'
-2014-06-23T21:54:48.380637+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1681)
+2014-06-23T21:54:48.380637+00:00 app[web.1]: 	at org.apache.catalina.loader.WebappClassL
+oader.loadClass(WebappClassLoader.java:1681)
 2014-06-23T21:54:48.381248+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
 2014-06-23T21:54:48.380639+00:00 app[web.1]: 	at java.lang.Class.forName0(Native Method)
 2014-06-23T21:54:48.381236+00:00 app[web.1]: Jun 23, 2014 9:54:48 PM org.apache.catalina.core.StandardContext listenerStart
@@ -1428,8 +1372,7 @@ og
 2014-06-23T21:54:48.381250+00:00 app[web.1]: 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
 2014-06-23T21:54:48.380641+00:00 app[web.1]: 	at java.lang.Class.forName(Class.java:188)
 2014-06-23T21:54:48.381252+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
-2014-06-23T21:54:48.381261+00:00 app[web.1]: 	at org.springframework.web.conte
-xt.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+2014-06-23T21:54:48.381261+00:00 app[web.1]: 	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
 2014-06-23T21:54:48.381251+00:00 app[web.1]: 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
 2014-06-23T21:54:48.381262+00:00 app[web.1]: 	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
 2014-06-23T21:54:48.381256+00:00 app[web.1]: 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
@@ -1502,10 +1445,65 @@ xt.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
 2014-06-23T22:00:53.881912+00:00 heroku[api]: Release v11 created by senechow@gmail.com
 2014-06-23T22:01:01.379314+00:00 app[web.1]: Error: No such file or directory
 2014-06-23T22:01:02.977076+00:00 heroku[web.1]: State changed from starting to crashed
-2014-06-23T22:01:00.064572+00:00 heroku[web.1]: Starting process with command `java -Xmx384m -Xss512k -XX:+UseCompressedOops -jar target/dependency/webapp-runner.jar --port 56866 target/*.war`
+2014-06-23T22:01:00.064572+00
+:00 heroku[web.1]: Starting process with command `java -Xmx384m -Xss512k -XX:+UseCompressedOops -jar target/dependency/webapp-runner.jar --port 56866 target/*.war`
 2014-06-23T22:01:02.969505+00:00 heroku[web.1]: Process exited with status 126
 2014-06-23T22:01:33.533693+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=photolib.herokuapp.com request_id=8902344d-2ad1-450c-a293-c358e67f16aa fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
 2014-06-23T22:01:35.026406+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=photolib.herokuapp.com request_id=c271d998-a61f-4438-89c7-2d7ceac3ffab fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
 2014-06-23T22:02:32.260941+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=photolib.herokuapp.com request_id=37236afe-7c0a-40fe-a8a3-d410aa4b039a fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
 2014-06-23T22:02:33.133081+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=photolib.herokuapp.com request_id=ba2b461d-98ea-4bbe-940b-cc35d89a608b fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
 2014-06-23T22:02:33.646264+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=photolib.herokuapp.com request_id=62cfd470-554e-417b-9efb-47950cec83cb fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
+2014-06-23T22:05:23+00:00 heroku[slug-compiler]: Slug compilation started
+2014-06-23T22:05:48+00:00 heroku[slug-compiler]: Slug compilation finished
+2014-06-23T22:05:49.120278+00:00 heroku[web.1]: State changed from crashed to starting
+2014-06-23T22:05:48.197539+00:00 heroku[api]: Deploy 5010055 by senechow@gmail.com
+2014-06-23T22:05:48.197624+00:00 heroku[api]: Release v12 created by senechow@gmail.com
+2014-06-23T22:05:54.989840+00:00 app[web.1]: Error: No such file or directory
+2014-06-23T22:05:54.990052+00:00 app[web.1]: Error waiting for process to terminate: No child processes
+2014-06-23T22:05:56.206603+00:00 heroku[web.1]: State changed from starting to crashed
+2014-06-23T22:05:56.207521+00:00 heroku[web.1]: State changed from crashed to starting
+2014-06-23T22:05:54.115265+00:00 heroku[web.1]: Starting process with command `java -Xmx384m -Xss512k -XX:+UseCompressedOops -jar target/dependency/webapp-runner.jar --port 52033 target/*.war`
+2014-06-23T22:05:56.171821+00:00 heroku[web.1]: Process exited with status 22
+2014-06-23T22:06:03.191160+00:00 app[web.1]: Error waiting for process to terminate: No child processes
+2014-06-23T22:06:03.190283+00:00 app[web.1]: Error: No such file or directory
+2014-06-23T22:06:04.502376+00:00 heroku[web.1]: State changed from starting to crashed
+2014-06-23T22:06:04.490711+00:00 heroku[web.1]: Process exited with status 22
+2014-06-23T22:06:02.008942+00:00 heroku[web.1]: Starting process with command `java -Xmx384m -Xss512k -XX:+UseCompressedOops -jar target/dependency/webapp-runner.jar --port 59114 target/*.war`
+2014-06-23T22:07:27.860038+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=photolib.herokuapp.com request_id=68990143-d9df-4ea2-b45a-0185ee86bc85 fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
+2014-06-23T22:07:28.869628+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=photolib.herokuapp.com request_id=125de60a-e26f-4131-9fee-8bc20f9399eb fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
+2014-06-23T22:09:09.905341+00:00 heroku[web.1]: State changed from crashed to starting
+2014-06-23T22:09:09.683561+00:00 heroku[api]: Set PATH config vars by senechow@gmail.com
+2014-06-23T22:09:09.683612+00:00 heroku[api]: Release v13 created by senechow@gmail.com
+2014-06-23T22:09:17.482966+00:00 app[web.1]: Error: No such file or directory
+2014-06-23T22:09:18.956790+00:00 heroku[web.1]: State changed from starting to crashed
+2014-06-23T22:09:16.263065+00:00 heroku[web.1]: Starting process with command `java -Xmx384m -Xss512k -XX:+UseCompressedOops -jar target/dependency/webapp-runner.jar --port 52365 target/*.war`
+2014-06-23T22:09:18.949310+00:00 heroku[web.1]: Process exited with status 126
+2014-06-23T22:11:44.620569+00:00 heroku[web.1]: State changed from crashed to starting
+2014-06-23T22:11:44.382491+00:00 heroku[api]: Release v14 created by senechow@gmail.com
+2014-06-23T22:11:44.382406+00:00 heroku[api]: Set PATH config vars by senechow@gmail.com
+2014-06-23T22:11:53.835729+00:00 app[web.1]: Error: No such file or directory
+2014-06-23T22:11:55.265352+00:00 heroku[web.1]: State changed from starting to crashed
+2014-06-23T22:11:52.823934+00:00 heroku[web.1]: Starting process with command `java -Xmx384m -Xss512k -XX:+UseCompressedOops -jar target/dependency/webapp-runner.jar --port 12218 target/*.war`
+2014-06-23T22:11:55.248610+00:00 heroku[web.1]: Process exited with status 126
+2014-06-23T22:18:35.366698+00:00 heroku[api]: Release v15 created by senechow@gmail.com
+2014-06-23T22:18:35.366632+00:00 heroku[api]: Set PATH config vars by senechow@gmail.com
+2014-06-23T22:18:35.461018+00:00 heroku[web.1]: State changed from crashed to starting
+2014-06-23T22:18:42.774757+00:00 app[web.1]: Error: No such file or directory
+2014-06-23T22:18:44.028565+00:00 heroku[web.1]: State changed from starting to crashed
+2014-06-23T22:18:44.029549+00:00 heroku[web.1]: State changed from crashed to starting
+2014-06-23T22:18:41.872652+00:00 heroku[web.1]: Starting process with command `java -Xmx384m -Xss512k -XX:+UseCompressedOops -jar target/dependency/webapp-runner.jar --port 58368 target/*.war`
+2014-06-23T22:18:43.966586+00:00 heroku[web.1]: Process exited with status 126
+2014-06-23T22:18:51.098248+00:00 app[web.1]: Error: No such file or directory
+2014-06-23T22:18:52.466802+00:00 heroku[web.1]: State changed from starting to crashed
+2014-06-23T22:18:50.249079+00:00 heroku[web.1]: Starting process with command `java -Xmx384m -Xss512k -XX:+UseCompressedOops -jar target/dependency/webapp-runner.jar --port 6484 target/*.war`
+2014-06-23T22:18:52.457591+00:00 heroku[web.1]: Process exited with status 126
+2014-06-23T22:19:10.366410+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=photolib.herokuapp.com request_id=261bae45-fd7b-42be-83e5-53a734e56c8f fwd="216.232.236.26" dyno= connect= service= status=503 bytes=
+2014-06-23T22:20:05+00:00 heroku[slug-compiler]: Slug compilation started
+2014-06-23T22:20:37+00:00 heroku[slug-compiler]: Slug compilation finished
+2014-06-23T22:20:37.805588+00:00 heroku[web.1]: State changed from crashed to starting
+2014-06-23T22:20:37.568742+00:00 heroku[api]: Deploy 4f9a78c by senechow@gmail.com
+2014-06-23T22:20:37.568850+00:00 heroku[api]: Release v16 created by senechow@gmail.com
+2014-06-23T22:20:45.164566+00:00 app[web.1]: Error: No such file or directory
+2014-06-23T22:20:43.757488+00:00 heroku[web.1]: Starting process with command `java -Xmx384m -Xss512k -XX:+UseCompressedOops -jar target/dependency/webapp-runner.jar --port 7711 target/*.war`
+2014-06-23T22:20:46.733572+00:00 heroku[web.1]: Process exited with status 126
+2014-06-23T22:20:46.751516+00:00 heroku[web.1]: State changed from starting to crashed

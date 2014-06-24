@@ -56,16 +56,16 @@
 		</div>
 	</div>
 
-	<div class="col-lg-11 col-md-10 col-sm-9 col-xs-9 center">
+	<div class="col-lg-11 col-md-9 col-sm-6 col-xs-9 center">
 
 		<c:if test="${!empty photoList}">
 			<c:forEach items="${photoList}" var="photo">
-				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
 					<div class="row">
-						<div class="box-drop-shadow">
-							<img
+						<div class="box-drop-shadow ">
+							<img 
 								src="${pageContext.request.contextPath}/photo/${photo.pid}/image"
-								 class="img-responsive img-rounded" >
+								 class="img-responsive img-rounded image-clip">
 							<c:choose>
 								<c:when test="${fn:length(photo.name) > 20}">
 									<c:set var="shortenedPhotoName"

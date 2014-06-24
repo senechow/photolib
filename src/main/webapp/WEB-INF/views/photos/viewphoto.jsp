@@ -22,10 +22,10 @@
 		</div>
 
 	<div class="row">
-		<div class="col-lg-6 col-md-7 col-sm-7 col-xs-8 image center">
+		<div class="col-lg-6 col-md-7 col-sm-7 col-xs-8 center">
 			<img
 				src="${pageContext.request.contextPath}/photo/${photo.pid}/image"
-				class="img-responsive">
+				class="img-responsive center">
 		</div>
 	</div>
 

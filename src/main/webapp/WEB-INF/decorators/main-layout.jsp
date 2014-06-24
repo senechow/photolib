@@ -46,5 +46,6 @@
 		src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
 	<script src="/PhotoLibrary/resources/javascripts/confirm-delete-modal.js"></script>
+	<script src="/PhotoLibrary/resources/javascripts/center-modal.js"></script>
 </body>
 </html>

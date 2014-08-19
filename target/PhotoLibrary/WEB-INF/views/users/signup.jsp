@@ -46,6 +46,10 @@
 					</div>
 				</div>
 			</div>
+			
+			<div class="row">
+				<t:input path="userName" label="User Name:" required="true" />
+			</div>
 
 
 			<div class="row">
@@ -61,6 +65,8 @@
 				<t:input-password path="passwordConfirm" label="Confirm Password"
 					required="true" />
 			</div>
+			
+			<input type="hidden" name="passwordOld" value=" ">
 
 
 			<div class="form-group">

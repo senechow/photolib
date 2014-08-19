@@ -3,18 +3,22 @@ package com.spring.photolib.webapp.domain;
 import java.util.Date;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.Parameter;
@@ -39,6 +43,11 @@ public class User {
 	@NotEmpty
 	@Email
 	private String emailAddress;
+	
+	@Column(name="password_old")
+	@NotEmpty
+	@Type(type = "encryptedString")
+	private String passwordOld;
 
 	@Column(name = "password")
 	@NotNull
@@ -52,6 +61,11 @@ public class User {
 	@Type(type = "encryptedString")
 	private String passwordConfirm;
 
+	@Column(name="user_name")
+	@NotNull
+	@NotEmpty
+	private String userName;
+	
 	@Column(name = "first_name")
 	private String firstName;
 
@@ -72,16 +86,23 @@ public class User {
 	@Column(name="confirmation_code")
 	private String confirmationCode;
 	
-	@Column(name="stored_confirmaion_code")
+	@Column(name="stored_confirmation_code")
 	private String storedConfirmationCode;
-
-	/*
-	 * @Column(name="confirmation_code") private String confirmationCode;
-	 * 
-	 * @Column(name="status") private int status;
-	 */
-	@OneToMany(mappedBy = "user")
+	
+	@OneToMany(mappedBy = "user", cascade= CascadeType.ALL)
 	private Set<Photo> photos;
+	
+	@OneToMany(mappedBy = "user", cascade= CascadeType.ALL)
+	private Set<Album> albums;
+	
+	@ManyToMany(fetch = FetchType.LAZY, mappedBy = "users")
+	private Set<Rating> ratings;
+	
+	@OneToMany(mappedBy = "user", cascade=CascadeType.ALL)
+	private Set<UserFlag> userFlags;
+	
+	@Column(name="banned")
+	private boolean banned;
 
 	public User() {}
 
@@ -117,6 +138,10 @@ public class User {
 	public void setPhotos(Set<Photo> photos) {
 		this.photos = photos;
 	}
+	
+	public void setAlbums(Set<Album> albums) {
+		this.albums = albums;
+	}
 
 	public void setRole(Role role) {
 		this.role = role;
@@ -132,6 +157,26 @@ public class User {
 	
 	public void setStoredConfirmationCode(String storedConfirmationCode) {
 		this.storedConfirmationCode = storedConfirmationCode;
+	}
+	
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public void setRatings(Set<Rating> ratings) {
+		this.ratings = ratings;
+	}
+	
+	public void setPasswordOld(String passwordOld) {
+		this.passwordOld = passwordOld;
+	}
+
+	public void setUserFlags(Set<UserFlag> userFlags) {
+		this.userFlags = userFlags;
+	}
+	
+	public void setBanned(boolean banned) {
+		this.banned = banned;
 	}
 
 	public Integer getUid() {
@@ -180,6 +225,30 @@ public class User {
 	
 	public String getStoredConfirmationCode() {
 		return storedConfirmationCode;
+	}
+	
+	public String getUserName() {
+		return userName;
+	}
+	
+	public Set<Album> getAlbums() {
+		return albums;
+	}
+	
+	public Set<Rating> getRatings() {
+		return ratings;
+	}
+
+	public String getPasswordOld() {
+		return passwordOld;
+	}
+
+	public Set<UserFlag> getUserFlags() {
+		return userFlags;
+	}
+	
+	public boolean getBanned() {
+		return banned;
 	}
 
 }

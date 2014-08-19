@@ -47,21 +47,30 @@
 
 <div class="form-group">
 	<div class="row">
-		<label>Visibility: *</label>
-		<div class="radio">
-			<form:label path="isPublic">Public</form:label>
-			<form:radiobutton path="isPublic" value="true" />
-			<form:errors path="isPublic" cssClass="error" />
-		</div>
+		<label>Privacy Settings: *</label>
+	</div>
+	<div class="radio">
+		<form:radiobutton path="isPublic" value="true" label="Public" />
+		<form:errors path="isPublic" cssClass="error" />
+	</div>
 
-		<div class="radio">
-
-			<form:label path="isPublic"> Private</form:label>
-			<form:radiobutton path="isPublic" value="false" />
-			<form:errors path="isPublic" cssClass="error" />
-		</div>
+	<div class="radio">
+		<form:radiobutton path="isPublic" value="false" label="Private"/>
+		<form:errors path="isPublic" cssClass="error" />
 	</div>
 </div>
+
+
+
+<div class="form-group">
+	<div class="row">
+		<form:label path="tags"> Tags </form:label>
+		<form:input id="tagsid" path="tags" class="form-control" />
+		<form:errors path="tags" cssClass="error" />
+	</div>
+</div>
+
+
 
 <div class="form-group">
 	<div class="row col-lg-2 col-md-2 col-sm-3">

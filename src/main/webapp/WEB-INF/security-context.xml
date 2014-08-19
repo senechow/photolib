@@ -9,20 +9,32 @@
 
 
 	<http auto-config='true'>
-		<intercept-url pattern="/photo/new" access="ROLE_REGISTERED_USER"
+		<intercept-url pattern="/admin" access="ROLE_ADMIN" />
+		<intercept-url pattern="/admin/**" access="ROLE_ADMIN" />
+		<intercept-url pattern="/photo/new" access="ROLE_REGISTERED_USER, ROLE_ADMIN"
 			method="GET" />
 		<intercept-url pattern="/photo/*"
-			access="ROLE_ANONYMOUS, ROLE_REGISTERED_USER" method="GET" />
+			access="ROLE_ANONYMOUS, ROLE_REGISTERED_USER, ROLE_ADMIN" method="GET" />
 		<intercept-url pattern="/photo/*/image"
-			access="ROLE_ANONYMOUS, ROLE_REGISTERED_USER" />
-		<intercept-url pattern="/photo/*" access="ROLE_REGISTERED_USER"
+			access="ROLE_ANONYMOUS, ROLE_REGISTERED_USER, ROLE_ADMIN" />
+		<intercept-url pattern="/photo/*" access="ROLE_REGISTERED_USER, ROLE_ADMIN"
 			method="POST" />
-		<intercept-url pattern="/photo/*" access="ROLE_REGISTERED_USER"
+		<intercept-url pattern="/photo/*" access="ROLE_REGISTERED_USER, ROLE_ADMIN"
 			method="DELETE" />
-		<intercept-url pattern="/photo/*/**" access="ROLE_REGISTERED_USER" />
+		<intercept-url pattern="/photo/*/**" access="ROLE_REGISTERED_USER, ROLE_ADMIN" />
+		<intercept-url pattern="/album/new" access="ROLE_REGISTERED_USER, ROLE_ADMIN"
+			method="GET" />
+		<intercept-url pattern="/album/*"
+			access="ROLE_ANONYMOUS, ROLE_REGISTERED_USER, ROLE_ADMIN" method="GET" />
+		<intercept-url pattern="/album/*" access="ROLE_REGISTERED_USER, ROLE_ADMIN"
+			method="POST" />
+		<intercept-url pattern="/album/*" access="ROLE_REGISTERED_USER, ROLE_ADMIN"
+			method="DELETE" />
+		<intercept-url pattern="/album/*/**" access="ROLE_REGISTERED_USER, ROLE_ADMIN" />
 		<intercept-url pattern="/users/new/**" access="ROLE_ANONYMOUS" />
 		<intercept-url pattern="/users/*/confirmemail/**" access="ROLE_ANONYMOUS" />
-		<intercept-url pattern="/users/**" access="ROLE_REGISTERED_USER" />
+		<intercept-url pattern="/users/**" access="ROLE_REGISTERED_USER, ROLE_ADMIN" />
+		<intercept-url pattern="/users/*/**" access="ROLE_REGISTERED_USER, ROLE_ADMIN" />
 
 		<form-login login-page="/login" default-target-url="/login-successful"
 			authentication-failure-url="/login-failed" />

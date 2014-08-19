@@ -10,23 +10,27 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Repository;
 
+import com.spring.photolib.webapp.domain.Album;
 import com.spring.photolib.webapp.domain.Photo;
 import com.spring.photolib.webapp.domain.Role;
 import com.spring.photolib.webapp.domain.User;
 import com.spring.photolib.webapp.exception.AccountAlreadyConfirmedException;
 import com.spring.photolib.webapp.exception.ConfirmationMismatchException;
+import com.spring.photolib.webapp.util.SortHelper;
 
 @Repository
 public class UserDaoImpl implements UserDao {
 
 	@Autowired
 	private SessionFactory sessionFactory;
+	private SortHelper sortHelper = new SortHelper();
 
 	public void createUser(User user) {
 		Session session = sessionFactory.getCurrentSession(); 
 		user.setRole((Role) session.createQuery("from Role where role = 'registered_user'").list().get(0));
 		user.setActivated(false);
 		user.setCreationDate(new Date());
+		user.setBanned(false);
 		if(!user.getFirstName().isEmpty()){
 			user.setFirstName(user.getFirstName().substring(0,1).toUpperCase() + user.getFirstName().substring(1));
 		}
@@ -63,7 +67,13 @@ public class UserDaoImpl implements UserDao {
 		return (User) sessionFactory.getCurrentSession().get(User.class, id);
 	}
 	
-	public List<Photo> getUserPhotos(Integer id) {
+	public List<Photo> getUserPhotosAndSort(Integer id, String sortType) {
+		List photos = getUserPhotos(id);
+		sortHelper.sortPhoto(sortType, photos);
+		return photos;
+	}
+	
+	private List<Photo> getUserPhotos(Integer id) {
 		//List<Photo> photos = sessionFactory.getCurrentSession().createQuery("from Photo p inner join p.user as u where p.user.uid = :id").setParameter("id", id).list(); 
 		List<Photo> photos = sessionFactory.getCurrentSession().createQuery("from Photo p where p.user.uid = :id").setParameter("id", id).list();
 		return photos;
@@ -93,4 +103,22 @@ public class UserDaoImpl implements UserDao {
 		}
 	}
 
+	public List<Album> getUserAlbums(Integer id) {
+		List<Album> albums = sessionFactory.getCurrentSession().createQuery("from Album a where a.user.uid = :id").setParameter("id", id).list();
+		return albums;
+	}
+
+	public void banUser(Integer id) {
+		Session session = sessionFactory.getCurrentSession();
+		User user = (User) session.get(User.class, id);
+		user.setBanned(true);
+		session.update(user);	
+	}
+
+	public void unbanUser(Integer id) {
+		Session session = sessionFactory.getCurrentSession();
+		User user = (User) session.get(User.class, id);
+		user.setBanned(false);
+		session.update(user);
+	}
 }

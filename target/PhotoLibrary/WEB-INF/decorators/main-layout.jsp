@@ -22,8 +22,28 @@
 	href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 
 <!-- main css -->
+
+<link
+	href="<c:url value="/resources/stylesheets/cerulean-bootstrap.min.css" />"
+	rel="stylesheet" />
 <link href="<c:url value="/resources/stylesheets/main.css" />"
 	rel="stylesheet" />
+<link rel="stylesheet"
+	href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" type="text/css"
+	href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css">
+<link rel="stylesheet" type="text/css"
+	href="<c:url value="/resources/stylesheets/jquery.tagit.css" />" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script
+	src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script
+	src="<c:url value= "/resources/javascripts/masonry.pkgd.min.js"/>"></script>
+<script
+	src="<c:url value= "/resources/javascripts/jquery.infinitescroll.min.js"/>"></script>
+<script
+	src="<c:url value= "/resources/javascripts/imagesloaded.pkgd.min.js"/>"></script>
+<script src="<c:url value= "/resources/javascripts/jquery.sausage.js"/>"></script>
 <title>Photo Library</title>
 </head>
 <body>
@@ -38,14 +58,20 @@
 
 
 	<!-- JQuery -->
-	<script
-		src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script
+		src="<c:url value= "/resources/javascripts/jquery-simple-pagination-plugin.js"/>"></script>
+	<script
 		src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="<c:url value= "/resources/javascripts/tag-it.js"/>"></script>
+	<script src="<c:url value= "/resources/javascripts/autocomplete.js"/>"></script>
 
-	<script src="/PhotoLibrary/resources/javascripts/confirm-delete-modal.js"></script>
-	<script src="/PhotoLibrary/resources/javascripts/center-modal.js"></script>
+	<script src="<c:url value= "/resources/javascripts/datepicker.js"/>"></script>
+	<script
+		src="<c:url value= "/resources/javascripts/confirm-delete-modal.js"/>"></script>
+	<script src="<c:url value= "/resources/javascripts/tabs.js"/>"></script>
+
+
 </body>
 </html>

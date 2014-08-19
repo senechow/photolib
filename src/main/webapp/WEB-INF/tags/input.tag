@@ -10,6 +10,7 @@
 <%@attribute name="cssClass" required="false" type="java.lang.String"%>
 <%@attribute name="label" required="false" type="java.lang.String"%>
 <%@attribute name="required" required="false" type="java.lang.Boolean"%>
+<%@attribute name="id" required="false" type="java.lang.String"%>
 
 <c:if test="${empty label}">
 	<c:set var="label"
@@ -22,7 +23,8 @@
 				<span class="required">*</span>
 			</c:if></label>
 		<form:input path="${path}" class="form-control" 
-			cssClass="${empty cssClass ? '' : cssClass}"  />
+			cssClass="${empty cssClass ? '' : cssClass}"  
+			id= "${empty id ? '' : id}"/>
 		<c:if test="${status.error}">
 			<span class="help-inline control-label">${status.errorMessage}</span>
 		</c:if>

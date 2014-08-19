@@ -45,10 +45,11 @@ form {
 
 .box-drop-shadow {
 
+	-webkit-box-shadow:  0px 0px 10px 0px rgba(30,150,255,1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(30,150,255,1);
+    box-shadow: 0px 0px 10px 0px rgba(30,150,255,1);
 	margin-top: 30px;
 	margin-bottom: 35px;
-	margin-right: 5px;
-	box-shadow: 0 0 50px blue;
 	padding: 20px;
 }
 
@@ -64,4 +65,66 @@ form {
 .title {
 	text-align: left
 }
+
+.tag-box{
+	position: relative;
+	background-color:#E0EAF1;
+    border-bottom: 1px solid #3E6D8E;
+    border-right: 1px solid #7F9FB6;
+    color: #3E6D8E;
+    font-size: 90%;
+    line-height: 2.4;
+    margin: 2px 0px 2px 0px;
+    padding: 3px 4px;
+    text-decoration: none;
+    white-space: nowrap;
+ 
+}
+
+#masonry-container{
+    margin: 0 auto;
+}
+
+.item {
+	opacity: 0;
+}
+
+.item.loaded {
+	opacity: 1;
+}
+
+.simple-pagination-page-numbers a
+{
+	display: block;
+	float: left;
+	width: 2rem;
+	text-align: left;
+}
+
+
+a[class^="simple-pagination-navigation-"] + a[class^="simple-pagination-navigation-"]
+{
+	margin-right: 0;
+}
+a[class*="simple-pagination-navigation-disabled"]
+{
+	color: black;
+	cursor: default;
+}
+
+.my-navigation:after
+{
+	content: "";
+	display: table;
+	clear: both;
+}
+.my-navigation div
+{
+	float: left;
+	
+}
+.my-navigation div + div
+{
+	margin-left: .5rem;
+
 }

@@ -1,21 +1,32 @@
 package com.spring.photolib.webapp.controller;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.security.Principal;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomCollectionEditor;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
+import org.springframework.web.bind.ServletRequestDataBinder;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,9 +36,17 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.spring.photolib.webapp.domain.AuthorizedUser;
+import com.spring.photolib.webapp.domain.Flag;
 import com.spring.photolib.webapp.domain.Photo;
+import com.spring.photolib.webapp.domain.PhotoFlag;
+import com.spring.photolib.webapp.domain.Role;
+import com.spring.photolib.webapp.domain.Search;
+import com.spring.photolib.webapp.domain.Tag;
+import com.spring.photolib.webapp.exception.PhotoAlreadyRatedException;
 import com.spring.photolib.webapp.exception.UnauthorizedException;
 import com.spring.photolib.webapp.service.PhotoService;
+import com.spring.photolib.webapp.util.SortTypes;
+import com.spring.photolib.webapp.util.TagPropertyEditor;
 import com.spring.photolib.webapp.validator.PhotoValidator;
 
 @Controller
@@ -38,11 +57,53 @@ public class PhotoController {
 
 	private Logger logger = Logger.getLogger(PhotoController.class);
 
-	@RequestMapping(value = { "","/", "/photo" }, method = RequestMethod.GET)
-	public String listPhotos(ModelMap map, Principal principal) {
+	private static final String[] PHOTO_FLAG_REASONS = {
+			"Inappropriate language", "Inappropriate image",
+			"Other (Please specify in description)" };
+
+	@RequestMapping(value = { "", "/", "/photo" }, method = RequestMethod.GET)
+	public String listPhotos(
+			ModelMap map,
+			Principal principal,
+			@RequestParam(value = "page", defaultValue = "0", required = false) int page) {
 		logger.info("Retrieving photo list.");
-		map.addAttribute("photoList", photoService.listPhotos(principal));
+		map.addAttribute("photoList", photoService.listPhotos(principal, page));
+		Search search = new Search();
+		search.setSortType(SortTypes.MOST_RECENT.toString());
+		map.addAttribute("search", search);
+		map.addAttribute("sortingSelections", SortTypes.getSortTypesAsStrings());
+
 		logger.info("Photo list retrieval completed.");
+		return "photos/photo";
+	}
+	
+	@RequestMapping(value = "/morephotos" , method = RequestMethod.GET)
+	public String addListPhotos( @RequestParam(value = "sortType", defaultValue = "Most Recent", required = false) String sortType,
+			@RequestParam(value = "page", defaultValue = "0", required = false) int page, ModelMap map,
+			Principal principal
+			) {
+		logger.info("Adding more photos to the list.");
+		map.addAttribute("photoList", photoService.listPhotosAndSort(principal, sortType, page));
+		Search search = new Search();
+		search.setSortType(sortType);
+		map.addAttribute("search", search);
+		map.addAttribute("sortingSelections", SortTypes.getSortTypesAsStrings());
+
+		logger.info("More photos have been added.");
+		return "photos/_photo";
+	}
+
+	@RequestMapping(value = "/photo/sort")
+	public String sortPhotos(@ModelAttribute("search") Search search,
+			BindingResult result, ModelMap map, Principal principal) {
+		logger.info("Retrieving and sorting photos by type "
+				+ search.getSortType());
+		map.addAttribute("photoList", photoService.listPhotosAndSort(principal,
+				search.getSortType(), 0));
+		map.addAttribute("sortingSelections", SortTypes.getSortTypesAsStrings());
+		map.addAttribute("search", search);
+		logger.info("Finished retrieving and sorting photos by type "
+				+ search.getSortType());
 		return "photos/photo";
 	}
 
@@ -65,7 +126,7 @@ public class PhotoController {
 		boolean hasErrors = photoHasErrors(errors, result, imageFile);
 
 		if (hasErrors) {
-			logger.error("Form errors were found during photo creation. Redirecting user back ot photo creation page.");
+			logger.error("Form errors were found during photo creation. Redirecting user back to photo creation page.");
 			map.addAttribute("errors", errors);
 			return "photos/addphoto";
 		} else {
@@ -84,7 +145,7 @@ public class PhotoController {
 	public String editPhoto(@PathVariable Integer pid, Principal principal,
 			ModelMap map) {
 		logger.info("Directing to photo editting page for photo id " + pid);
-		Photo photo = photoService.getPhotoById(pid);
+		Photo photo = photoService.getPhotoAndTagsById(pid);
 
 		if (!correctUser(photo, principal)) {
 			logger.error("Unauthorized attempt by user with id "
@@ -123,12 +184,40 @@ public class PhotoController {
 				return "photos/editphoto";
 			} else {
 				photoService.updatePhoto(photo, imageFile, principal);
+				Photo updatedPhoto = photoService.getPhotoAndTagsById(pid);
+				map.addAttribute("photo", updatedPhoto);
 				map.addAttribute("message",
 						"label.message.photo.editsuccessful");
 				logger.info("Photo with id " + pid + "was successfully updated");
 				return "photos/viewphoto";
 			}
 		}
+	}
+
+	@InitBinder
+	protected void initBinder(WebDataBinder binder) {
+		binder.registerCustomEditor(Set.class, "tags", new TagPropertyEditor());
+	}
+
+	private Set<Tag> createSetFromStrings(String unformatedTagNames) {
+		unformatedTagNames.replaceAll("\\s", "");
+		Set<Tag> tagNames = new LinkedHashSet<Tag>();
+		boolean endOfString = false;
+		while (!endOfString) {
+			Tag tag = new Tag();
+			if (unformatedTagNames.contains(",")) {
+				tag.setName(unformatedTagNames.substring(0,
+						unformatedTagNames.indexOf(",")));
+				unformatedTagNames = unformatedTagNames
+						.substring(unformatedTagNames.indexOf(",") + 1);
+
+			} else {
+				tag.setName(unformatedTagNames);
+				endOfString = true;
+			}
+			tagNames.add(tag);
+		}
+		return tagNames;
 	}
 
 	@RequestMapping(value = "/photo/{pid}", method = RequestMethod.DELETE)
@@ -156,7 +245,7 @@ public class PhotoController {
 	public String getPhotoById(@PathVariable Integer pid, ModelMap map)
 			throws IOException {
 		logger.info("Retrieving photo with id " + pid);
-		Photo photo = photoService.getPhotoById(pid);
+		Photo photo = photoService.getPhotoAndTagsById(pid);
 		if (photo.getDescription().equals("")) {
 			photo.setDescription("No description is avaliable.");
 		}
@@ -180,10 +269,45 @@ public class PhotoController {
 		}
 	}
 
+	@RequestMapping(value = "/photo/{pid}/rate")
+	public String ratePhoto(@RequestParam("rating") Integer rating,
+			@PathVariable Integer pid, Principal principal, ModelMap map,
+			RedirectAttributes redirectAttributes) {
+		if (principal == null) {
+			logger.error("Unauthorized attempt by an unregistered user to rate photo with id "
+					+ pid);
+			throw new UnauthorizedException();
+		}
+
+		Photo photo = photoService.getPhotoById(pid);
+		List<String> errors = new ArrayList<String>();
+		if (photo.getUser().getUid().equals(getCurrentUser(principal))) {
+
+			logger.error("User attempted to rate their own photo");
+			errors.add("error.rating.rateownphoto");
+			redirectAttributes.addFlashAttribute("errors", errors);
+			return "redirect:/photo/" + pid;
+
+		} else {
+			try {
+				photoService.ratePhoto(photo, rating, principal);
+			} catch (PhotoAlreadyRatedException e) {
+				errors.add("error.rating.ratetwice");
+				redirectAttributes.addFlashAttribute("errors", errors);
+				return "redirect:/photo/" + pid;
+			}
+		}
+		redirectAttributes.addFlashAttribute("message",
+				"label.message.photo.ratingsuccessful");
+		return "redirect:/photo/" + pid;
+	}
+
 	private boolean correctUser(Photo photo, Principal principal) {
 		AuthorizedUser user = getCurrentUser(principal);
+		Role userRole = user.getRole();
 		boolean correct = false;
-		if (photo.getUser().getUid() == user.getId()) {
+		if (photo.getUser().getUid() == user.getId()
+				|| userRole.getRole().equals("admin")) {
 			correct = true;
 		}
 

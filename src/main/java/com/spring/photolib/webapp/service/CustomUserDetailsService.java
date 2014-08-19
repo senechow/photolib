@@ -34,13 +34,18 @@ public class CustomUserDetailsService implements UserDetailsService {
 		boolean enabled;
 		boolean accountNonExpired = true;
 		boolean credentialsNonExpired = true;
-		boolean accountNonLocked = true;
+		boolean accountNonLocked;
 
 		if(domainUser.getActivated() && domainUser.getConfirmationCode().equals(domainUser.getStoredConfirmationCode())) {
 			enabled = true;
-		}
-		else{
+		} else{
 			enabled = false;
+		}
+		
+		if(domainUser.getBanned()) {
+			accountNonLocked = false;
+		} else {
+			accountNonLocked = true;
 		}
 		
 		AuthorizedUser appUser = new AuthorizedUser(
@@ -55,6 +60,9 @@ public class CustomUserDetailsService implements UserDetailsService {
 		appUser.setLastName(domainUser.getLastName());
 		appUser.setPhotos(domainUser.getPhotos());
 		appUser.setRole(domainUser.getRole());
+		appUser.setAlbums(domainUser.getAlbums());
+		appUser.setUserName(domainUser.getUserName());
+		appUser.setBanned(domainUser.getBanned());
 
 		return appUser;
 	}

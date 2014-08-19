@@ -24,6 +24,12 @@ public class AuthorizedUser extends User {
 	private Role role;
 	
 	private Set<Photo> photos;
+	
+	private Set<Album> albums;
+	
+	private String userName;
+	
+	private boolean banned;
 
 	public AuthorizedUser(String username, String password, Collection<? extends GrantedAuthority> authorities) {
 		super(username, password, authorities);
@@ -66,6 +72,18 @@ public class AuthorizedUser extends User {
 	public void setRole(Role role) {
 		this.role = role;
 	}
+	
+	public void setAlbums(Set<Album> albums){
+		this.albums = albums;
+	}
+	
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	
+	public void setBanned(boolean banned) {
+		this.banned = banned;
+	}
 
 	public Integer getId() {
 		return id;
@@ -93,5 +111,13 @@ public class AuthorizedUser extends User {
 
 	public Role getRole() {
 		return role;
+	}
+	
+	public String getUserName() {
+		return userName;
+	}
+	
+	public boolean getBanned() {
+		return banned;
 	}
 }

@@ -3,6 +3,7 @@ package com.spring.photolib.webapp.service;
 import java.util.List;
 import java.util.Set;
 
+import com.spring.photolib.webapp.domain.Album;
 import com.spring.photolib.webapp.domain.Photo;
 import com.spring.photolib.webapp.domain.User;
 import com.spring.photolib.webapp.exception.AccountAlreadyConfirmedException;
@@ -16,7 +17,12 @@ public interface UserService {
 	public void removeUser(Integer id);
 	public User getUserInfo(Integer id);
 	public List<Photo> getUserPhotos(Integer uid);
+	public List<Photo> getUserPhotosAndSort(Integer uid, String sortType);
+	public List<Album> getUserAlbums(Integer uid);
 	public void activateAccount(User confirmUser, Integer uid) throws AccountAlreadyConfirmedException, ConfirmationMismatchException;
 	public User getUserByEmail(String email);
-	
+	public void changePassword(User oldUser, User newUser);
+	public void resetPassword(User user);
+	public void banUser(Integer id);
+	public void unbanUser(Integer id);
 }

@@ -54,6 +54,10 @@
 		</form>
 
 		<div class="row">
+			<a href="<c:url value="/forgotpassword"/>">Forgot your password?</a>
+		</div>
+
+		<div class="row">
 			<a href="<c:url value="/users/new"/>">Don't have an account?
 				Create one.</a>
 		</div>

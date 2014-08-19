@@ -4,10 +4,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ taglib prefix="sec"
+	uri="http://www.springframework.org/security/tags"%>
 
 <html>
 <body>
-
 	<div class="col-lg-11 col-md-10 col-sm-9 col-xs-9 center">
 		<div class="row">
 			<c:choose>
@@ -29,8 +30,8 @@
 		<c:import url="/WEB-INF/views/shared/messages.jsp" />
 
 		<div class="row">
-			<c:url var="newPhotoURL" value="/photo/new"/>
-			<form:form action="${pageContext.request.contextPath}/photo/new" method="get">
+			<form:form action="${pageContext.request.contextPath}/photo/new"
+				method="get">
 				<input type="submit" value="Create New Photo"
 					class="btn btn-lg btn-primary">
 			</form:form>
@@ -39,11 +40,42 @@
 
 	<div class="col-lg-11 col-md-10 col-sm-9 col-xs-9 center">
 		<div class="row">
+			<c:choose>
+				<c:when test="${! empty userPhotoTitle}">
+					<sec:authentication property="principal.id" var="accountId" />
+					<c:url var="userSortUrl" value="/users/${accountId}/photos/sort" />
+					<form:form method="get" action="${userSortUrl}"
+						commandName="search">
+						<div class="form-group">
+							<form:label path="sortType">Sort By: </form:label>
+							<form:select class="form-control" id="select" path="sortType"
+								items="${sortingSelections}" onchange="this.form.submit()">
+							</form:select>
+						</div>
+					</form:form>
+				</c:when>
+				<c:otherwise>
+					<c:url var="sortUrl" value="/photo/sort" />
+					<form:form method="get" action="${sortUrl}" commandName="search">
+						<div class="col-lg-2 col-md-3 col-sm-4 form-group">
+							<form:label path="sortType">Sort By: </form:label>
+							<form:select class="form-control" path="sortType"
+								items="${sortingSelections}" onchange="this.form.submit()">
+							</form:select>
+						</div>
+					</form:form>
+				</c:otherwise>
+			</c:choose>
+		</div>
+	</div>
+
+	<div class="col-lg-11 col-md-10 col-sm-9 col-xs-9 center">
+		<div class="row">
 			<c:if test="${empty photoList}">
 				<c:choose>
-					<c:when test="${!empty userPhotoEmptyMsg}">
+					<c:when test="${!empty emptyPhotoMsg}">
 						<p>
-							<spring:message code="${userPhotoEmptyMsg}" />
+							<spring:message code="${emptyPhotoMsg}" />
 						</p>
 					</c:when>
 					<c:otherwise>
@@ -56,38 +88,94 @@
 		</div>
 	</div>
 
-	<div class="col-lg-11 col-md-9 col-sm-6 col-xs-9 center">
-
-		<c:if test="${!empty photoList}">
-			<c:forEach items="${photoList}" var="photo">
-				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-					<div class="row">
-						<div class="box-drop-shadow ">
-							<img 
-								src="${pageContext.request.contextPath}/photo/${photo.pid}/image"
-								 class="img-responsive img-rounded image-clip">
-							<c:choose>
-								<c:when test="${fn:length(photo.name) > 20}">
-									<c:set var="shortenedPhotoName"
-										value="${fn:substring(photo.name,0,20)}..." />
-									<h4>${shortenedPhotoName}</h4>
-								</c:when>
-								<c:otherwise>
-									<h4>${photo.name}</h4>
-								</c:otherwise>
-							</c:choose>
-							<form:form
-								action="${pageContext.request.contextPath}/photo/${photo.pid}"
-								method="get" commandName="photo">
-								<input type="submit" value="Details" class="btn btn-success">
-							</form:form>
-						</div>
-					</div>
-				</div>
-			</c:forEach>
-		</c:if>
-
+	<div class="col-lg-11 col-md-10 col-sm-9 col-xs-9 center">
+		<div id="masonry-container">
+			<c:import url="/WEB-INF/views/photos/_photo.jsp"></c:import>
+		</div>
 	</div>
+
+	<script type="text/javascript">
+	
+	var rootUrl = "${pageContext.request.contextPath}";
+	
+	(function(){
+		var page = 0, 
+			loading = false;
+		
+		function nearBottomOfPage() {
+			return $(window).scrollTop() > $(document).height() - $(window).height() - 150;
+		}
+		
+		$(window).scroll(function() {
+			
+			if(loading) {
+				return;
+			}
+			
+			if(nearBottomOfPage()) {
+				loading=true;
+				page++;
+				var location = rootUrl + "/morephotos?sortType=${search.sortType}" + "&page=" + page;
+				$.ajax({
+					url: location,
+					type: 'get',
+					dataType: 'html',
+					success: 
+						function(data) {
+						if(data.trim()) {
+						$(window).sausage('draw');
+						loading=false;
+						
+						var $boxes= data;
+					
+						$("#masonry-container").append($boxes).masonry('appended', $boxes);
+						}
+						else {
+							page--;
+							$(window).sausage('destroy');
+						}
+					}
+				});
+				$(".item").imagesLoaded(function() {
+						$("#masonry-container").masonry('reloadItems');
+						$("#masonry-container").masonry('layout');
+						$(".item").addClass('loaded');
+				});
+			}
+		});
+		$(window).sausage();
+	
+	}());
+
+	$(document).ready(function() {
+		
+		var $container = $('#masonry-container');
+		$(".item").imagesLoaded(function() {
+			$container.imagesLoaded(function() {
+				$(".item").addClass('loaded');
+				$container.masonry({
+					itemSelector : '.item',
+					isAnimated : true,
+					columnWidth : containerWidth(),
+					isFitWidth: true
+				});
+				
+			});
+		});
+	});
+
+	function containerWidth() {
+		 var width = $(window).width();
+	     var col = 200;
+	     if(width < 1200 && width >= 980) {
+	       col = 160;
+	     }
+	     else if(width < 980 && width >= 768) {
+	       col = 124;
+	     }
+	     return col;
+	}
+	</script>
 
 </body>
 </html>

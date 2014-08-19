@@ -84,7 +84,6 @@
 	</div>
 
 	<form:form id="hiddenadvschform" method="get" modelAttribute="search">
-
 		<form:hidden path="name" />
 		<form:hidden path="description" />
 		<form:hidden path="createdSince" />

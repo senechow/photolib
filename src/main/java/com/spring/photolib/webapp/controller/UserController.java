@@ -31,6 +31,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -59,9 +60,10 @@ public class UserController {
 	@Autowired
 	@Qualifier("userValidator")
 	private Validator validator;
-	
-	private static final String [] USER_FLAG_REASONS = {"Inappropriate name", "Spamming", 
-		"Posting inappropriate material", "Other (Please specify in description)"};
+
+	private static final String[] USER_FLAG_REASONS = { "Inappropriate name",
+			"Spamming", "Posting inappropriate material",
+			"Other (Please specify in description)" };
 
 	@RequestMapping(value = "/users/new", method = RequestMethod.GET)
 	public String newUser(ModelMap map) {
@@ -131,7 +133,8 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "/users/{id}", method = RequestMethod.GET)
-	public String viewUser(@PathVariable Integer id, ModelMap map, Principal principal) {
+	public String viewUser(@PathVariable Integer id, ModelMap map,
+			Principal principal) {
 		logger.info("Viewing user account for user with id " + id);
 		User user = userService.getUserInfo(id);
 		user.setPassword("");
@@ -140,7 +143,7 @@ public class UserController {
 		user.setStoredConfirmationCode("");
 		user.setPasswordOld("");
 		map.addAttribute("user", user);
-		if(getCurrentUser(principal).getId().equals(id)) {
+		if (getCurrentUser(principal).getId().equals(id)) {
 			map.addAttribute("myAccountTitle", "label.title.myaccount");
 		}
 		return "users/viewuser";
@@ -230,31 +233,51 @@ public class UserController {
 
 	@RequestMapping(value = "/users/{id}/photos", method = RequestMethod.GET)
 	public String showUsersPhotos(@PathVariable Integer id, ModelMap map) {
-		logger.info("Retrieving all photos created by user " + id);
+		logger.info("Retrieving some photos created by user " + id);
 		map.addAttribute("userPhotoTitle", "label.title.usersphoto");
 		map.addAttribute("emptyPhotoMsg", "label.emptyusersphoto");
-		map.addAttribute("photoList", userService.getUserPhotos(id));
+		map.addAttribute("photoList", userService.getUserPhotos(id, 0));
 		map.addAttribute("sortingSelections", SortTypes.getSortTypesAsStrings());
 		Search search = new Search();
 		search.setSortType(SortTypes.MOST_RECENT.toString());
 		map.addAttribute("search", search);
-		logger.info("Successfully retrieved all photos created by user " + id);
+		logger.info("Successfully retrieved some photos created by user " + id);
 		return "photos/photo";
 	}
 
 	@RequestMapping(value = "/users/{id}/photos/sort", method = RequestMethod.GET)
-	public String sortUsersPhotos(@ModelAttribute("search") Search search,
-			BindingResult result, @PathVariable Integer id, ModelMap map) {
+	public String sortUsersPhotos(
+			@ModelAttribute("search") Search search,
+			BindingResult result,
+			@RequestParam(value = "page", defaultValue = "0", required = false) int page,
+			@PathVariable Integer id, ModelMap map) {
 		logger.info("Sorting all photos created by user " + id);
 		map.addAttribute("userPhotoTitle", "label.title.usersphoto");
 		map.addAttribute("emptyPhotoMsg", "label.emptyusersphoto");
 		map.addAttribute("photoList",
-				userService.getUserPhotosAndSort(id, search.getSortType()));
+				userService.getUserPhotosAndSort(id, search.getSortType(), page));
 		map.addAttribute("sortingSelections", SortTypes.getSortTypesAsStrings());
 		map.addAttribute("search", search);
 		logger.info("Successfully sorted all photos created by user " + id);
 		return "photos/photo";
-
+	}
+	
+	@RequestMapping(value = "/users/{id}/morephotos", method = RequestMethod.GET)
+	public String getMoreUsersPhotos(@PathVariable Integer id, ModelMap map,
+			@RequestParam(value = "sortType", defaultValue = "Most Recent", required = false) String sortType, 
+			@RequestParam(value = "page", defaultValue = "0", required = false) int page) {
+		logger.info("Getting more photos created by user " + id);
+		map.addAttribute("userPhotoTitle", "label.title.usersphoto");
+		map.addAttribute("emptyPhotoMsg", "label.emptyusersphoto");
+		map.addAttribute("photoList",
+				userService.getUserPhotosAndSort(id, sortType, page));
+		map.addAttribute("sortingSelections", SortTypes.getSortTypesAsStrings());
+		Search search = new Search();
+		search.setSortType(sortType);
+		map.addAttribute("search", search);
+		logger.info("Successfully add more photos created by user " + id);
+		return "photos/_photo";
+		
 	}
 
 	@RequestMapping(value = "/users/{id}/albums", method = RequestMethod.GET)
@@ -297,7 +320,8 @@ public class UserController {
 		if (user.getConfirmationCode() == null
 				|| user.getConfirmationCode().equals("")) {
 			errors.add("error.empty.confirmationcode");
-			FieldError fieldError = new FieldError("user", "confirmationCode", "error.empty.confirmationcode");
+			FieldError fieldError = new FieldError("user", "confirmationCode",
+					"error.empty.confirmationcode");
 			result.addError(fieldError);
 			map.addAttribute("userid", id.toString());
 			map.addAttribute("errors", errors);
@@ -310,7 +334,8 @@ public class UserController {
 			userService.activateAccount(user, id);
 		} catch (AccountAlreadyConfirmedException e) {
 			errors.add("error.activation.alreadyactivated");
-			FieldError fieldError = new FieldError("user", "confirmationCode", "error.empty.error.activation.alreadyactivated");
+			FieldError fieldError = new FieldError("user", "confirmationCode",
+					"error.empty.error.activation.alreadyactivated");
 			result.addError(fieldError);
 			map.addAttribute("userid", id.toString());
 			map.addAttribute("errors", errors);
@@ -322,7 +347,8 @@ public class UserController {
 			errors.add("error.activation.confirmationmismatch");
 			map.addAttribute("userid", id.toString());
 			map.addAttribute("errors", errors);
-			FieldError fieldError = new FieldError("user", "confirmationCode", "error.activation.confirmationmismatch");
+			FieldError fieldError = new FieldError("user", "confirmationCode",
+					"error.activation.confirmationmismatch");
 			result.addError(fieldError);
 			logger.error("User with id " + id
 					+ "has entered in an incorrect email confirmation code.");
@@ -335,16 +361,16 @@ public class UserController {
 		return "redirect:/login";
 	}
 
-	@RequestMapping(value = "/users/{id}/changepassword", method=RequestMethod.GET)
-	public String changePassword(@PathVariable Integer id,
-			Principal principal, ModelMap map) {
+	@RequestMapping(value = "/users/{id}/changepassword", method = RequestMethod.GET)
+	public String changePassword(@PathVariable Integer id, Principal principal,
+			ModelMap map) {
 		logger.info("Direction user to the change password page");
 		map.addAttribute("user", new User());
 		return "users/changepwd";
 
 	}
 
-	@RequestMapping(value = "/users/{id}/updatepassword", method=RequestMethod.POST)
+	@RequestMapping(value = "/users/{id}/updatepassword", method = RequestMethod.POST)
 	public String updatePassword(@ModelAttribute("user") @Valid User user,
 			BindingResult result, @PathVariable Integer id, ModelMap map,
 			Principal principal, RedirectAttributes redirectAttributes) {
@@ -380,14 +406,17 @@ public class UserController {
 					}
 				}
 			}
-			if(!user.getPasswordOld().equals("") && !user.getPasswordOld().equals(oldUser.getPasswordOld())) {
-				FieldError passwordError = new FieldError("user", "passwordOld", "error.password.wrongold");
+			if (!user.getPasswordOld().equals("")
+					&& !user.getPasswordOld().equals(oldUser.getPasswordOld())) {
+				FieldError passwordError = new FieldError("user",
+						"passwordOld", "error.password.wrongold");
 				result.addError(passwordError);
 				errors.add("error.password.wrongold");
 			}
 			if (!errors.isEmpty()) {
 				map.addAttribute("errors", errors);
-				logger.error("There were errors when changing the password of the user with id " + id
+				logger.error("There were errors when changing the password of the user with id "
+						+ id
 						+ ". Redirecting the user to the change password page.");
 				return "users/changepwd";
 			} else {
@@ -406,31 +435,33 @@ public class UserController {
 			}
 		}
 	}
-	
-	@RequestMapping(value="/forgotpassword", method=RequestMethod.GET)
+
+	@RequestMapping(value = "/forgotpassword", method = RequestMethod.GET)
 	public String forgotPassword(ModelMap map) {
 		logger.info("Directing the user to the forgot password page");
 		map.addAttribute("user", new User());
 		return "users/forgotpassword";
 	}
-	
-	@RequestMapping(value="/forgotpassword/sendemail", method=RequestMethod.POST)
-	public String forgotPasswordSendEmail(@ModelAttribute ("user") User user, BindingResult result,
-			ModelMap map, HttpServletRequest request) {
+
+	@RequestMapping(value = "/forgotpassword/sendemail", method = RequestMethod.POST)
+	public String forgotPasswordSendEmail(@ModelAttribute("user") User user,
+			BindingResult result, ModelMap map, HttpServletRequest request) {
 		logger.info("Changing the user's password to a random one and sending an email to their email");
-		List<String> errors = new ArrayList<String> ();
-		if(user.getEmailAddress() == null || user.getEmailAddress().equals("")) {
+		List<String> errors = new ArrayList<String>();
+		if (user.getEmailAddress() == null || user.getEmailAddress().equals("")) {
 			logger.error("User entered in an empty email address during password recovery");
-			FieldError fieldError = new FieldError("user", "emailAddress", "NotEmpty.user.emailAddress");
+			FieldError fieldError = new FieldError("user", "emailAddress",
+					"NotEmpty.user.emailAddress");
 			result.addError(fieldError);
 			errors.add("NotEmpty.user.emailAddress");
 			map.addAttribute("errors", errors);
 			return "users/forgotpassword";
 		}
 		User storedUser = userService.getUserByEmail(user.getEmailAddress());
-		if(storedUser == null) {
+		if (storedUser == null) {
 			logger.error("User entered in an incorrect email address during password recovery");
-			FieldError fieldError = new FieldError("user", "emailAddress", "error.email.wrongemail");
+			FieldError fieldError = new FieldError("user", "emailAddress",
+					"error.email.wrongemail");
 			result.addError(fieldError);
 			errors.add("error.email.wrongemail");
 			map.addAttribute("errors", errors);
@@ -440,7 +471,8 @@ public class UserController {
 			String baseUrl = request
 					.getRequestURL()
 					.toString()
-					.substring(0, request.getRequestURL().toString().indexOf("user"));
+					.substring(0,
+							request.getRequestURL().toString().indexOf("user"));
 
 			String sendingURL = baseUrl + "/login";
 
@@ -459,8 +491,9 @@ public class UserController {
 					+ sendingURL);
 
 			mailSender.send(message);
-			
-			logger.info("The user has successfully started password recovery with email " + user.getEmailAddress());
+
+			logger.info("The user has successfully started password recovery with email "
+					+ user.getEmailAddress());
 			return "users/forgotpasswordsendemail";
 		}
 	}

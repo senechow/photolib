@@ -46,7 +46,7 @@
 					<c:url var="userSortUrl" value="/users/${accountId}/photos/sort" />
 					<form:form method="get" action="${userSortUrl}"
 						commandName="search">
-						<div class="form-group">
+						<div class="col-lg-2 col-md-3 col-sm-4 form-group">
 							<form:label path="sortType">Sort By: </form:label>
 							<form:select class="form-control" id="select" path="sortType"
 								items="${sortingSelections}" onchange="this.form.submit()">
@@ -100,7 +100,8 @@
 	
 	(function(){
 		var page = 0, 
-			loading = false;
+			loading = false
+			onUsersPhotoPage = "${userPhotoTitle}";
 		
 		function nearBottomOfPage() {
 			return $(window).scrollTop() > $(document).height() - $(window).height() - 150;
@@ -115,7 +116,14 @@
 			if(nearBottomOfPage()) {
 				loading=true;
 				page++;
-				var location = rootUrl + "/morephotos?sortType=${search.sortType}" + "&page=" + page;
+				var location;
+				if(onUsersPhotoPage) {
+					var userId = "${accountId}";
+					location = rootUrl + "/users/" + userId + "/morephotos?sortType=${search.sortType}&page=" + page;
+				}
+				else {
+					location = rootUrl + "/morephotos?sortType=${search.sortType}" + "&page=" + page;
+				}
 				$.ajax({
 					url: location,
 					type: 'get',

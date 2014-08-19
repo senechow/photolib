@@ -53,8 +53,8 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Transactional
-	public List<Photo> getUserPhotos(Integer uid) {
-		return userDao.getUserPhotosAndSort(uid, SortTypes.MOST_RECENT.toString());
+	public List<Photo> getUserPhotos(Integer uid, int page) {
+		return userDao.getUserPhotosAndSort(uid,SortTypes.MOST_RECENT.toString(),page);
 	}
 
 	@Transactional
@@ -73,8 +73,8 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Transactional
-	public List<Photo> getUserPhotosAndSort(Integer uid, String sortType) {
-		return userDao.getUserPhotosAndSort(uid,sortType);
+	public List<Photo> getUserPhotosAndSort(Integer uid, String sortType, int page) {
+		return userDao.getUserPhotosAndSort(uid,sortType,page);
 	}
 	
 	@Transactional

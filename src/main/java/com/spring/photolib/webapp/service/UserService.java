@@ -16,8 +16,8 @@ public interface UserService {
 	public void updateUser(User user);
 	public void removeUser(Integer id);
 	public User getUserInfo(Integer id);
-	public List<Photo> getUserPhotos(Integer uid);
-	public List<Photo> getUserPhotosAndSort(Integer uid, String sortType);
+	public List<Photo> getUserPhotos(Integer uid, int page);
+	public List<Photo> getUserPhotosAndSort(Integer uid, String sortType, int page);
 	public List<Album> getUserAlbums(Integer uid);
 	public void activateAccount(User confirmUser, Integer uid) throws AccountAlreadyConfirmedException, ConfirmationMismatchException;
 	public User getUserByEmail(String email);

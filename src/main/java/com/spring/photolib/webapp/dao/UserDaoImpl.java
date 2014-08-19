@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,8 @@ public class UserDaoImpl implements UserDao {
 	@Autowired
 	private SessionFactory sessionFactory;
 	private SortHelper sortHelper = new SortHelper();
+	
+	private static final int MAX_PHOTOS_PER_PAGE = 6;
 
 	public void createUser(User user) {
 		Session session = sessionFactory.getCurrentSession(); 
@@ -67,15 +70,13 @@ public class UserDaoImpl implements UserDao {
 		return (User) sessionFactory.getCurrentSession().get(User.class, id);
 	}
 	
-	public List<Photo> getUserPhotosAndSort(Integer id, String sortType) {
-		List photos = getUserPhotos(id);
-		sortHelper.sortPhoto(sortType, photos);
-		return photos;
-	}
-	
-	private List<Photo> getUserPhotos(Integer id) {
-		//List<Photo> photos = sessionFactory.getCurrentSession().createQuery("from Photo p inner join p.user as u where p.user.uid = :id").setParameter("id", id).list(); 
-		List<Photo> photos = sessionFactory.getCurrentSession().createQuery("from Photo p where p.user.uid = :id").setParameter("id", id).list();
+	public List<Photo> getUserPhotosAndSort(Integer id, String sortType, int page) {
+		String orderBy = sortHelper.setOrderBy(sortType);
+		Query query;
+		query = sessionFactory.getCurrentSession().createQuery("from Photo p where p.user.uid = :id " + orderBy).setParameter("id", id);
+		query.setMaxResults(MAX_PHOTOS_PER_PAGE);
+		query.setFirstResult(page * MAX_PHOTOS_PER_PAGE);
+		List<Photo> photos = query.list();
 		return photos;
 	}
 	

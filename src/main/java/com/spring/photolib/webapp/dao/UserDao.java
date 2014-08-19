@@ -23,7 +23,7 @@ public interface UserDao {
 
 	public User getUserInfo(Integer id);
 
-	public List<Photo> getUserPhotosAndSort(Integer id, String sortType);
+	public List<Photo> getUserPhotosAndSort(Integer id, String sortType, int page);
 
 	public List<Album> getUserAlbums(Integer id);
 

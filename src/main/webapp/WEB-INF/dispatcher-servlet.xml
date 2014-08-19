@@ -52,12 +52,12 @@
 		<property name="location" value="classpath:server.properties" />
 	</bean>
 
-	<!-- <bean -->
-	<!-- class="org.jasypt.spring31.properties.EncryptablePropertyPlaceholderConfigurer"> -->
-	<!-- <constructor-arg ref="configurationEncryptor" /> -->
-	<!-- <property name="location" value="classpath:server_local.properties" 
-		/> -->
-	<!-- </bean> -->
+<!-- 	<bean -->
+<!-- 	class="org.jasypt.spring31.properties.EncryptablePropertyPlaceholderConfigurer"> -->
+<!-- 	<constructor-arg ref="configurationEncryptor" /> -->
+<!-- 	<property name="location" value="classpath:server_local.properties"  -->
+<!-- 		/> -->
+<!-- 	</bean> -->
 
 	<bean id="configurationEncryptor" class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
 		<property name="config" ref="environmentVariablesConfiguration" />
@@ -93,9 +93,9 @@
 		<property name="driverClassName" value="org.postgresql.Driver" />
 		<property name="url"
 			value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() 
- 			+ @dbUrl.getPath() }" />
-		<!-- <property name="url" value="jdbc:postgresql://localhost:5432/photolib" 
-			/> -->
+  			+ @dbUrl.getPath() }" />
+<!-- 		<property name="url" value="jdbc:postgresql://localhost:5432/photolib"  -->
+<!-- 			/> -->
 		<property name="username" value="${jdbc.username}" />
 		<property name="password" value="${jdbc.password}" />
 	</bean>

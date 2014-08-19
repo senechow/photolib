@@ -13,7 +13,7 @@
 	<div class="col-lg-7 col-md-8 col-sm-9 col-xs-11 center">
 
 		<div class="row">
-			<h2>Create Photo</h2>
+			<h2>Create a New Photo</h2>
 		</div>
 
 		

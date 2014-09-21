@@ -10,7 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.spring.photolib.webapp.dao.PhotoDao;
 import com.spring.photolib.webapp.domain.Photo;
-import com.spring.photolib.webapp.exception.PhotoAlreadyRatedException;
+import com.spring.photolib.webapp.exception.AlreadyRatedException;
 
 @Service
 public class PhotoServiceImpl implements PhotoService {
@@ -19,8 +19,8 @@ public class PhotoServiceImpl implements PhotoService {
 	private PhotoDao photoDao;
 	
 	@Transactional
-	public List<Photo> listPhotos(Principal principal, int page) {
-		return photoDao.listPhotos(principal, page, "Most Recent");
+	public List<Photo> listPhotos(Principal principal) {
+		return photoDao.listPhotos(principal);
 	}
 
 	@Transactional
@@ -51,14 +51,20 @@ public class PhotoServiceImpl implements PhotoService {
 		return photoDao.getPhotoAndTagsById(pid);
 	}
 
-	@Transactional
-	public List<Photo> listPhotosAndSort(Principal principal, String sortType, int page) {
-		return photoDao.listPhotos(principal, page, sortType);
-	}
+//	@Transactional
+//	public List<Photo> listPhotosAndSort(Principal principal, String sortType, int page) {
+//		return photoDao.listPhotos(principal, page, sortType);
+//	}
 	
 	@Transactional
-	public void ratePhoto(Photo photo, Integer rating, Principal principal) throws PhotoAlreadyRatedException {
+	public void ratePhoto(Photo photo, Integer rating, Principal principal) throws AlreadyRatedException {
 		photoDao.ratePhoto(photo, rating, principal);
+	}
+
+	@Transactional
+	public void updatePhotoViewCount(Photo photo) {
+		photoDao.updatePhotoViewCount(photo);
+		
 	}
 
 }

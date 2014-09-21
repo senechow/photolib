@@ -34,8 +34,6 @@
 
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 
-
-
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
@@ -47,17 +45,16 @@
 	</bean>
 
 	<bean
-		class="org.jasypt.spring31.properties.EncryptablePropertyPlaceholderConfigurer">
-		<constructor-arg ref="configurationEncryptor" />
-		<property name="location" value="classpath:server.properties" />
+	class="org.jasypt.spring31.properties.EncryptablePropertyPlaceholderConfigurer">
+	<constructor-arg ref="configurationEncryptor" />
+	<property name="location" value="classpath:server.properties" />
 	</bean>
 
-	<!-- <bean -->
-	<!-- class="org.jasypt.spring31.properties.EncryptablePropertyPlaceholderConfigurer"> -->
-	<!-- <constructor-arg ref="configurationEncryptor" /> -->
-	<!-- <property name="location" value="classpath:server_local.properties" 
-		/> -->
-	<!-- </bean> -->
+<!-- 	<bean -->
+<!-- 		class="org.jasypt.spring31.properties.EncryptablePropertyPlaceholderConfigurer"> -->
+<!-- 		<constructor-arg ref="configurationEncryptor" /> -->
+<!-- 		<property name="location" value="classpath:server_local.properties" /> -->
+<!-- 	</bean> -->
 
 	<bean id="configurationEncryptor" class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
 		<property name="config" ref="environmentVariablesConfiguration" />
@@ -67,6 +64,7 @@
 		class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
 		<property name="algorithm" value="PBEWithMD5AndDES" />
 		<property name="passwordEnvName" value="APP_ENCRYPTION_PASSWORD" />
+	
 	</bean>
 
 	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
@@ -93,9 +91,8 @@
 		<property name="driverClassName" value="org.postgresql.Driver" />
 		<property name="url"
 			value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() 
- 			+ @dbUrl.getPath() }" />
-		<!-- <property name="url" value="jdbc:postgresql://localhost:5432/photolib" 
-			/> -->
+  				+ @dbUrl.getPath() }" />
+<!-- 		<property name="url" value="jdbc:postgresql://localhost:5432/photolib" /> -->
 		<property name="username" value="${jdbc.username}" />
 		<property name="password" value="${jdbc.password}" />
 	</bean>
@@ -112,7 +109,8 @@
 				<value>com.spring.photolib.webapp.domain.Role</value>
 				<value>com.spring.photolib.webapp.domain.Tag</value>
 				<value>com.spring.photolib.webapp.domain.Album</value>
-				<value>com.spring.photolib.webapp.domain.Rating</value>
+				<value>com.spring.photolib.webapp.domain.PhotoRating</value>
+				<value>com.spring.photolib.webapp.domain.AlbumRating</value>
 				<value>com.spring.photolib.webapp.domain.Flag</value>
 				<value>com.spring.photolib.webapp.domain.PhotoFlag</value>
 				<value>com.spring.photolib.webapp.domain.UserFlag</value>

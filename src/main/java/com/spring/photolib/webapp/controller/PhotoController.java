@@ -14,11 +14,14 @@ import java.util.Set;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomCollectionEditor;
+import org.springframework.beans.support.MutableSortDefinition;
+import org.springframework.beans.support.PagedListHolder;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -42,9 +45,11 @@ import com.spring.photolib.webapp.domain.PhotoFlag;
 import com.spring.photolib.webapp.domain.Role;
 import com.spring.photolib.webapp.domain.Search;
 import com.spring.photolib.webapp.domain.Tag;
-import com.spring.photolib.webapp.exception.PhotoAlreadyRatedException;
+import com.spring.photolib.webapp.exception.AlreadyRatedException;
 import com.spring.photolib.webapp.exception.UnauthorizedException;
 import com.spring.photolib.webapp.service.PhotoService;
+import com.spring.photolib.webapp.util.PhotoHelper;
+import com.spring.photolib.webapp.util.SortHelper;
 import com.spring.photolib.webapp.util.SortTypes;
 import com.spring.photolib.webapp.util.TagPropertyEditor;
 import com.spring.photolib.webapp.validator.PhotoValidator;
@@ -55,6 +60,8 @@ public class PhotoController {
 	@Autowired
 	private PhotoService photoService;
 
+	private SortHelper sortHelper = new SortHelper();
+	private PhotoHelper photoHelper = new PhotoHelper();
 	private Logger logger = Logger.getLogger(PhotoController.class);
 
 	private static final String[] PHOTO_FLAG_REASONS = {
@@ -62,46 +69,42 @@ public class PhotoController {
 			"Other (Please specify in description)" };
 
 	@RequestMapping(value = { "", "/", "/photo" }, method = RequestMethod.GET)
-	public String listPhotos(
-			ModelMap map,
-			Principal principal,
-			@RequestParam(value = "page", defaultValue = "0", required = false) int page) {
+	public String listPhotos(ModelMap map, Principal principal,
+			HttpServletRequest request) {
 		logger.info("Retrieving photo list.");
-		map.addAttribute("photoList", photoService.listPhotos(principal, page));
-		Search search = new Search();
-		search.setSortType(SortTypes.MOST_RECENT.toString());
-		map.addAttribute("search", search);
-		map.addAttribute("sortingSelections", SortTypes.getSortTypesAsStrings());
-
+		PagedListHolder<Photo> photoList = new PagedListHolder<Photo>(
+				photoService.listPhotos(principal), new MutableSortDefinition(
+						sortHelper.getDefaultSortPhoto(), true, true));
+		photoHelper.addPhotosAndNewSearchToMap(photoList, request, map,
+				SortTypes.MOST_RECENT.toString());
 		logger.info("Photo list retrieval completed.");
 		return "photos/photo";
 	}
-	
-	@RequestMapping(value = "/morephotos" , method = RequestMethod.GET)
-	public String addListPhotos( @RequestParam(value = "sortType", defaultValue = "Most Recent", required = false) String sortType,
-			@RequestParam(value = "page", defaultValue = "0", required = false) int page, ModelMap map,
-			Principal principal
-			) {
-		logger.info("Adding more photos to the list.");
-		map.addAttribute("photoList", photoService.listPhotosAndSort(principal, sortType, page));
-		Search search = new Search();
-		search.setSortType(sortType);
-		map.addAttribute("search", search);
-		map.addAttribute("sortingSelections", SortTypes.getSortTypesAsStrings());
 
+	@RequestMapping(value = "/morephotos", method = RequestMethod.GET)
+	public String addListPhotos(
+			@RequestParam(value = "sortType", defaultValue = "Most Recent", required = false) String sortType,
+			@RequestParam(value = "page", defaultValue = "0", required = false) int page,
+			ModelMap map, Principal principal, HttpServletRequest request) {
+		logger.info("Adding more photos to the list.");
+		PagedListHolder<Photo> photoList = (PagedListHolder) request
+				.getSession().getAttribute("session_photolist");
+		photoHelper.addMorePhotosAndNewSearchToMap(photoList, map, sortType);
 		logger.info("More photos have been added.");
 		return "photos/_photo";
 	}
 
 	@RequestMapping(value = "/photo/sort")
-	public String sortPhotos(@ModelAttribute("search") Search search,
-			BindingResult result, ModelMap map, Principal principal) {
+	public String sortPhotos(@ModelAttribute("photoSearch") Search search,
+			BindingResult result, ModelMap map, Principal principal,
+			HttpServletRequest request) {
 		logger.info("Retrieving and sorting photos by type "
 				+ search.getSortType());
-		map.addAttribute("photoList", photoService.listPhotosAndSort(principal,
-				search.getSortType(), 0));
-		map.addAttribute("sortingSelections", SortTypes.getSortTypesAsStrings());
-		map.addAttribute("search", search);
+		PagedListHolder<Photo> photoList = new PagedListHolder<Photo>(
+				photoService.listPhotos(principal),
+				sortHelper.getSortDefinition(search.getSortType()));
+		photoHelper.addPhotosAndExistingSearchToMap(photoList, request, map,
+				search);
 		logger.info("Finished retrieving and sorting photos by type "
 				+ search.getSortType());
 		return "photos/photo";
@@ -136,7 +139,7 @@ public class PhotoController {
 					"label.message.photo.creationsuccessful");
 			logger.info("Photo with id " + photo.getPid()
 					+ " was successfully created.");
-			// return "redirect:/photo/" + photo.getPid();
+
 			return "photos/viewphoto";
 		}
 	}
@@ -246,6 +249,11 @@ public class PhotoController {
 			throws IOException {
 		logger.info("Retrieving photo with id " + pid);
 		Photo photo = photoService.getPhotoAndTagsById(pid);
+		logger.info("Updating view count for photo with id " + pid);
+		if (!map.containsKey("message")) {
+			photo.setViewCount(photo.getViewCount() + 1);
+			photoService.updatePhotoViewCount(photo);
+		}
 		if (photo.getDescription().equals("")) {
 			photo.setDescription("No description is avaliable.");
 		}
@@ -291,8 +299,8 @@ public class PhotoController {
 		} else {
 			try {
 				photoService.ratePhoto(photo, rating, principal);
-			} catch (PhotoAlreadyRatedException e) {
-				errors.add("error.rating.ratetwice");
+			} catch (AlreadyRatedException e) {
+				errors.add("error.rating.ratephototwice");
 				redirectAttributes.addFlashAttribute("errors", errors);
 				return "redirect:/photo/" + pid;
 			}

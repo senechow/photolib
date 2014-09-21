@@ -15,6 +15,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -56,6 +57,12 @@ public class Album {
 	@Column(name="isPublic")
 	private boolean isPublic;
 	
+	@Column(name="album_size")
+	private int albumSize;
+	
+	@Column(name="viewCount")
+	private int viewCount;
+	
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name="ALBUM_PHOTO",
 				joinColumns={@JoinColumn(name = "aid")},
@@ -68,6 +75,9 @@ public class Album {
 	
 	@OneToMany(mappedBy = "album", cascade=CascadeType.ALL)
 	private Set<AlbumFlag> albumFlags;
+	
+	@OneToOne(mappedBy = "album", cascade = CascadeType.ALL)
+	private AlbumRating rating;
 
 	public Album() {}
 	
@@ -91,6 +101,14 @@ public class Album {
 		return isPublic;
 	}
 	
+	public int getAlbumSize() {
+		return albumSize;
+	}
+	
+	public int getViewCount() {
+		return viewCount;
+	}
+	
 	public String getDescription() {
 		return description;
 	}
@@ -105,6 +123,10 @@ public class Album {
 	
 	public Set<AlbumFlag> getAlbumFlags() {
 		return albumFlags;
+	}
+	
+	public AlbumRating getRating() {
+		return rating;
 	}
 	
 	public void setAid(Integer aid) {
@@ -139,8 +161,19 @@ public class Album {
 		this.isPublic = isPublic;
 	}
 	
+	public void setAlbumSize(int albumSize) {
+		this.albumSize = albumSize;
+	}
+	
+	public void setViewCount(int viewCount) {
+		this.viewCount = viewCount;
+	}
+	
 	public void setAlbumFlags(Set<AlbumFlag> albumFlags) {
 		this.albumFlags = albumFlags;
 	}
 
+	public void setRating(AlbumRating rating) {
+		this.rating = rating;
+	}
 }

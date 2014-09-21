@@ -33,7 +33,7 @@
 
 			<div class="form-group">
 				<div class="row">
-					<input type="submit" value="Enter" class="btn btn-lg btn-success">
+					<input type="submit" value="Enter" class="btn btn-lg btn-primary">
 				</div>
 			</div>
 		</form:form>

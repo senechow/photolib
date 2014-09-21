@@ -1,5 +1,6 @@
 package com.spring.photolib.webapp.dao;
 
+import java.security.Principal;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -8,10 +9,12 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Repository;
 
 import com.spring.photolib.webapp.domain.Album;
+import com.spring.photolib.webapp.domain.AuthorizedUser;
 import com.spring.photolib.webapp.domain.Photo;
 import com.spring.photolib.webapp.domain.Role;
 import com.spring.photolib.webapp.domain.User;
@@ -70,20 +73,25 @@ public class UserDaoImpl implements UserDao {
 		return (User) sessionFactory.getCurrentSession().get(User.class, id);
 	}
 	
-	public List<Photo> getUserPhotosAndSort(Integer id, String sortType, int page) {
-		String orderBy = sortHelper.setOrderBy(sortType);
-		Query query;
-		query = sessionFactory.getCurrentSession().createQuery("from Photo p where p.user.uid = :id " + orderBy).setParameter("id", id);
-		query.setMaxResults(MAX_PHOTOS_PER_PAGE);
-		query.setFirstResult(page * MAX_PHOTOS_PER_PAGE);
+	public List<Photo> getUserPhotos(Integer id, Principal principal) {
+		if(principal != null) {
+			AuthorizedUser user = (AuthorizedUser) ((Authentication) principal)
+					.getPrincipal();
+			if(user.getId().equals(id)) {
+				Query query = sessionFactory.getCurrentSession().createQuery("from Photo p where p.user.uid = :id ").setParameter("id", id);
+				List<Photo> photos = query.list();
+				return photos;
+			}
+		}
+		Query query = sessionFactory.getCurrentSession().createQuery("from Photo p where p.user.uid = :id and p.isPublic = true").setParameter("id", id);
 		List<Photo> photos = query.list();
 		return photos;
 	}
 	
-	public User getUserByEmail(String email) {
+	public User getUserByEmail(String email) throws  UsernameNotFoundException{
 		List <User> userList = sessionFactory.getCurrentSession().createQuery("from User u where u.emailAddress = :email_address").setString("email_address",email).list();
 		if(userList.isEmpty()) {
-			throw new UsernameNotFoundException("Error: User not found");
+			return null;
 		}
 		return (User) userList.get(0);
 	}
@@ -104,8 +112,16 @@ public class UserDaoImpl implements UserDao {
 		}
 	}
 
-	public List<Album> getUserAlbums(Integer id) {
-		List<Album> albums = sessionFactory.getCurrentSession().createQuery("from Album a where a.user.uid = :id").setParameter("id", id).list();
+	public List<Album> getUserAlbums(Integer id, Principal principal) {
+		if(principal != null) {
+			AuthorizedUser user = (AuthorizedUser) ((Authentication) principal)
+					.getPrincipal();
+			if(user.getId().equals(id)) {
+				List<Album> albums = sessionFactory.getCurrentSession().createQuery("from Album a where a.user.uid = :id").setParameter("id", id).list();
+				return albums;
+			}
+		}
+		List<Album> albums = sessionFactory.getCurrentSession().createQuery("from Album a where a.user.uid = :id and a.isPublic = true").setParameter("id", id).list();
 		return albums;
 	}
 

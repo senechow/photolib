@@ -9,6 +9,6 @@ import com.spring.photolib.webapp.domain.Search;
 public interface SearchService {
 	
 	public List<Photo> basicSearchPhotos(String query, Principal principal);
-	public List<Photo> advancedSearchPhotos(Search query, int page, Principal principal);
+	public List<Photo> advancedSearchPhotos(Search query, Principal principal);
 	
 }

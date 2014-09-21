@@ -19,7 +19,8 @@
 		<c:import url="/WEB-INF/views/shared/errors.jsp" />
 
 		<c:url var="advSearchUrl" value="/advancedsearch/search" />
-		<form:form method="get" action="${advSearchUrl}" commandName="search">
+		<form:form method="get" action="${advSearchUrl}"
+			commandName="photoSearch">
 
 			<div class="row">
 				<t:input path="name" label="Name of photo: " />
@@ -45,15 +46,17 @@
 			<div class="row">
 				<div class="form-group">
 					<form:label class="control-label" path="sortType">Sort By: </form:label>
-					<form:select class="form-control" path="sortType"
-						items="${sortingSelections}" />
+					<div class="select-style">
+						<form:select path="sortType"
+							items="${sortingSelections}" />
+					</div>
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="form-group">
 
-					<input type="submit" value="Search" class="btn btn-lg btn-success">
+					<input type="submit" value="Search" class="btn btn-lg btn-primary">
 				</div>
 			</div>
 

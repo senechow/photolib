@@ -1,8 +1,10 @@
 package com.spring.photolib.webapp.dao;
 
+import java.security.Principal;
 import java.util.List;
 import java.util.Set;
 
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.spring.photolib.webapp.domain.Album;
@@ -23,11 +25,11 @@ public interface UserDao {
 
 	public User getUserInfo(Integer id);
 
-	public List<Photo> getUserPhotosAndSort(Integer id, String sortType, int page);
+	public List<Photo> getUserPhotos(Integer id, Principal principal);
 
-	public List<Album> getUserAlbums(Integer id);
+	public List<Album> getUserAlbums(Integer id, Principal principal);
 
-	public User getUserByEmail(String email);
+	public User getUserByEmail(String email) throws  UsernameNotFoundException;
 
 	public void activateAccount(User confirmUser, Integer uid)
 			throws AccountAlreadyConfirmedException,

@@ -2,10 +2,12 @@ package com.spring.photolib.webapp.service;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
+import java.security.Principal;
 import java.security.SecureRandom;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -53,8 +55,8 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Transactional
-	public List<Photo> getUserPhotos(Integer uid, int page) {
-		return userDao.getUserPhotosAndSort(uid,SortTypes.MOST_RECENT.toString(),page);
+	public List<Photo> getUserPhotos(Integer uid, Principal principal) {
+		return userDao.getUserPhotos(uid, principal);
 	}
 
 	@Transactional
@@ -63,20 +65,15 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Transactional
-	public User getUserByEmail(String email) {
+	public User getUserByEmail(String email) throws  UsernameNotFoundException{
 		return userDao.getUserByEmail(email);
 	}
 
 	@Transactional
-	public List<Album> getUserAlbums(Integer uid) {
-		return userDao.getUserAlbums(uid);
+	public List<Album> getUserAlbums(Integer uid, Principal principal) {
+		return userDao.getUserAlbums(uid, principal);
 	}
 
-	@Transactional
-	public List<Photo> getUserPhotosAndSort(Integer uid, String sortType, int page) {
-		return userDao.getUserPhotosAndSort(uid,sortType,page);
-	}
-	
 	@Transactional
 	public void changePassword(User oldUserInfo, User newUserInfo) {
 		oldUserInfo.setPassword(newUserInfo.getPassword());
@@ -116,7 +113,7 @@ public class UserServiceImpl implements UserService {
 		try {
 			SecureRandom rand = SecureRandom.getInstance("SHA1PRNG", "SUN");
 			for (int i = 0; i < length; i++) {
-				double index = rand.nextInt(2) * charactersLength;
+				double index = rand.nextInt(2) * (charactersLength - 1);
 				buffer.append(characters.charAt((int) index));
 			}
 		} catch (NoSuchAlgorithmException e) {

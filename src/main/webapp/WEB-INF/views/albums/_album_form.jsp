@@ -48,7 +48,7 @@
 <div class="form-group">
 	<div class="row col-lg-2 col-md-2 col-sm-3">
 		<div class="row">
-			<input type="submit" value="Enter" class="btn btn-lg btn-success">
+			<input type="submit" value="Enter" class="btn btn-lg btn-primary">
 		</div>
 	</div>
 </div>

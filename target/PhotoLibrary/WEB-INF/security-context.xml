@@ -26,12 +26,19 @@
 			method="GET" />
 		<intercept-url pattern="/album/*"
 			access="ROLE_ANONYMOUS, ROLE_REGISTERED_USER, ROLE_ADMIN" method="GET" />
+		<intercept-url pattern="/album/*/image"
+			access="ROLE_ANONYMOUS, ROLE_REGISTERED_USER, ROLE_ADMIN" />
 		<intercept-url pattern="/album/*" access="ROLE_REGISTERED_USER, ROLE_ADMIN"
 			method="POST" />
 		<intercept-url pattern="/album/*" access="ROLE_REGISTERED_USER, ROLE_ADMIN"
 			method="DELETE" />
 		<intercept-url pattern="/album/*/**" access="ROLE_REGISTERED_USER, ROLE_ADMIN" />
 		<intercept-url pattern="/users/new/**" access="ROLE_ANONYMOUS" />
+		<intercept-url pattern="/users/*" access="ROLE_ANONYMOUS, ROLE_REGISTERED_USER, ROLE_ADMIN" method="GET"/>
+		<intercept-url pattern="/users/*/photos/**" access="ROLE_ANONYMOUS, ROLE_REGISTERED_USER, ROLE_ADMIN"/>
+		<intercept-url pattern="/users/*/morephotos" access="ROLE_ANONYMOUS, ROLE_REGISTERED_USER, ROLE_ADMIN"/>
+		<intercept-url pattern="/users/*/albums/**" access="ROLE_ANONYMOUS, ROLE_REGISTERED_USER, ROLE_ADMIN"/>
+		<intercept-url pattern="/users/*/morealbums" access="ROLE_ANONYMOUS, ROLE_REGISTERED_USER, ROLE_ADMIN"/>
 		<intercept-url pattern="/users/*/confirmemail/**" access="ROLE_ANONYMOUS" />
 		<intercept-url pattern="/users/**" access="ROLE_REGISTERED_USER, ROLE_ADMIN" />
 		<intercept-url pattern="/users/*/**" access="ROLE_REGISTERED_USER, ROLE_ADMIN" />

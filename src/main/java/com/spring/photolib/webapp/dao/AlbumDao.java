@@ -4,6 +4,8 @@ import java.security.Principal;
 import java.util.List;
 
 import com.spring.photolib.webapp.domain.Album;
+import com.spring.photolib.webapp.domain.Photo;
+import com.spring.photolib.webapp.exception.AlreadyRatedException;
 
 public interface AlbumDao {
 	
@@ -13,5 +15,7 @@ public interface AlbumDao {
 	public void updateAlbum(Album album, Principal principal);
 	public void removeAlbum(Album album);
 	public Album getAlbumAndPhotosById(Integer id);
+	public void updateAlbumViewcount(Album album);
+	public void rateAlbum(Album album, Integer rating, Principal principal) throws AlreadyRatedException;
 
 }

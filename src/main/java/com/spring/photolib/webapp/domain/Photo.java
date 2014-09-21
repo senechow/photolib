@@ -63,6 +63,9 @@ public class Photo {
 	@Column (name="imageContentType")
 	private String imageContentType;
 	
+	@Column(name="viewCount")
+	private int viewCount;
+	
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name="creation_date", updatable=false )
 	@DateTimeFormat(pattern="yyy/MM/dd")
@@ -88,7 +91,7 @@ public class Photo {
 	private Set<Album> albums;
 	
 	@OneToOne(mappedBy = "photo", cascade = CascadeType.ALL)
-	private Rating rating;
+	private PhotoRating rating;
 	
 	@OneToMany(mappedBy = "photo", cascade=CascadeType.ALL)
 	private Set<PhotoFlag> photoFlags;
@@ -119,6 +122,10 @@ public class Photo {
 		this.imageContentType = imageContentType;
 	}
 	
+	public void setViewCount(int viewCount) {
+		this.viewCount = viewCount;
+	}
+	
 	public void setUser(User user) {
 		this.user = user;
 	}
@@ -144,7 +151,7 @@ public class Photo {
 	}
 	
 
-	public void setRating(Rating rating) {
+	public void setRating(PhotoRating rating) {
 		this.rating = rating;
 	}
 	
@@ -176,6 +183,10 @@ public class Photo {
 		return imageContentType;
 	}
 	
+	public int getViewCount() {
+		return viewCount;
+	}
+	
 	public User getUser() {
 		return user;
 	}
@@ -200,7 +211,7 @@ public class Photo {
 		return albums;
 	}
 	
-	public Rating getRating() {
+	public PhotoRating getRating() {
 		return rating;
 	}
 

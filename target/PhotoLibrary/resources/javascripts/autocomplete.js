@@ -19,7 +19,7 @@ $(document).ready(function() {
 		
 		autocomplete : {
 			source : function(request, response) {
-			//	$.getJSON("/PhotoLibrary/tags", {
+//				$.getJSON("/PhotoLibrary/tags", {
 				$.getJSON(rootUrl + "/tags", {
 					term : extractLast(request.term)
 				}, function(result) {

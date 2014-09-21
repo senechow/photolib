@@ -4,6 +4,7 @@ import java.security.Principal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -46,20 +47,20 @@ public class SearchDaoImpl implements SearchDao {
 				.setString(0, '%' + query + '%').list();
 	}
 
-	public List<Photo> advancedSearchPhotos(Search search, int page,
-			Principal principal) {
+	public List<Photo> advancedSearchPhotos(Search search, Principal principal) {
 		removeTagBrackets(search);
 		Query query;
 		List<Photo> photoList = new ArrayList<Photo>();
 		Session session = sessionFactory.getCurrentSession();
-		SortHelper sorter = new SortHelper();
-		String orderBy = sorter.setOrderBy(search.getSortType());
 		search.setName("%" + search.getName().toLowerCase() + "%");
 		if (search.getDescription().isEmpty()) {
 			search.setDescription("%");
 		} else {
 			search.setDescription("%" + search.getDescription().toLowerCase()
 					+ "%");
+		}
+		if(search.getCreatedSince() == null) {
+			search.setCreatedSince(new Date());
 		}
 
 		if (principal != null) {
@@ -71,8 +72,7 @@ public class SearchDaoImpl implements SearchDao {
 						.createQuery(
 								"From Photo p where lower(p.name) LIKE lower(?) AND lower(p.description) LIKE lower(?)"
 										+ "AND p.creationDate <= ? AND (p.isPublic = true OR p.user.id = ?) AND p.id in"
-										+ "(Select p2.id From Photo p2 join p2.tags t where t.name in (:tagNameList)) "
-										+ orderBy)
+										+ "(Select p2.id From Photo p2 join p2.tags t where t.name in (:tagNameList))")
 						.setString(0, search.getName())
 						.setString(1, search.getDescription())
 						.setParameter(2, search.getCreatedSince())
@@ -82,8 +82,7 @@ public class SearchDaoImpl implements SearchDao {
 				query = session
 						.createQuery(
 								"from Photo p where lower(p.name) LIKE lower(?) AND lower(p.description) LIKE lower(?) "
-										+ "AND p.creationDate <= ? AND (p.isPublic = true OR p.user.id = ?) "
-										+ orderBy)
+										+ "AND p.creationDate <= ? AND (p.isPublic = true OR p.user.id = ?)")
 						.setString(0, search.getName())
 						.setString(1, search.getDescription())
 						.setParameter(2, search.getCreatedSince())
@@ -96,8 +95,7 @@ public class SearchDaoImpl implements SearchDao {
 						.createQuery(
 								"From Photo p where lower(p.name) LIKE lower(?) AND lower(p.description) LIKE lower(?) "
 										+ "AND p.creationDate <= ? AND p.isPublic = true AND p.isPublic = true AND p.id in"
-										+ "(Select p2.id From Photo p2 join p2.tags t where t.name in (:tagNameList)) "
-										+ orderBy)
+										+ "(Select p2.id From Photo p2 join p2.tags t where t.name in (:tagNameList))")
 						.setString(0, search.getName())
 						.setString(1, search.getDescription())
 						.setParameter(2, search.getCreatedSince())
@@ -106,19 +104,15 @@ public class SearchDaoImpl implements SearchDao {
 				query = session
 						.createQuery(
 								"from Photo p where lower(p.name) LIKE lower(?) AND lower(p.description) LIKE lower(?) "
-										+ "AND p.creationDate <= ? AND p.isPublic = true "
-										+ orderBy)
+										+ "AND p.creationDate <= ? AND p.isPublic = true ")
 						.setString(0, search.getName())
 						.setString(1, search.getDescription())
 						.setParameter(2, search.getCreatedSince());
 			}
 
 		}
-		query.setMaxResults(MAX_PHOTOS_PER_PAGE);
-		query.setFirstResult(page * MAX_PHOTOS_PER_PAGE);
 		photoList = query.list();
 		return photoList;
-
 	}
 
 	private void removeTagBrackets(Search search) {

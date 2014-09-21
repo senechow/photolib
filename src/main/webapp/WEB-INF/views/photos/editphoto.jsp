@@ -28,7 +28,7 @@
 
 		<form:form action="${pageContext.request.contextPath}/photo/${photo.pid}" method="get">
 			<div class="row">
-				<input type="submit" value="Back" class="btn btn-lg btn-primary">
+				<input type="submit" value="Back" class="btn btn-lg btn-success">
 			</div>
 		</form:form>
 

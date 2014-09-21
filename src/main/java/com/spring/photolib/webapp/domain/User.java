@@ -96,7 +96,10 @@ public class User {
 	private Set<Album> albums;
 	
 	@ManyToMany(fetch = FetchType.LAZY, mappedBy = "users")
-	private Set<Rating> ratings;
+	private Set<PhotoRating> photoRatings;
+	
+	@ManyToMany(fetch = FetchType.LAZY, mappedBy = "users")
+	private Set<AlbumRating> albumRatings;
 	
 	@OneToMany(mappedBy = "user", cascade=CascadeType.ALL)
 	private Set<UserFlag> userFlags;
@@ -163,8 +166,12 @@ public class User {
 		this.userName = userName;
 	}
 
-	public void setRatings(Set<Rating> ratings) {
-		this.ratings = ratings;
+	public void setPhotoRatings(Set<PhotoRating> photoRatings) {
+		this.photoRatings = photoRatings;
+	}
+	
+	public void setAlbumRatings(Set<AlbumRating> albumRatings) {
+		this.albumRatings = albumRatings;
 	}
 	
 	public void setPasswordOld(String passwordOld) {
@@ -235,8 +242,12 @@ public class User {
 		return albums;
 	}
 	
-	public Set<Rating> getRatings() {
-		return ratings;
+	public Set<PhotoRating> getPhotoRatings() {
+		return photoRatings;
+	}
+	
+	public Set<AlbumRating> getAlbumRatings() {
+		return albumRatings;
 	}
 
 	public String getPasswordOld() {

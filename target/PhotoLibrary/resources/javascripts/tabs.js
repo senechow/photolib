@@ -9,22 +9,6 @@ $('#adminTabs li:eq(3) a').tab('show');
 $('#adminTabs li:eq(4) a').tab('show');
 $('#adminTabs a:first').tab('show');
 
-//$('#Flagged-Photo-Tabs').click(function(e) {
-//	httpGet("/PhotoLibrary/admin/dashboard/flaggedphotos");
-//});
-//
-//$('#Flagged-Album-Tabs').click(function(e) {
-//	httpGet("/PhotoLibrary/admin/dashboard/flaggedalbums");
-//});
-//
-//$('#Flagged-User-Tabs').click(function(e) {
-//	httpGet("/PhotoLibrary/admin/dashboard/flaggedusers");
-//});
-//
-//$('#Banned-User-Tabs').click(function(e) {
-//	httpGet("/PhotoLibrary/admin/dashboard/bannedusers");
-//});
-
 $('#flagged-photo-container').simplePagination({
 	items_per_page : 6,
 	number_of_visible_page_numbers : 6,

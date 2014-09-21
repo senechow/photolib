@@ -24,8 +24,8 @@ public class SearchServiceImpl implements SearchService {
 	}
 	
 	@Transactional
-	public List<Photo> advancedSearchPhotos(Search search, int page, Principal principal){
-		return searchDao.advancedSearchPhotos(search, page, principal);
+	public List<Photo> advancedSearchPhotos(Search search, Principal principal){
+		return searchDao.advancedSearchPhotos(search, principal);
 	}
 
 }

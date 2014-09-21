@@ -9,5 +9,5 @@ import com.spring.photolib.webapp.domain.Search;
 public interface SearchDao {
 	
 	public List<Photo> basicSearchPhotos(String query, Principal principal);
-	public List<Photo> advancedSearchPhotos(Search search, int page, Principal principal);
+	public List<Photo> advancedSearchPhotos(Search search, Principal principal);
 }

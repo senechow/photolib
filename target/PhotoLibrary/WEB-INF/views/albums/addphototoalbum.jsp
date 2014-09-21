@@ -23,7 +23,7 @@
 
 			<div class="form-group">
 				<div class="row">
-					<input type="submit" value="Back" class="btn btn-lg btn-primary">
+					<input type="submit" value="Back" class="btn btn-lg btn-success">
 				</div>
 			</div>
 		</form:form>
@@ -34,7 +34,7 @@
 
 			<div class="form-group">
 				<div class="row">
-					<input type="submit" value="Add" class="btn btn-lg btn-success">
+					<input type="submit" value="Add" class="btn btn-lg btn-primary">
 				</div>
 			</div>
 

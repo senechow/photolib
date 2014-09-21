@@ -42,7 +42,7 @@
 		<div class="row">
 			<c:url var="sortUrl" value="/advancedsearch/search" />
 			<form:form id="avdsearchform" name="avdsearchform" method="get"
-				action="${sortUrl}" modelAttribute="search">
+				action="${sortUrl}" modelAttribute="photoSearch">
 				<div class="col-lg-2 col-md-3 col-sm-4 form-group">
 					<form:label path="sortType">Sort By: </form:label>
 					<form:select class="form-control" path="sortType"
@@ -83,7 +83,7 @@
 		</div>
 	</div>
 
-	<form:form id="hiddenadvschform" method="get" modelAttribute="search">
+	<form:form id="hiddenadvschform" method="get" modelAttribute="photoSearch">
 		<form:hidden path="name" />
 		<form:hidden path="description" />
 		<form:hidden path="createdSince" />
@@ -95,7 +95,7 @@
 	
 	$("#avdsearchform").change(function(){
 		console.info("a");
-		 $("#avdsearchform input[name=tags]").val("${search.tags}");
+		 $("#avdsearchform input[name=tags]").val("${photoSearch.tags}");
 		 $("#avdsearchform").serialize();
 		 $("#avdsearchform").submit();
 		 
@@ -117,7 +117,7 @@
 			}
 			
 			if(nearBottomOfPage()) {
-				 $('form#hiddenadvschform input[name=tags]').val("${search.tags}");
+				 $('form#hiddenadvschform input[name=tags]').val("${photoSearch.tags}");
 				var searchVar = $("#hiddenadvschform").serialize();
 				
 				loading=true;
@@ -137,17 +137,17 @@
 						var $boxes= data;
 					
 						$("#masonry-container").append($boxes).masonry('appended', $boxes);
+						$(".item").imagesLoaded(function() {
+							$("#masonry-container").masonry('reloadItems');
+							$("#masonry-container").masonry('layout');
+							$(".item").addClass('loaded');
+					});
 						}
 						else {
 							page--;
 							$(window).sausage('destroy');
 						}
 					}
-				});
-				$(".item").imagesLoaded(function() {
-						$("#masonry-container").masonry('reloadItems');
-						$("#masonry-container").masonry('layout');
-						$(".item").addClass('loaded');
 				});
 			}
 		});

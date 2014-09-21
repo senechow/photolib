@@ -4,6 +4,7 @@
 
     <excludes>
         <pattern>**/morephotos*</pattern>
+        <pattern>**/morealbums*</pattern>
     </excludes>
 
 <decorator name="main-layout" page="main-layout.jsp">

@@ -7,26 +7,38 @@
 <c:if test="${! empty photoList}">
 	<c:forEach items="${photoList}" var="photo">
 		<div class="box-drop-shadow  item">
-			<div class="row col-lg-4">
-				<img
-					src="${pageContext.request.contextPath}/photo/${photo.pid}/image"
-					class="img-responsive img-rounded image-clip">
-				<c:choose>
-					<c:when test="${fn:length(photo.name) > 12}">
-						<c:set var="shortenedPhotoName"
-							value="${fn:substring(photo.name,0,12)}..." />
-						<h4>${shortenedPhotoName}</h4>
-					</c:when>
-					<c:otherwise>
-						<h4>${photo.name}</h4>
-					</c:otherwise>
-				</c:choose>
+			
 				<form:form
 					action="${pageContext.request.contextPath}/photo/${photo.pid}"
 					method="get" commandName="photo">
-					<input type="submit" value="Details" class="btn btn-success">
+					<input type="image"
+						src="${pageContext.request.contextPath}/photo/${photo.pid}/image"
+						class="img-responsive img-rounded image-clip">
 				</form:form>
+
+				<c:choose>
+					<c:when test="${fn:length(photo.name) > 20}">
+						<c:set var="shortenedPhotoName"
+							value="${fn:substring(photo.name,0,20)}..." />
+						<h4 >
+							<a href="<c:url value="/photo/${photo.pid}"/>">${shortenedPhotoName}</a>
+						</h4>
+					</c:when>
+					<c:otherwise>
+						<h4>
+							<a href="<c:url value="/photo/${photo.pid}"/>">${photo.name}</a>
+						</h4>
+					</c:otherwise>
+				</c:choose>
+
+				<h5>Views: ${photo.viewCount}</h5>
+
+				<div class="center col-lg-7 col-md-7 col-sm-8 col-xs-12">
+					<div class="five-star-rating" data-score="${photo.rating.rating}"></div>
+				</div>
 			</div>
-		</div>
+		
 	</c:forEach>
 </c:if>
+
+<script src="<c:url value= "/resources/javascripts/rating.js"/>"></script>

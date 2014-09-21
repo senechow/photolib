@@ -27,7 +27,7 @@
 
 		<form:form action="${pageContext.request.contextPath}/photo" method="get">
 			<div class="row">
-				<input type="submit" value="Cancel" class="btn btn-lg btn-primary">
+				<input type="submit" value="Cancel" class="btn btn-lg btn-success">
 			</div>
 		</form:form>
 

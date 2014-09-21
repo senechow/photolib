@@ -7,7 +7,8 @@ public enum SortTypes {
 	
 	MOST_RECENT("Most Recent"),
 	ALPHABETICAL("Alphabetical"),
-	TOP_RATED("Top Rated");
+	TOP_RATED("Top Rated"),
+	VIEW_COUNT("View Count");
 	
 	private String value;
 	

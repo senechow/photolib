@@ -24,6 +24,8 @@ public class UsersValidator implements Validator {
 				&& !user.getPassword().equals(user.getPasswordConfirm())) {
 			errors.rejectValue("password", "error.password.mismatch",
 					"password.mismatch");
+			errors.rejectValue("passwordConfirm", "error.password.mismatch",
+					"password.mismatch");
 		}
 
 	}

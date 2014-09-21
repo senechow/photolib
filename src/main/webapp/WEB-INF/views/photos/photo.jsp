@@ -17,6 +17,9 @@
 						<spring:message code="${userPhotoTitle}" />
 					</h1>
 				</c:when>
+				<c:when test="${! empty user}">
+					<h1>${user.userName}'s Photos</h1>
+				</c:when>
 				<c:otherwise>
 					<h1>
 						<spring:message code="label.title.photo" />
@@ -28,40 +31,44 @@
 
 	<div class="col-lg-11 col-md-10 col-sm-9 col-xs-9 center">
 		<c:import url="/WEB-INF/views/shared/messages.jsp" />
+	</div>
+	<div class="col-lg-11 col-md-10 col-sm-9 col-xs-9 center">
 
-		<div class="row">
-			<form:form action="${pageContext.request.contextPath}/photo/new"
-				method="get">
-				<input type="submit" value="Create New Photo"
-					class="btn btn-lg btn-primary">
-			</form:form>
-		</div>
+		<form:form action="${pageContext.request.contextPath}/photo/new"
+			method="get">
+			<input type="submit" value="Create New Photo"
+				class="btn btn-lg btn-primary">
+		</form:form>
 	</div>
 
 	<div class="col-lg-11 col-md-10 col-sm-9 col-xs-9 center">
 		<div class="row">
 			<c:choose>
-				<c:when test="${! empty userPhotoTitle}">
-					<sec:authentication property="principal.id" var="accountId" />
-					<c:url var="userSortUrl" value="/users/${accountId}/photos/sort" />
+				<c:when test="${! empty user}">
+					<c:url var="userSortUrl" value="/users/${user.uid}/photos/sort" />
 					<form:form method="get" action="${userSortUrl}"
-						commandName="search">
+						commandName="photoSearch">
 						<div class="col-lg-2 col-md-3 col-sm-4 form-group">
 							<form:label path="sortType">Sort By: </form:label>
-							<form:select class="form-control" id="select" path="sortType"
-								items="${sortingSelections}" onchange="this.form.submit()">
-							</form:select>
+							<div class="select-style">
+								<form:select class="form-control" id="select" path="sortType"
+									items="${sortingSelections}" onchange="this.form.submit()">
+								</form:select>
+							</div>
 						</div>
 					</form:form>
 				</c:when>
 				<c:otherwise>
 					<c:url var="sortUrl" value="/photo/sort" />
-					<form:form method="get" action="${sortUrl}" commandName="search">
+					<form:form method="get" action="${sortUrl}"
+						commandName="photoSearch">
 						<div class="col-lg-2 col-md-3 col-sm-4 form-group">
 							<form:label path="sortType">Sort By: </form:label>
-							<form:select class="form-control" path="sortType"
-								items="${sortingSelections}" onchange="this.form.submit()">
-							</form:select>
+							<div class="select-style">
+								<form:select  path="sortType"
+									items="${sortingSelections}" onchange="this.form.submit()">
+								</form:select>
+							</div>
 						</div>
 					</form:form>
 				</c:otherwise>
@@ -70,7 +77,6 @@
 	</div>
 
 	<div class="col-lg-11 col-md-10 col-sm-9 col-xs-9 center">
-		<div class="row">
 			<c:if test="${empty photoList}">
 				<c:choose>
 					<c:when test="${!empty emptyPhotoMsg}">
@@ -85,12 +91,17 @@
 					</c:otherwise>
 				</c:choose>
 			</c:if>
-		</div>
 	</div>
 
 	<div class="col-lg-11 col-md-10 col-sm-9 col-xs-9 center">
 		<div id="masonry-container">
 			<c:import url="/WEB-INF/views/photos/_photo.jsp"></c:import>
+		</div>
+	</div>
+	<div class="col-lg-1 col-md-2 col-sm-3 col-xs-3 center">
+		<div id="LoadingImage" style="display: none;">
+			<img
+				src="${pageContext.servletContext.contextPath}/resources/images/loading.gif" />
 		</div>
 	</div>
 
@@ -99,14 +110,22 @@
 	var rootUrl = "${pageContext.request.contextPath}";
 	
 	(function(){
-		var page = 0, 
-			loading = false
-			onUsersPhotoPage = "${userPhotoTitle}";
 		
-		function nearBottomOfPage() {
-			return $(window).scrollTop() > $(document).height() - $(window).height() - 150;
-		}
-		
+		var  loading = false,
+		onUsersPhotoPage = "${user}";
+	
+	function nearBottomOfPage() {
+		return $(window).scrollTop() > $(document).height() - $(window).height() - 150;
+	}
+	
+		 $(document).ajaxStart(function () {
+			 $("#LoadingImage").show();
+	        });
+
+	        $(document).ajaxStop(function () {
+	        	$("#LoadingImage").hide();
+	        });
+	
 		$(window).scroll(function() {
 			
 			if(loading) {
@@ -115,14 +134,13 @@
 			
 			if(nearBottomOfPage()) {
 				loading=true;
-				page++;
 				var location;
 				if(onUsersPhotoPage) {
-					var userId = "${accountId}";
-					location = rootUrl + "/users/" + userId + "/morephotos?sortType=${search.sortType}&page=" + page;
+					var userId = "${user.uid}";
+					location = rootUrl + "/users/" + userId + "/morephotos?sortType=${photoSearch.sortType}";
 				}
 				else {
-					location = rootUrl + "/morephotos?sortType=${search.sortType}" + "&page=" + page;
+					location = rootUrl + "/morephotos?sortType=${photoSearch.sortType}";
 				}
 				$.ajax({
 					url: location,
@@ -131,27 +149,21 @@
 					success: 
 						function(data) {
 						if(data.trim()) {
-						$(window).sausage('draw');
-						loading=false;
-						
-						var $boxes= data;
-					
-						$("#masonry-container").append($boxes).masonry('appended', $boxes);
-						}
-						else {
-							page--;
-							$(window).sausage('destroy');
+							loading=false;
+							var $boxes= data;
+							$("#masonry-container").append($boxes).masonry('appended', $boxes);
+							$(".item").imagesLoaded(function() {
+								$("#masonry-container").masonry('reloadItems');
+								$("#masonry-container").masonry('layout');
+								$(".item").addClass('loaded');
+						});
 						}
 					}
 				});
-				$(".item").imagesLoaded(function() {
-						$("#masonry-container").masonry('reloadItems');
-						$("#masonry-container").masonry('layout');
-						$(".item").addClass('loaded');
-				});
+				
 			}
 		});
-		$(window).sausage();
+		
 	
 	}());
 
@@ -160,6 +172,7 @@
 		var $container = $('#masonry-container');
 		$(".item").imagesLoaded(function() {
 			$container.imagesLoaded(function() {
+				
 				$(".item").addClass('loaded');
 				$container.masonry({
 					itemSelector : '.item',

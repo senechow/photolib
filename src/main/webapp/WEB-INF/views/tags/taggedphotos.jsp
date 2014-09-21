@@ -19,7 +19,7 @@
 
 	<div class="col-lg-11 col-md-10 col-sm-9 col-xs-9 center">
 		<div class="row">
-			<c:if test="${empty tag.photos}">
+			<c:if test="${empty photoList}">
 				<p>
 					<spring:message code="label.emptytag" />
 				</p>
@@ -27,8 +27,122 @@
 		</div>
 	</div>
 
-	<div class="col-lg-11 col-md-9 col-sm-6 col-xs-9 center">
+	<div class="col-lg-11 col-md-10 col-sm-9 col-xs-9 center">
+		<div class="row">
+			<c:url var="sortUrl" value="/tags/${tag.tid}/sort" />
+			<form:form method="get" action="${sortUrl}" commandName="photoSearch">
+				<div class="col-lg-2 col-md-3 col-sm-4 form-group">
+					<form:label path="sortType">Sort By: </form:label>
+					<form:select class="form-control" path="sortType"
+						items="${sortingSelections}" onchange="this.form.submit()">
+					</form:select>
+				</div>
+			</form:form>
+		</div>
+	</div>
 
+	<div class="col-lg-11 col-md-10 col-sm-9 col-xs-9 center">
+		<div id="masonry-container">
+			<c:import url="/WEB-INF/views/photos/_photo.jsp"></c:import>
+		</div>
+	</div>
+
+	<div class="col-lg-1 col-md-2 col-sm-3 col-xs-3 center">
+		<div id="LoadingImage" style="display: none;">
+			<img
+				src="${pageContext.servletContext.contextPath}/resources/images/loading.gif" />
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	
+	var rootUrl = "${pageContext.request.contextPath}";
+	
+	(function(){
+		
+		var  loading = false
+	
+	function nearBottomOfPage() {
+		return $(window).scrollTop() > $(document).height() - $(window).height() - 150;
+	}
+	
+		 $(document).ajaxStart(function () {
+			 $("#LoadingImage").show();
+	        });
+
+	        $(document).ajaxStop(function () {
+	        	$("#LoadingImage").hide();
+	        });
+	
+		$(window).scroll(function() {
+			
+			if(loading) {
+				return;
+			}
+			
+			if(nearBottomOfPage()) {
+				loading=true;
+				var tagId = "${tag.tid}";
+				var location = rootUrl + "/tags/" + tagId + "/morephotos?sortType=${photoSearch.sortType}";
+				$.ajax({
+					url: location,
+					type: 'get',
+					dataType: 'html',
+					success: 
+						function(data) {
+						if(data.trim()) {
+							loading=false;
+							var $boxes= data;
+							$("#masonry-container").append($boxes).masonry('appended', $boxes);
+							$(".item").imagesLoaded(function() {
+								$("#masonry-container").masonry('reloadItems');
+								$("#masonry-container").masonry('layout');
+								$(".item").addClass('loaded');
+						});
+						}
+					}
+				});
+				
+			}
+		});
+		
+	
+	}());
+
+	$(document).ready(function() {
+		
+		var $container = $('#masonry-container');
+		$(".item").imagesLoaded(function() {
+			$container.imagesLoaded(function() {
+				
+				$(".item").addClass('loaded');
+				$container.masonry({
+					itemSelector : '.item',
+					isAnimated : true,
+					columnWidth : containerWidth(),
+					isFitWidth: true
+				});
+				
+			});
+		});
+	});
+
+	function containerWidth() {
+		 var width = $(window).width();
+	     var col = 200;
+	     if(width < 1200 && width >= 980) {
+	       col = 160;
+	     }
+	     else if(width < 980 && width >= 768) {
+	       col = 124;
+	     }
+	     return col;
+	}
+	</script>
+
+	<!-- 
+	<div class="col-lg-11 col-md-9 col-sm-6 col-xs-9 center">
+	
 		<c:if test="${!empty tag.photos}">
 			<c:forEach items="${tag.photos}" var="photo">
 				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
@@ -57,8 +171,8 @@
 				</div>
 			</c:forEach>
 		</c:if>
-
 	</div>
+-->
 
 </body>
 </html>

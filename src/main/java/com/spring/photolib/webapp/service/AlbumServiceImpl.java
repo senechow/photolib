@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.spring.photolib.webapp.dao.AlbumDao;
 import com.spring.photolib.webapp.domain.Album;
 import com.spring.photolib.webapp.domain.Photo;
+import com.spring.photolib.webapp.exception.AlreadyRatedException;
 
 @Service
 public class AlbumServiceImpl implements AlbumService {
@@ -47,6 +48,16 @@ public class AlbumServiceImpl implements AlbumService {
 	@Transactional
 	public Album getAlbumAndPhotosById(Integer id){
 		return albumDao.getAlbumAndPhotosById(id);
+	}
+	
+	@Transactional
+	public void updateAlbumViewcount(Album album) {
+		albumDao.updateAlbumViewcount(album);
+	}
+	
+	@Transactional
+	public void rateAlbum(Album album, Integer rating, Principal principal) throws AlreadyRatedException {
+		albumDao.rateAlbum(album, rating, principal);
 	}
 
 }

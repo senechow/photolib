@@ -66,7 +66,7 @@ public class AlbumController {
 
 		PagedListHolder<Album> albumList = new PagedListHolder<Album>(
 				albumService.getAlbums(principal), new MutableSortDefinition(
-						sortHelper.getDefaultSortPhoto(), true, true));
+						sortHelper.getDefaultSortPhoto(), true, false));
 		albumHelper.addAlbumsAndNewSearchToMap(albumList, request, map,
 				SortTypes.MOST_RECENT.toString());
 		logger.info("Retrieval of public albums is complete");

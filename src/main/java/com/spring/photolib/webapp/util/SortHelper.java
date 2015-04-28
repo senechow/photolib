@@ -26,7 +26,7 @@ public class SortHelper {
 			 sortDefinition = new MutableSortDefinition(property, true, true);
 		} else if (sortType.equals("Most Recent")) {
 			property = "creationDate";
-			 sortDefinition = new MutableSortDefinition(property, true, true);
+			 sortDefinition = new MutableSortDefinition(property, true, false);
 		} else if (sortType.equals("Top Rated")) {
 			 property = "rating.rating";
 			 sortDefinition = new MutableSortDefinition(property, true, false);

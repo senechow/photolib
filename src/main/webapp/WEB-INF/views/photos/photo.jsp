@@ -36,7 +36,7 @@
 
 		<form:form action="${pageContext.request.contextPath}/photo/new"
 			method="get">
-			<input type="submit" value="Create New Photo"
+			<input id="newPhotoBtn" type="submit" value="Create New Photo"
 				class="btn btn-lg btn-primary">
 		</form:form>
 	</div>
@@ -93,7 +93,7 @@
 			</c:if>
 	</div>
 
-	<div class="col-lg-11 col-md-10 col-sm-9 col-xs-9 center">
+	<div class="col-lg-12 col-md-10 col-sm-9 col-xs-9 center">
 		<div id="masonry-container">
 			<c:import url="/WEB-INF/views/photos/_photo.jsp"></c:import>
 		</div>

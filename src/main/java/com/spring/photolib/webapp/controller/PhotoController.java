@@ -74,7 +74,7 @@ public class PhotoController {
 		logger.info("Retrieving photo list.");
 		PagedListHolder<Photo> photoList = new PagedListHolder<Photo>(
 				photoService.listPhotos(principal), new MutableSortDefinition(
-						sortHelper.getDefaultSortPhoto(), true, true));
+						sortHelper.getDefaultSortPhoto(), true, false));
 		photoHelper.addPhotosAndNewSearchToMap(photoList, request, map,
 				SortTypes.MOST_RECENT.toString());
 		logger.info("Photo list retrieval completed.");

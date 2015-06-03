@@ -92,7 +92,7 @@
 		<property name="driverClassName" value="org.postgresql.Driver" />
 		<property name="url"
 			value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() 
-   				+ @dbUrl.getPath() }" /> 
+  				+ @dbUrl.getPath() }" /> 
 <!-- 		<property name="url" value="jdbc:postgresql://localhost:5432/photolib" /> -->
 
 		<property name="username" value="${jdbc.username}" />

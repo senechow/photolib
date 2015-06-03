@@ -29,7 +29,15 @@ public class CustomUserDetailsService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String email)
 			throws UsernameNotFoundException {
 
+		if(email == null || email.equals("")){
+			throw new UsernameNotFoundException("Email address is blank");
+		}
+		
 		User domainUser = userDAO.getUserByEmail(email);
+		
+		if(domainUser == null) {
+			throw new UsernameNotFoundException("User does not exist");
+		}
 
 		boolean enabled;
 		boolean accountNonExpired = true;

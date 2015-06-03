@@ -628,7 +628,7 @@ public class UserController {
 				String sendingURL = baseUrl + "/login";
 
 				SimpleMailMessage message = new SimpleMailMessage();
-				message.setFrom("photolib@notreply.com");
+				message.setFrom("photolib@noreply.com");
 				message.setTo(user.getEmailAddress());
 				message.setSubject("Photo Library Password Reset");
 				message.setText("You have requested to reset your password. Please go to the link below "

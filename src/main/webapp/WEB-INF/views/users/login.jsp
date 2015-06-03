@@ -26,13 +26,14 @@
 			</div>
 		</c:if>
 
-		<form class="form-signin" method="post"
+		<form id="loginForm" class="form-signin" method="post"
 			action="<c:url value='j_spring_security_check'/>">
 
 			<div class="form-group">
 				<div class="row">
 					<label>Email Address:</label> <input type="text"
-						class="form-control input-md" name="j_username" />
+						class="form-control input-md" name="j_username" id="j_username"/>
+					
 				</div>
 			</div>
 
@@ -40,7 +41,7 @@
 				<div class="row">
 
 					<label>Password:</label> <input type="password"
-						class="form-control" name="j_password" />
+						class="form-control" name="j_password" id="j_password" />
 
 				</div>
 			</div>

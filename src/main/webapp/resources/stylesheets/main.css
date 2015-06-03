@@ -38,6 +38,19 @@ div.field {
 	margin-right: 500px;
 }
 
+h1,h2,h3,h4,h5,h6{
+	color: #317eac;
+}
+
+label.error{
+	color: red;
+	font-weight: bold;
+}
+
+label{
+	color: #317eac;
+}
+
 p {
 	font-size: 1.1em;
 	font-weight: 400;
@@ -149,6 +162,10 @@ a[class*="simple-pagination-navigation-disabled"]
 
 .inner {
 	display: inline-block;
+}
+
+a{
+	color: #317eac !important;
 }
 
  #galleria{height:500px}

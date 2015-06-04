@@ -11,6 +11,7 @@
 <%@attribute name="label" required="false" type="java.lang.String"%>
 <%@attribute name="required" required="false" type="java.lang.Boolean"%>
 <%@attribute name="id" required="false" type="java.lang.String"%>
+<%@attribute name="name" required="false" type="java.lang.String"%>
 
 <c:if test="${empty label}">
 	<c:set var="label"
@@ -24,7 +25,8 @@
 			</c:if></label>
 		<form:input path="${path}" class="form-control" 
 			cssClass="${empty cssClass ? '' : cssClass}"  
-			id= "${empty id ? '' : id}"/>
+			id= "${empty id ? '' : id}"
+			name="${empty name ? '' : name }"/>
 		<c:if test="${status.error}">
 			<span class="help-inline control-label">${status.errorMessage}</span>
 		</c:if>

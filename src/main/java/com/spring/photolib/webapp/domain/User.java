@@ -20,6 +20,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.Parameter;
 import org.hibernate.annotations.Type;
@@ -52,12 +53,14 @@ public class User {
 	@Column(name = "password")
 	@NotNull
 	@NotEmpty
+	@Size(min=6)
 	@Type(type = "encryptedString")
 	private String password;
 
 	@Column(name = "password_confirm")
 	@NotNull
 	@NotEmpty
+	@Size(min=6)
 	@Type(type = "encryptedString")
 	private String passwordConfirm;
 

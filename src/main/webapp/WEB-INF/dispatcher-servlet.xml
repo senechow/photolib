@@ -78,6 +78,7 @@
 				<prop key="mail.transport.protocol">smtp</prop>
 				<prop key="mail.smtp.auth">true</prop>
 				<prop key="mail.smtp.starttls.enable">true</prop>
+				<prop key="mail.smtp.ssl.trust">smtp.gmail.com</prop>
 			</props>
 		</property>
 	</bean>
@@ -92,7 +93,7 @@
 		<property name="driverClassName" value="org.postgresql.Driver" />
 		<property name="url"
 			value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() 
-  				+ @dbUrl.getPath() }" /> 
+   				+ @dbUrl.getPath() }" />
 <!-- 		<property name="url" value="jdbc:postgresql://localhost:5432/photolib" /> -->
 
 		<property name="username" value="${jdbc.username}" />

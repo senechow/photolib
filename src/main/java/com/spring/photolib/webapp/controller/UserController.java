@@ -101,7 +101,7 @@ public class UserController {
 			for (ObjectError objError : result.getAllErrors()) {
 				boolean added = false;
 				for (String code : objError.getCodes()) {
-					if (code.contains("NotEmpty.user")) {
+					if (code.contains("NotEmpty.user") || code.contains("Size.user")) {
 						errors.add(code);
 						added = true;
 						break;

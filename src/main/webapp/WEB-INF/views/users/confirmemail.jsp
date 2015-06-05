@@ -24,11 +24,11 @@
 			<p>* means a required field</p>
 		</div>
 
-		<form:form role="form" method="POST" commandName="user"
+		<form:form role="form" method="POST" commandName="user" id="confirmEmailForm"
 			action="${pageContext.request.contextPath}/users/${userid}/confirmemail/confirm">
 			<div class="row">
 				<t:input path="confirmationCode" label="Confirmation Code:"
-					required="true"></t:input>
+					required="true" id="confirmationCode"></t:input>
 			</div>
 
 			<div class="form-group">

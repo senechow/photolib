@@ -24,7 +24,7 @@
 
 		<sec:authentication property="principal.id" var="accountId" />
 
-		<form:form role="form" method="POST" commandName="user"
+		<form:form role="form" method="POST" commandName="user" id="editUserForm"
 			action="${pageContext.request.contextPath}/users/${accountId}/update">
 
 			<div class="row">
@@ -32,14 +32,14 @@
 					<div class="col-md-6 col-sm-6">
 						<div class="form-group">
 							<form:label class="control-label" path="firstName">First Name:</form:label>
-							<form:input path="firstName" class="form-control input-md" />
+							<form:input path="firstName" class="form-control input-md" id="editUserFirstName"/>
 							<form:errors path="firstName" cssClass="error" />
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-6">
 						<div class="form-group">
 							<form:label path="lastName">Last Name:</form:label>
-							<form:input path="lastName" class="form-control input-md" />
+							<form:input path="lastName" class="form-control input-md" id="editUserLastName"/>
 							<form:errors path="lastName" cssClass="error" />
 						</div>
 					</div>
@@ -47,17 +47,17 @@
 			</div>
 
 			<div class="row">
-				<t:input path="userName" label="User Name:" required="true" />
+				<t:input path="userName" label="User Name:" required="true" id="editUserName"/>
 			</div>
 
 
 			<div class="row">
-				<t:input path="emailAddress" label="Email Address:" required="true" />
+				<t:input path="emailAddress" label="Email Address:" required="true" id="editUserEmailAddress"/>
 			</div>
 
 			<div class="form-group">
 				<div class="row">
-					<input type="submit" value="Enter" class="btn btn-lg btn-primary">
+					<input type="submit" value="Enter" class="btn btn-lg btn-primary" id="submitEditUserBtn">
 				</div>
 			</div>
 		</form:form>

@@ -9,6 +9,7 @@
 <%@attribute name="path" required="true" type="java.lang.String"%>
 <%@attribute name="label" required="false" type="java.lang.String"%>
 <%@attribute name="required" required="false" type="java.lang.Boolean"%>
+<%@attribute name="id" required="false" type="java.lang.String"%>
 
 <c:if test="${empty label}">
 	<c:set var="label"
@@ -21,7 +22,7 @@
 				<span class="required">*</span>
 			</c:if>
 		</label> 
-		<input type="file" name="${path}" id="${path}" class="form-control" />
+		<input type="file" name="${path}" id="${empty id ? path : id}" class="form-control" />
 		<c:if test="${status.error}">
 			<c:forEach items="${status.errorMessages}" var="error">
 				<span class="help-block control-label">${error}</span>

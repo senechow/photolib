@@ -17,7 +17,7 @@
 		</div>
 
 		<form:form method="post" action="${pageContext.request.contextPath}/photo/${photo.pid}"
-			commandName="photo" enctype="multipart/form-data">
+			commandName="photo" enctype="multipart/form-data" id="editPhotoForm" cssClass="photoForm">
 			<form:errors path="*" cssClass="error" />
 
 			<c:import url="/WEB-INF/views/photos/_photo_form.jsp" />
@@ -26,7 +26,7 @@
 
 
 
-		<form:form action="${pageContext.request.contextPath}/photo/${photo.pid}" method="get">
+		<form:form action="${pageContext.request.contextPath}/photo/${photo.pid}" method="get" >
 			<div class="row">
 				<input type="submit" value="Back" class="btn btn-lg btn-success">
 			</div>

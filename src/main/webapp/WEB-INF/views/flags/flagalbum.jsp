@@ -24,7 +24,8 @@
 		</div>
 
 		<form:form role="form" method="POST" commandName="flag"
-			action="${pageContext.request.contextPath}/album/${album.aid}/confirmflag">
+			action="${pageContext.request.contextPath}/album/${album.aid}/confirmflag"
+			cssClass="flagForm" id="flagAlbumForm">
 
 			<c:import url="/WEB-INF/views/flags/_flag_form.jsp" />
 

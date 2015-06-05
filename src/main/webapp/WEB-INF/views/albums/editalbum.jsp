@@ -17,7 +17,7 @@
 
 		<form:form method="post"
 			action="${pageContext.request.contextPath}/album/${album.aid}"
-			commandName="album">
+			commandName="album" id="editAlbumForm" class="albumForm">
 			<form:errors path="*" cssClass="error" />
 
 			<c:import url="/WEB-INF/views/albums/_album_form.jsp" />

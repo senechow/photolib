@@ -8,7 +8,7 @@
 	<div class="row">
 		<form:label path="reason">Reason: *</form:label>
 		<div class="select-style">
-			<form:select path="reason" items="${flaggingReasons}" />
+			<form:select path="reason" items="${flaggingReasons}" id="flagReason"/>
 		</div>
 	</div>
 </div>
@@ -16,7 +16,7 @@
 <div class="form-group">
 	<div class="row">
 		<form:label path="description" cssStyle="display:inline">Description:</form:label>
-		<form:textarea path="description" class="form-control" rows="8" />
+		<form:textarea path="description" class="form-control" rows="8" id="flagDescription"/>
 		<form:errors path="description" cssClass="error" />
 	</div>
 </div>

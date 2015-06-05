@@ -24,7 +24,8 @@
 		</div>
 
 		<form:form role="form" method="POST" commandName="flag"
-			action="${pageContext.request.contextPath}/user/${user.uid}/confirmflag">
+			action="${pageContext.request.contextPath}/user/${user.uid}/confirmflag"
+			cssClass="flagForm" id="flagUserForm">
 			
 			<c:import url="/WEB-INF/views/flags/_flag_form.jsp"/>
 			

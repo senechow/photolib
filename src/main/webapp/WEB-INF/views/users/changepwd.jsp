@@ -24,30 +24,32 @@
 
 		<sec:authentication property="principal.id" var="accountId" />
 
-		<form:form role="form" method="POST" commandName="user"
+		<form:form role="form" method="POST" commandName="user" id="changePasswordForm"
 			action="${pageContext.request.contextPath}/users/${accountId}/updatepassword">
 
 
 			<div class="row">
 				
  				<t:input-password path="passwordOld" label="Old Password:" 
-  					required="true" />
+  					required="true" id="changePasswordOldPassword"/>
 			</div>
 
 
 			<div class="row">
-				<t:input-password path="password" label="New Password:" required="true" />
+				<t:input-password path="password" label="New Password:" required="true" 
+					id="changePasswordNewPassword"/>
 			</div>
 
 			<div class="row">
-				<t:input-password path="passwordConfirm" label="Confirm New Password:" required="true" />
+				<t:input-password path="passwordConfirm" label="Confirm New Password:" required="true" 
+					id="changePasswordConfirmPassword"/>
 			</div>
 			
 			<input type="hidden" name="emailAddress" value="${user.emailAddress}">
 			
 			<div class="form-group">
 				<div class="row">
-					<input type="submit" value="Enter" class="btn btn-lg btn-primary">
+					<input type="submit" value="Enter" class="btn btn-lg btn-primary" id="submitChangePasswordFormBtn">
 				</div>
 			</div>
 		</form:form>

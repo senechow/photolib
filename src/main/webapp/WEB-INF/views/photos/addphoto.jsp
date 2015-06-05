@@ -18,7 +18,7 @@
 
 		
 		<form:form method="post" action="${pageContext.request.contextPath}/photo/new/create"
-			commandName="photo" enctype="multipart/form-data">
+			commandName="photo" enctype="multipart/form-data" id="createPhotoForm" cssClass="photoForm">
 
 			<c:import url="/WEB-INF/views/photos/_photo_form.jsp" />
 

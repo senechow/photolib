@@ -22,15 +22,14 @@
 </div>
 
 <div class="row">
-	<t:input-file path="imageFile" label="Image: " required="true" />
-
+	<t:input-file path="imageFile" label="Image: " required="true" id="photoImage"/>
 </div>
 
 
 <div class="row">
 	<div class="row">
 		<div class="col-lg-5 col-md-7 col-sm-8 col-xs-10">
-			<t:input path="name" label="Name: " required="true"></t:input>
+			<t:input path="name" label="Name: " required="true" id="photoName"></t:input>
 		</div>
 	</div>
 </div>
@@ -38,7 +37,7 @@
 <div class="form-group">
 	<div class="row">
 		<form:label path="description" cssStyle="display:inline">Description:</form:label>
-		<form:textarea path="description" class="form-control" rows="8" />
+		<form:textarea path="description" class="form-control" rows="8" id="photoDescription"/>
 		<form:errors path="description" cssClass="error" />
 	</div>
 </div>
@@ -50,12 +49,12 @@
 		<label>Privacy Settings: *</label>
 	</div>
 	<div class="radio">
-		<form:radiobutton path="isPublic" value="true" label="Public" />
+		<form:radiobutton path="isPublic" value="true" label="Public" id="photoSelectPublic"/>
 		<form:errors path="isPublic" cssClass="error" />
 	</div>
 
 	<div class="radio">
-		<form:radiobutton path="isPublic" value="false" label="Private"/>
+		<form:radiobutton path="isPublic" value="false" label="Private" id="photoSelectPrivate"/>
 		<form:errors path="isPublic" cssClass="error" />
 	</div>
 </div>
@@ -65,7 +64,7 @@
 <div class="form-group">
 	<div class="row">
 		<form:label path="tags"> Tags </form:label>
-		<form:input id="tagsid" path="tags" class="form-control" />
+		<form:input id="tagsid" path="tags" class="form-control"/>
 		<form:errors path="tags" cssClass="error" />
 	</div>
 </div>
@@ -75,7 +74,7 @@
 <div class="form-group">
 	<div class="row col-lg-2 col-md-2 col-sm-3">
 		<div class="row">
-			<input type="submit" value="Enter" class="btn btn-lg btn-primary">
+			<input type="submit" value="Enter" class="btn btn-lg btn-primary" id="submitPhotoForm">
 		</div>
 	</div>
 </div>

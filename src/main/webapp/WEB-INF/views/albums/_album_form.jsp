@@ -15,7 +15,7 @@
 <div class="row">
 	<div class="row">
 		<div class="col-lg-5 col-md-7 col-sm-8 col-xs-10">
-			<t:input path="name" label="Name: " required="true"></t:input>
+			<t:input path="name" label="Name: " required="true" id="albumName"></t:input>
 		</div>
 	</div>
 </div>
@@ -23,7 +23,7 @@
 <div class="form-group">
 	<div class="row">
 		<form:label path="description" cssStyle="display:inline">Description:</form:label>
-		<form:textarea path="description" class="form-control" rows="8" />
+		<form:textarea path="description" class="form-control" rows="8" id="albumDescription"/>
 		<form:errors path="description" cssClass="error" />
 	</div>
 </div>
@@ -35,11 +35,11 @@
 		<label class="control-label">Privacy Settings: *</label>
 	</div>
 	<div class="radio">
-		<form:radiobutton path="isPublic" value="true" label="Public" />
+		<form:radiobutton path="isPublic" value="true" label="Public" id="albumSelectPublic"/>
 		<form:errors path="isPublic" cssClass="error" />
 	</div>
 	<div class="radio">
-		<form:radiobutton path="isPublic" value="false" label="Private" />
+		<form:radiobutton path="isPublic" value="false" label="Private" id="albumSelectPrivate"/>
 		<form:errors path="isPublic" cssClass="error" />
 	</div>
 </div>

@@ -18,7 +18,7 @@
 
 		<form:form method="post"
 			action="${pageContext.request.contextPath}/album/new/create"
-			commandName="album">
+			commandName="album" id="createAlbumForm" cssClass="albumForm">
 
 			<c:import url="/WEB-INF/views/albums/_album_form.jsp" />
 
